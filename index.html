@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cora — Padaria por Assinatura</title>
+  <meta name="description" content="Vem aí a Cora. Pão de fermentação natural, toda semana na sua porta. Padaria por assinatura em Niterói e Rio de Janeiro.">
+  <meta name="theme-color" content="#2E55CD">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cora — Padaria por Assinatura">
+  <meta property="og:description" content="Pão de fermentação natural, feito sob medida, entregue toda semana na sua porta. Niterói e Rio de Janeiro.">
+  <meta property="og:image" content="images/_original.jpg">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Montagu+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-50: #EBEEFB;
+      --brand-500: #2E55CD;
+      --brand-600: #2545A8;
+      --brand-700: #1D3787;
+      --brand-800: #172E6E;
+      --brand-900: #0F1E49;
+      --warm-50: #FAFAF8;
+      --warm-100: #F5F4F0;
+      --warm-200: #E8E6E1;
+      --warm-400: #A8A49C;
+      --warm-500: #7A766E;
+      --warm-600: #5C5850;
+      --warm-700: #3D3A34;
+      --warm-800: #2A2723;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--warm-50);
+      color: var(--warm-600);
+      font-family: 'Montagu Slab', Georgia, Palatino, serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .heading {
+      font-family: 'League Gothic', Impact, 'Arial Narrow', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+    }
+
+
+    /* ═══════════════════════════════════
+       HERO
+    ═══════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 48px 24px;
+      background-color: var(--warm-50);
+    }
+
+    .hero-content {
+      max-width: 480px;
+    }
+
+    .hero-symbol {
+      width: 44px;
+      height: auto;
+      margin: 0 auto 32px;
+      display: block;
+    }
+
+    .hero-logo {
+      height: 56px;
+      margin: 0 auto 48px;
+      display: block;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      line-height: 1.1;
+      color: var(--brand-500);
+      margin-bottom: 24px;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      color: var(--warm-600);
+      max-width: 360px;
+      margin: 0 auto 40px;
+      line-height: 1.65;
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      font-family: 'Montagu Slab', Georgia, serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--brand-500);
+      border: 1.5px solid var(--brand-500);
+      padding: 12px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background-color 150ms ease-out, color 150ms ease-out;
+    }
+
+    .btn-ghost:hover {
+      background-color: var(--brand-500);
+      color: #fff;
+    }
+
+    .btn-filled {
+      display: inline-block;
+      font-family: 'Montagu Slab', Georgia, serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff;
+      background-color: var(--brand-500);
+      padding: 14px 36px;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      border: none;
+      transition: background-color 150ms ease-out;
+    }
+
+    .btn-filled:hover {
+      background-color: var(--brand-600);
+    }
+
+
+    /* ═══════════════════════════════════
+       SEÇÃO A CORA
+    ═══════════════════════════════════ */
+    .about {
+      padding: 72px 24px;
+      background-color: var(--warm-50);
+    }
+
+    .about-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: 'League Gothic', Impact, sans-serif;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      color: var(--brand-500);
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+
+    .section-title {
+      font-size: 30px;
+      line-height: 1.1;
+      color: var(--warm-800);
+      margin-bottom: 24px;
+    }
+
+    .about p {
+      color: var(--warm-600);
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .about p:last-child { margin-bottom: 0; }
+
+
+    /* ═══════════════════════════════════
+       PILARES
+    ═══════════════════════════════════ */
+
+    /* Pilar com foto */
+    .pilar-photo {
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .pilar-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .pilar-photo .overlay {
+      position: absolute;
+      inset: 0;
+      background-color: var(--brand-900);
+      opacity: 0.82;
+    }
+
+    .pilar-photo .pilar-content {
+      position: relative;
+      z-index: 1;
+      padding: 48px 24px;
+      max-width: 560px;
+    }
+
+    .pilar-photo h3 {
+      font-size: 30px;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .pilar-photo p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* Pilar claro */
+    .pilar-light {
+      background-color: var(--warm-100);
+      border-top: 1px solid var(--warm-200);
+      border-bottom: 1px solid var(--warm-200);
+      padding: 64px 24px;
+    }
+
+    .pilar-light .pilar-content {
+      max-width: 560px;
+    }
+
+    .pilar-light h3 {
+      font-size: 30px;
+      line-height: 1.1;
+      color: var(--warm-800);
+      margin-bottom: 16px;
+    }
+
+    .pilar-light p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--warm-600);
+    }
+
+    /* Pilar brand */
+    .pilar-brand {
+      background-color: var(--brand-500);
+      padding: 64px 24px;
+    }
+
+    .pilar-brand .pilar-content {
+      max-width: 560px;
+    }
+
+    .pilar-brand h3 {
+      font-size: 30px;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .pilar-brand p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.85);
+    }
+
+
+    /* ═══════════════════════════════════
+       COMO FUNCIONA
+    ═══════════════════════════════════ */
+    .how {
+      padding: 72px 24px;
+      background-color: var(--warm-50);
+    }
+
+    .how-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .how h2 {
+      margin-bottom: 48px;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      align-items: baseline;
+    }
+
+    .step-num {
+      font-family: 'League Gothic', Impact, sans-serif;
+      font-size: 48px;
+      color: var(--brand-500);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 44px;
+      font-weight: 400;
+    }
+
+    .step-body h4 {
+      font-family: 'League Gothic', Impact, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-size: 18px;
+      color: var(--warm-800);
+      margin-bottom: 4px;
+      font-weight: 400;
+    }
+
+    .step-body p {
+      font-size: 15px;
+      color: var(--warm-600);
+      line-height: 1.6;
+    }
+
+
+    /* ═══════════════════════════════════
+       CTA FINAL
+    ═══════════════════════════════════ */
+    .cta-final {
+      background-color: var(--brand-900);
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .cta-final-content {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .cta-final h2 {
+      font-size: 34px;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .cta-final p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 32px;
+      line-height: 1.65;
+    }
+
+
+    /* ═══════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════ */
+    footer {
+      text-align: center;
+      padding: 32px 24px 0;
+      background-color: var(--warm-50);
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--warm-400);
+      line-height: 1.8;
+    }
+
+    footer a {
+      color: var(--brand-500);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Band grafismo no rodapé */
+    .footer-band {
+      margin-top: 32px;
+      height: 48px;
+      background-color: var(--brand-500);
+      background-image: url('images/grafismo_coracao.svg');
+      background-size: 48px 48px;
+      background-repeat: repeat;
+    }
+
+
+    /* ═══════════════════════════════════
+       ANIMAÇÕES
+    ═══════════════════════════════════ */
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-up {
+        opacity: 0;
+        transform: translateY(16px);
+        animation: fadeUp 500ms ease-out forwards;
+      }
+
+      .fade-up:nth-child(2) { animation-delay: 60ms; }
+      .fade-up:nth-child(3) { animation-delay: 120ms; }
+      .fade-up:nth-child(4) { animation-delay: 180ms; }
+      .fade-up:nth-child(5) { animation-delay: 240ms; }
+      .fade-up:nth-child(6) { animation-delay: 300ms; }
+
+      @keyframes fadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up { opacity: 1; transform: none; }
+    }
+
+
+    /* ═══════════════════════════════════
+       DESKTOP
+    ═══════════════════════════════════ */
+    @media (min-width: 768px) {
+      .hero h1 { font-size: 52px; }
+      .hero-sub { font-size: 18px; }
+      .section-title { font-size: 36px; }
+      .pilar-photo { min-height: 500px; }
+      .pilar-photo h3,
+      .pilar-light h3,
+      .pilar-brand h3 { font-size: 36px; }
+      .pilar-photo .pilar-content,
+      .pilar-light .pilar-content,
+      .pilar-brand .pilar-content {
+        max-width: 640px;
+        margin: 0 auto;
+      }
+      .cta-final h2 { font-size: 42px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="hero-content">
+      <!-- Grafismo coração -->
+      <img src="images/grafismo_coracao.svg" alt="" class="hero-symbol fade-up" aria-hidden="true">
+      <!-- Logo com tag -->
+      <img src="images/cora_logo_com_tag.svg" alt="Cora — Padaria por Assinatura" class="hero-logo fade-up">
+      <h1 class="heading fade-up">VEM AÍ UMA PADARIA QUE RESPEITA O TEMPO</h1>
+      <p class="hero-sub fade-up">Pão de fermentação natural, feito sob medida, entregue toda semana na sua porta. Sem loja. Sem pressa. Sem sobra.</p>
+      <a href="https://app.acora.com.br/interesse" class="btn-ghost fade-up">Quero saber primeiro</a>
+    </div>
+  </section>
+
+
+  <!-- ═══ A CORA ═══ -->
+  <section class="about">
+    <div class="about-inner">
+      <p class="section-label">A CORA</p>
+      <h2 class="heading section-title">INGREDIENTES REAIS. SÓ O NECESSÁRIO.</h2>
+      <p>A Cora é uma padaria de fermentação natural por assinatura. Cada fornada é feita sob demanda. Você escolhe, a gente assa. Toda semana, fresquinho na sua porta.</p>
+      <p>O modelo de assinatura existe por uma razão: cada fornada é planejada, sem pressa e sem desperdício. Não é conveniência. É coerência com o processo.</p>
+    </div>
+  </section>
+
+
+  <!-- ═══ PILAR 1 — LEVAIN ═══ -->
+  <section class="pilar-photo">
+    <img src="images/_original.jpg" alt="Pão de fermentação natural" loading="lazy" width="1200" height="800">
+    <div class="overlay"></div>
+    <div class="pilar-content">
+      <h3 class="heading">LEVAIN DE HERANÇA</h3>
+      <p>O fermento da Cora tem décadas de história. Foi presente de um padeiro de origem uruguaia que incentivou o início de tudo. Um fermento com linhagem, mantido vivo até hoje. É ele que traz complexidade de sabor e mantém o pão fresco por mais tempo.</p>
+    </div>
+  </section>
+
+
+  <!-- ═══ PILAR 2 — BOM VIVER ═══ -->
+  <section class="pilar-light">
+    <div class="pilar-content">
+      <h3 class="heading">FILOSOFIA DO BOM VIVER</h3>
+      <p>Poucos ingredientes de boa qualidade, técnica certa e tempo. Isso basta. Um ano vivendo na Itália reforçou essa convicção: o bom viver passa por alimentar-se bem, sem complicar.</p>
+    </div>
+  </section>
+
+
+  <!-- ═══ PILAR 3 — RIGOR ═══ -->
+  <section class="pilar-photo">
+    <img src="images/_focaccia.jpg" alt="Focaccia de fermentação natural" loading="lazy" width="1200" height="800">
+    <div class="overlay"></div>
+    <div class="pilar-content">
+      <h3 class="heading">RIGOR DE PADEIRO DESIGNER</h3>
+      <p>Mais de 25 anos em design e 10 como entusiasta da padaria de fermentação natural. O rigor técnico e a busca por excelência se aplicam a tudo: crosta, corte, embalagem, entrega. Nada é acidente.</p>
+    </div>
+  </section>
+
+
+  <!-- ═══ PILAR 4 — JEITO CORA ═══ -->
+  <section class="pilar-brand">
+    <div class="pilar-content">
+      <h3 class="heading">CADA DETALHE TEM O JEITO CORA</h3>
+      <p>A experiência de 15 anos em branding ensinou que tudo deve estar conectado. O nome do plano, a embalagem, a comunicação. A diferença é que o produto é feito à mão, toda semana.</p>
+    </div>
+  </section>
+
+
+  <!-- ═══ COMO FUNCIONA ═══ -->
+  <section class="how">
+    <div class="how-inner">
+      <h2 class="heading section-title">SIMPLES COMO DEVE SER</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1°</span>
+          <div class="step-body">
+            <h4>VOCÊ ESCOLHE SEU PÃO</h4>
+            <p>A gente tem opções de fermentação natural pra diferentes gostos. Pode trocar toda semana se quiser.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">2°</span>
+          <div class="step-body">
+            <h4>A GENTE ASSA SOB MEDIDA</h4>
+            <p>Cada fornada é feita na quantidade certa. Fermentação longa, sem pressa.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-num">3°</span>
+          <div class="step-body">
+            <h4>ENTREGA TODA SEMANA</h4>
+            <p>Fresquinho na sua porta. Niterói e Rio de Janeiro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CTA FINAL ═══ -->
+  <section class="cta-final">
+    <div class="cta-final-content">
+      <h2 class="heading">QUER SER DOS PRIMEIROS?</h2>
+      <p>As entregas começam em breve. Deixa seu interesse e você vai saber antes de todo mundo.</p>
+      <a href="https://app.acora.com.br/interesse" class="btn-filled">Tenho interesse</a>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <p>
+      Cora — Padaria por Assinatura<br>
+      Niterói e Rio de Janeiro<br>
+      <a href="https://instagram.com/cora.padaria" target="_blank" rel="noopener noreferrer">@cora.padaria</a>
+    </p>
+    <div class="footer-band"></div>
+  </footer>
+
+</body>
+</html>
