@@ -84,7 +84,7 @@
       min-height: 100vh;
       min-height: 100svh;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       overflow: hidden;
     }
 
@@ -96,34 +96,22 @@
       object-fit: cover;
     }
 
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(15, 30, 73, 0.75) 0%,
-        rgba(15, 30, 73, 0.2) 50%,
-        rgba(15, 30, 73, 0.05) 100%
-      );
-    }
-
     .hero-content {
       position: relative;
       z-index: 1;
-      padding: 24px 24px 64px;
+      padding: 24px;
     }
 
     .hero-logo {
       height: 72px;
       display: block;
-      filter: brightness(0) invert(1);
       margin-bottom: 24px;
     }
 
     .hero-tagline {
       font-size: 28px;
       line-height: 1.1;
-      color: #fff;
+      color: var(--brand-500);
     }
 
 
@@ -131,7 +119,7 @@
        DOBRA 2 — COPY + CARROSSEL
     ═══════════════════════════════════ */
     .copy-section {
-      padding: 64px 24px;
+      padding: 64px 0;
       background-color: var(--warm-50);
     }
 
@@ -139,8 +127,8 @@
       display: flex;
       gap: 40px;
       flex-wrap: wrap;
-      max-width: 960px;
-      margin: 0 auto;
+      max-width: none;
+      padding: 0 24px;
     }
 
     .copy-left {
@@ -171,14 +159,10 @@
       color: var(--warm-800);
       margin-top: 56px;
       margin-bottom: 24px;
-      max-width: 960px;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 0 24px;
     }
 
     .carousel-wrapper {
-      max-width: 960px;
-      margin: 0 auto;
       position: relative;
     }
 
@@ -190,6 +174,8 @@
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
+      padding-left: 24px;
+      padding-right: 0;
       padding-bottom: 4px;
     }
 
@@ -235,9 +221,7 @@
       display: flex;
       gap: 12px;
       margin-top: 20px;
-      max-width: 960px;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 0 24px;
     }
 
     .carousel-nav button {
@@ -327,7 +311,7 @@
     .cta-copy {
       flex: 1 1 300px;
       background-color: var(--warm-100);
-      padding: 56px 32px;
+      padding: 56px 32px 56px 24px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -414,7 +398,6 @@
   <!-- ═══ DOBRA 1 — HERO ═══ -->
   <section class="hero">
     <img src="images/_hero_dobra1.jpg" alt="Pão de fermentação natural" class="hero-bg">
-    <div class="hero-overlay"></div>
     <div class="hero-content">
       <img src="images/cora_logo_cor.svg" alt="Cora" class="hero-logo">
       <p class="heading hero-tagline">PADARIA<br>POR<br>ASSINATURA</p>
