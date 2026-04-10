@@ -178,9 +178,7 @@
       padding-bottom: 4px;
     }
 
-    .carousel::before,
-    .carousel::after {
-      content: '';
+    .carousel-spacer {
       flex: 0 0 8px;
     }
 
@@ -395,8 +393,7 @@
       .hero-content { padding-left: 170px; }
       .copy-row { padding-left: 170px; }
       .carousel-label { padding-left: 170px; }
-      .carousel::before,
-      .carousel::after { flex-basis: 154px; }
+      .carousel-spacer { flex-basis: 154px; }
       .carousel-nav { padding-left: 170px; }
       .how { padding-left: 170px; }
       .cta-copy { padding-left: 170px; }
@@ -435,6 +432,7 @@
 
     <div class="carousel-wrapper">
       <div class="carousel" id="carousel">
+        <div class="carousel-spacer"></div>
         <div class="card">
           <img src="images/_original.jpg" alt="Pão Original" loading="lazy" width="240" height="180">
           <div class="card-body">
@@ -477,6 +475,7 @@
             <p>Massa leve de alta hidratação com farinha italiana, azeite e o levain da Cora. Casca fina e miolo aerado, feito pra abrir no meio e virar sanduíche.</p>
           </div>
         </div>
+        <div class="carousel-spacer"></div>
       </div>
 
       <div class="carousel-nav">
