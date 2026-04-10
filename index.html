@@ -56,73 +56,6 @@
       font-weight: 400;
     }
 
-
-    /* ═══════════════════════════════════
-       HERO
-    ═══════════════════════════════════ */
-    .hero {
-      min-height: 100vh;
-      min-height: 100svh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 48px 24px;
-      background-color: var(--warm-50);
-    }
-
-    .hero-content {
-      max-width: 480px;
-    }
-
-    .hero-symbol {
-      width: 44px;
-      height: auto;
-      margin: 0 auto 32px;
-      display: block;
-    }
-
-    .hero-logo {
-      height: 56px;
-      margin: 0 auto 48px;
-      display: block;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-      line-height: 1.1;
-      color: var(--brand-500);
-      margin-bottom: 24px;
-    }
-
-    .hero-sub {
-      font-size: 17px;
-      color: var(--warm-600);
-      max-width: 360px;
-      margin: 0 auto 40px;
-      line-height: 1.65;
-    }
-
-    .btn-ghost {
-      display: inline-block;
-      font-family: 'Montagu Slab', Georgia, serif;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--brand-500);
-      border: 1.5px solid var(--brand-500);
-      padding: 12px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: background-color 150ms ease-out, color 150ms ease-out;
-    }
-
-    .btn-ghost:hover {
-      background-color: var(--brand-500);
-      color: #fff;
-    }
-
     .btn-filled {
       display: inline-block;
       font-family: 'Montagu Slab', Georgia, serif;
@@ -144,59 +77,18 @@
 
 
     /* ═══════════════════════════════════
-       SEÇÃO A CORA
+       DOBRA 1 — HERO
     ═══════════════════════════════════ */
-    .about {
-      padding: 72px 24px;
-      background-color: var(--warm-50);
-    }
-
-    .about-inner {
-      max-width: 560px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      font-family: 'League Gothic', Impact, sans-serif;
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 0.12em;
-      color: var(--brand-500);
-      margin-bottom: 16px;
-      font-weight: 400;
-    }
-
-    .section-title {
-      font-size: 30px;
-      line-height: 1.1;
-      color: var(--warm-800);
-      margin-bottom: 24px;
-    }
-
-    .about p {
-      color: var(--warm-600);
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-
-    .about p:last-child { margin-bottom: 0; }
-
-
-    /* ═══════════════════════════════════
-       PILARES
-    ═══════════════════════════════════ */
-
-    /* Pilar com foto */
-    .pilar-photo {
+    .hero {
       position: relative;
-      min-height: 420px;
+      min-height: 100vh;
+      min-height: 100svh;
       display: flex;
       align-items: flex-end;
       overflow: hidden;
     }
 
-    .pilar-photo img {
+    .hero-bg {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -204,164 +96,271 @@
       object-fit: cover;
     }
 
-    .pilar-photo .overlay {
+    .hero-overlay {
       position: absolute;
       inset: 0;
-      background-color: var(--brand-900);
-      opacity: 0.82;
+      background: linear-gradient(
+        to top,
+        rgba(15, 30, 73, 0.75) 0%,
+        rgba(15, 30, 73, 0.2) 50%,
+        rgba(15, 30, 73, 0.05) 100%
+      );
     }
 
-    .pilar-photo .pilar-content {
+    .hero-content {
       position: relative;
       z-index: 1;
-      padding: 48px 24px;
-      max-width: 560px;
+      padding: 24px 24px 64px;
     }
 
-    .pilar-photo h3 {
-      font-size: 30px;
+    .hero-logo {
+      height: 72px;
+      display: block;
+      filter: brightness(0) invert(1);
+      margin-bottom: 24px;
+    }
+
+    .hero-tagline {
+      font-size: 28px;
       line-height: 1.1;
       color: #fff;
-      margin-bottom: 16px;
-    }
-
-    .pilar-photo p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: rgba(255,255,255,0.8);
-    }
-
-    /* Pilar claro */
-    .pilar-light {
-      background-color: var(--warm-100);
-      border-top: 1px solid var(--warm-200);
-      border-bottom: 1px solid var(--warm-200);
-      padding: 64px 24px;
-    }
-
-    .pilar-light .pilar-content {
-      max-width: 560px;
-    }
-
-    .pilar-light h3 {
-      font-size: 30px;
-      line-height: 1.1;
-      color: var(--warm-800);
-      margin-bottom: 16px;
-    }
-
-    .pilar-light p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--warm-600);
-    }
-
-    /* Pilar brand */
-    .pilar-brand {
-      background-color: var(--brand-500);
-      padding: 64px 24px;
-    }
-
-    .pilar-brand .pilar-content {
-      max-width: 560px;
-    }
-
-    .pilar-brand h3 {
-      font-size: 30px;
-      line-height: 1.1;
-      color: #fff;
-      margin-bottom: 16px;
-    }
-
-    .pilar-brand p {
-      font-size: 16px;
-      line-height: 1.7;
-      color: rgba(255,255,255,0.85);
     }
 
 
     /* ═══════════════════════════════════
-       COMO FUNCIONA
+       DOBRA 2 — COPY + CARROSSEL
     ═══════════════════════════════════ */
-    .how {
-      padding: 72px 24px;
+    .copy-section {
+      padding: 64px 24px;
       background-color: var(--warm-50);
     }
 
+    .copy-row {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .copy-left {
+      flex: 1 1 220px;
+    }
+
+    .copy-left h2 {
+      font-size: 30px;
+      line-height: 1.1;
+      color: var(--warm-800);
+      margin-bottom: 24px;
+    }
+
+    .copy-right {
+      flex: 1 1 220px;
+      display: flex;
+      align-items: center;
+    }
+
+    .copy-right p {
+      font-size: 16px;
+      color: var(--warm-600);
+      line-height: 1.7;
+    }
+
+    .carousel-label {
+      font-size: 22px;
+      color: var(--warm-800);
+      margin-top: 56px;
+      margin-bottom: 24px;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .carousel-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .carousel {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+    }
+
+    .carousel::-webkit-scrollbar { display: none; }
+
+    .card {
+      flex: 0 0 240px;
+      scroll-snap-align: start;
+      background: #fff;
+      border: 1px solid var(--warm-200);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 240px;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body {
+      padding: 16px;
+    }
+
+    .card-body h4 {
+      font-family: 'League Gothic', Impact, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--warm-800);
+      margin-bottom: 8px;
+    }
+
+    .card-body p {
+      font-size: 13px;
+      color: var(--warm-500);
+      line-height: 1.55;
+    }
+
+    .carousel-nav {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .carousel-nav button {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid var(--warm-200);
+      background: #fff;
+      color: var(--warm-600);
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 150ms ease-out, color 150ms ease-out;
+    }
+
+    .carousel-nav button:hover {
+      border-color: var(--brand-500);
+      color: var(--brand-500);
+    }
+
+
+    /* ═══════════════════════════════════
+       DOBRA 3 — COMO FUNCIONA
+    ═══════════════════════════════════ */
+    .how {
+      padding: 64px 24px;
+      background-color: var(--brand-500);
+    }
+
     .how-inner {
-      max-width: 560px;
+      max-width: 960px;
       margin: 0 auto;
     }
 
     .how h2 {
+      font-size: 28px;
+      color: #fff;
       margin-bottom: 48px;
     }
 
     .steps {
       display: flex;
-      flex-direction: column;
-      gap: 40px;
+      flex-wrap: wrap;
+      gap: 32px;
     }
 
     .step {
-      display: flex;
-      gap: 20px;
-      align-items: baseline;
+      flex: 1 1 220px;
     }
 
     .step-num {
       font-family: 'League Gothic', Impact, sans-serif;
       font-size: 48px;
-      color: var(--brand-500);
+      color: rgba(255, 255, 255, 0.3);
       line-height: 1;
-      flex-shrink: 0;
-      width: 44px;
       font-weight: 400;
+      margin-bottom: 12px;
     }
 
-    .step-body h4 {
+    .step h4 {
       font-family: 'League Gothic', Impact, sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.02em;
-      font-size: 18px;
-      color: var(--warm-800);
-      margin-bottom: 4px;
+      font-size: 16px;
       font-weight: 400;
+      color: #fff;
+      margin-bottom: 8px;
     }
 
-    .step-body p {
-      font-size: 15px;
-      color: var(--warm-600);
+    .step p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.75);
       line-height: 1.6;
     }
 
 
     /* ═══════════════════════════════════
-       CTA FINAL
+       DOBRA 4 — CTA FINAL
     ═══════════════════════════════════ */
     .cta-final {
-      background-color: var(--brand-900);
-      padding: 80px 24px;
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
     }
 
-    .cta-final-content {
-      max-width: 480px;
-      margin: 0 auto;
+    .cta-copy {
+      flex: 1 1 300px;
+      background-color: var(--warm-100);
+      padding: 56px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    .cta-final h2 {
-      font-size: 34px;
+    .cta-copy h2 {
+      font-size: 32px;
       line-height: 1.1;
-      color: #fff;
+      color: var(--warm-800);
       margin-bottom: 16px;
     }
 
-    .cta-final p {
+    .cta-copy p {
       font-size: 16px;
-      color: rgba(255,255,255,0.75);
-      margin-bottom: 32px;
-      line-height: 1.65;
+      color: var(--warm-600);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .cta-copy .btn-filled {
+      align-self: flex-start;
+    }
+
+    .cta-photo {
+      flex: 1 1 300px;
+      min-height: 360px;
+    }
+
+    .cta-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
 
@@ -389,7 +388,6 @@
       text-decoration: underline;
     }
 
-    /* Band grafismo no rodapé */
     .footer-band {
       margin-top: 32px;
       height: 48px;
@@ -401,159 +399,131 @@
 
 
     /* ═══════════════════════════════════
-       ANIMAÇÕES
-    ═══════════════════════════════════ */
-    @media (prefers-reduced-motion: no-preference) {
-      .fade-up {
-        opacity: 0;
-        transform: translateY(16px);
-        animation: fadeUp 500ms ease-out forwards;
-      }
-
-      .fade-up:nth-child(2) { animation-delay: 60ms; }
-      .fade-up:nth-child(3) { animation-delay: 120ms; }
-      .fade-up:nth-child(4) { animation-delay: 180ms; }
-      .fade-up:nth-child(5) { animation-delay: 240ms; }
-      .fade-up:nth-child(6) { animation-delay: 300ms; }
-
-      @keyframes fadeUp {
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .fade-up { opacity: 1; transform: none; }
-    }
-
-
-    /* ═══════════════════════════════════
        DESKTOP
     ═══════════════════════════════════ */
     @media (min-width: 768px) {
-      .hero h1 { font-size: 52px; }
-      .hero-sub { font-size: 18px; }
-      .section-title { font-size: 36px; }
-      .pilar-photo { min-height: 500px; }
-      .pilar-photo h3,
-      .pilar-light h3,
-      .pilar-brand h3 { font-size: 36px; }
-      .pilar-photo .pilar-content,
-      .pilar-light .pilar-content,
-      .pilar-brand .pilar-content {
-        max-width: 640px;
-        margin: 0 auto;
-      }
-      .cta-final h2 { font-size: 42px; }
+      .hero-tagline { font-size: 36px; }
+      .copy-left h2 { font-size: 36px; }
+      .steps { flex-wrap: nowrap; }
+      .cta-copy h2 { font-size: 42px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ═══ HERO ═══ -->
+  <!-- ═══ DOBRA 1 — HERO ═══ -->
   <section class="hero">
+    <img src="images/_hero_dobra1.jpg" alt="Pão de fermentação natural" class="hero-bg">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <!-- Grafismo coração -->
-      <img src="images/grafismo_coracao.svg" alt="" class="hero-symbol fade-up" aria-hidden="true">
-      <!-- Logo com tag -->
-      <img src="images/cora_logo_com_tag.svg" alt="Cora — Padaria por Assinatura" class="hero-logo fade-up">
-      <h1 class="heading fade-up">VEM AÍ UMA PADARIA QUE RESPEITA O TEMPO</h1>
-      <p class="hero-sub fade-up">Pão de fermentação natural, feito sob medida, entregue toda semana na sua porta. Sem loja. Sem pressa. Sem sobra.</p>
-      <a href="https://app.acora.com.br/interesse" class="btn-ghost fade-up">Quero saber primeiro</a>
+      <img src="images/cora_logo_cor.svg" alt="Cora" class="hero-logo">
+      <p class="heading hero-tagline">PADARIA<br>POR<br>ASSINATURA</p>
     </div>
   </section>
 
 
-  <!-- ═══ A CORA ═══ -->
-  <section class="about">
-    <div class="about-inner">
-      <p class="section-label">A CORA</p>
-      <h2 class="heading section-title">INGREDIENTES REAIS. SÓ O NECESSÁRIO.</h2>
-      <p>A Cora é uma padaria de fermentação natural por assinatura. Cada fornada é feita sob demanda. Você escolhe, a gente assa. Toda semana, fresquinho na sua porta.</p>
-      <p>O modelo de assinatura existe por uma razão: cada fornada é planejada, sem pressa e sem desperdício. Não é conveniência. É coerência com o processo.</p>
+  <!-- ═══ DOBRA 2 — COPY + CARROSSEL ═══ -->
+  <section class="copy-section">
+    <div class="copy-row">
+      <div class="copy-left">
+        <h2 class="heading">VEM AÍ UMA PADARIA QUE RESPEITA O TEMPO</h2>
+        <a href="https://app.acora.com.br/interesse" class="btn-filled">Quero saber primeiro</a>
+      </div>
+      <div class="copy-right">
+        <p>Pão de fermentação natural, entregue toda semana na sua porta. Sem loja. Sem pressa. Sem sobra.</p>
+      </div>
+    </div>
+
+    <h3 class="heading carousel-label">O QUE ESTAMOS PREPARANDO</h3>
+
+    <div class="carousel-wrapper">
+      <div class="carousel" id="carousel">
+        <div class="card">
+          <img src="images/_original.jpg" alt="Pão Original" loading="lazy" width="240" height="180">
+          <div class="card-body">
+            <h4>Original</h4>
+            <p>Mix de farinhas italiana e brasileira, água, sal e o levain da Cora. Fermentação lenta, crosta firme e miolo aberto.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/_integral.jpg" alt="Pão Integral" loading="lazy" width="240" height="180">
+          <div class="card-body">
+            <h4>Integral</h4>
+            <p>100% integral, com um blend de farinhas brasileira e italiana que traz mais complexidade ao sabor. Azeite na massa, fermentação lenta e miolo que fica macio por dias.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/_multigraos.jpg" alt="Pão Multigrãos" loading="lazy" width="240" height="180">
+          <div class="card-body">
+            <h4>Multigrãos</h4>
+            <p>Sete sementes torradas e escaldadas misturadas a farinha italiana e ao levain da Cora. Massa de alta hidratação, cheia de textura e sabor em cada fatia.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/_focaccia.jpg" alt="Focaccia Genovesa" loading="lazy" width="240" height="180">
+          <div class="card-body">
+            <h4>Focaccia Genovesa</h4>
+            <p>Massa de fermentação lenta com azeite generoso e o levain da Cora, coberta com cebola roxa, alecrim fresco e sal grosso.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/_brioche.jpg" alt="Brioche" loading="lazy" width="240" height="180">
+          <div class="card-body">
+            <h4>Brioche</h4>
+            <p>Farinha italiana, manteiga, ovos e mel encontram o levain da Cora numa massa amanteigada de fermentação natural, com miolo dourado que desfia.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/_ciabatta.jpg" alt="Ciabatta Rústica" loading="lazy" width="240" height="180">
+          <div class="card-body">
+            <h4>Ciabatta Rústica</h4>
+            <p>Massa leve de alta hidratação com farinha italiana, azeite e o levain da Cora. Casca fina e miolo aerado, feito pra abrir no meio e virar sanduíche.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-nav">
+        <button aria-label="Anterior" id="carousel-prev">&#8592;</button>
+        <button aria-label="Próximo" id="carousel-next">&#8594;</button>
+      </div>
     </div>
   </section>
 
 
-  <!-- ═══ PILAR 1 — LEVAIN ═══ -->
-  <section class="pilar-photo">
-    <img src="images/_original.jpg" alt="Pão de fermentação natural" loading="lazy" width="1200" height="800">
-    <div class="overlay"></div>
-    <div class="pilar-content">
-      <h3 class="heading">LEVAIN DE HERANÇA</h3>
-      <p>O fermento da Cora tem décadas de história. Foi presente de um padeiro de origem uruguaia que incentivou o início de tudo. Um fermento com linhagem, mantido vivo até hoje. É ele que traz complexidade de sabor e mantém o pão fresco por mais tempo.</p>
-    </div>
-  </section>
-
-
-  <!-- ═══ PILAR 2 — BOM VIVER ═══ -->
-  <section class="pilar-light">
-    <div class="pilar-content">
-      <h3 class="heading">FILOSOFIA DO BOM VIVER</h3>
-      <p>Poucos ingredientes de boa qualidade, técnica certa e tempo. Isso basta. Um ano vivendo na Itália reforçou essa convicção: o bom viver passa por alimentar-se bem, sem complicar.</p>
-    </div>
-  </section>
-
-
-  <!-- ═══ PILAR 3 — RIGOR ═══ -->
-  <section class="pilar-photo">
-    <img src="images/_focaccia.jpg" alt="Focaccia de fermentação natural" loading="lazy" width="1200" height="800">
-    <div class="overlay"></div>
-    <div class="pilar-content">
-      <h3 class="heading">RIGOR DE PADEIRO DESIGNER</h3>
-      <p>Mais de 25 anos em design e 10 como entusiasta da padaria de fermentação natural. O rigor técnico e a busca por excelência se aplicam a tudo: crosta, corte, embalagem, entrega. Nada é acidente.</p>
-    </div>
-  </section>
-
-
-  <!-- ═══ PILAR 4 — JEITO CORA ═══ -->
-  <section class="pilar-brand">
-    <div class="pilar-content">
-      <h3 class="heading">CADA DETALHE TEM O JEITO CORA</h3>
-      <p>A experiência de 15 anos em branding ensinou que tudo deve estar conectado. O nome do plano, a embalagem, a comunicação. A diferença é que o produto é feito à mão, toda semana.</p>
-    </div>
-  </section>
-
-
-  <!-- ═══ COMO FUNCIONA ═══ -->
+  <!-- ═══ DOBRA 3 — COMO FUNCIONA ═══ -->
   <section class="how">
     <div class="how-inner">
-      <h2 class="heading section-title">SIMPLES COMO DEVE SER</h2>
+      <h2 class="heading">COMO FUNCIONA</h2>
       <div class="steps">
         <div class="step">
-          <span class="step-num">1°</span>
-          <div class="step-body">
-            <h4>VOCÊ ESCOLHE SEU PÃO</h4>
-            <p>A gente tem opções de fermentação natural pra diferentes gostos. Pode trocar toda semana se quiser.</p>
-          </div>
+          <div class="step-num">1</div>
+          <h4>Você escolhe seu pão</h4>
+          <p>Pães de fermentação natural pra todo dia ou pra ocasiões especiais. Pode trocar toda semana se quiser.</p>
         </div>
         <div class="step">
-          <span class="step-num">2°</span>
-          <div class="step-body">
-            <h4>A GENTE ASSA SOB MEDIDA</h4>
-            <p>Cada fornada é feita na quantidade certa. Fermentação longa, sem pressa.</p>
-          </div>
+          <div class="step-num">2</div>
+          <h4>A gente assa sob medida</h4>
+          <p>Só assamos o que foi pedido. Fermentação longa, sem pressa.</p>
         </div>
         <div class="step">
-          <span class="step-num">3°</span>
-          <div class="step-body">
-            <h4>ENTREGA TODA SEMANA</h4>
-            <p>Fresquinho na sua porta. Niterói e Rio de Janeiro.</p>
-          </div>
+          <div class="step-num">3</div>
+          <h4>Entrega toda semana</h4>
+          <p>Fresquinho na sua porta. Niterói e Rio de Janeiro.</p>
         </div>
       </div>
     </div>
   </section>
 
 
-  <!-- ═══ CTA FINAL ═══ -->
+  <!-- ═══ DOBRA 4 — CTA FINAL ═══ -->
   <section class="cta-final">
-    <div class="cta-final-content">
-      <h2 class="heading">QUER SER DOS PRIMEIROS?</h2>
-      <p>As entregas começam em breve. Deixa seu interesse e você vai saber antes de todo mundo.</p>
+    <div class="cta-copy">
+      <h2 class="heading">QUERO SER UM DOS PRIMEIROS</h2>
+      <p>A Cora começa a entregar em breve. Deixa seu contato e você fica sabendo primeiro.</p>
       <a href="https://app.acora.com.br/interesse" class="btn-filled">Tenho interesse</a>
+    </div>
+    <div class="cta-photo">
+      <img src="images/_CTA_Final.jpg" alt="Pão artesanal Cora" loading="lazy">
     </div>
   </section>
 
@@ -567,6 +537,17 @@
     </p>
     <div class="footer-band"></div>
   </footer>
+
+
+  <script>
+    var carousel = document.getElementById('carousel');
+    document.getElementById('carousel-prev').addEventListener('click', function () {
+      carousel.scrollBy({ left: -260, behavior: 'smooth' });
+    });
+    document.getElementById('carousel-next').addEventListener('click', function () {
+      carousel.scrollBy({ left: 260, behavior: 'smooth' });
+    });
+  </script>
 
 </body>
 </html>
