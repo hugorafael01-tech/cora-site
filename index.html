@@ -174,12 +174,9 @@
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
-      padding-right: 0;
+      padding-left: 24px;
+      padding-right: 24px;
       padding-bottom: 4px;
-    }
-
-    .carousel-spacer {
-      flex: 0 0 8px;
     }
 
     .carousel::-webkit-scrollbar { display: none; }
@@ -390,12 +387,12 @@
        DESKTOP
     ═══════════════════════════════════ */
     @media (min-width: 768px) {
-      .hero-content { padding-left: 170px; }
-      .copy-row { padding-left: 170px; }
-      .carousel-label { padding-left: 170px; }
-      .carousel-spacer { flex-basis: 154px; }
+      .hero-content { padding-left: 170px; padding-right: 170px; }
+      .copy-row { padding-left: 170px; padding-right: 170px; }
+      .carousel-label { padding-left: 170px; padding-right: 170px; }
+      .carousel { padding-left: 170px; padding-right: 170px; }
       .carousel-nav { padding-left: 170px; }
-      .how { padding-left: 170px; }
+      .how { padding-left: 170px; padding-right: 170px; }
       .cta-copy { padding-left: 170px; }
       .hero-tagline { font-size: 36px; }
       .copy-left h2 { font-size: 36px; }
@@ -432,7 +429,6 @@
 
     <div class="carousel-wrapper">
       <div class="carousel" id="carousel">
-        <div class="carousel-spacer"></div>
         <div class="card">
           <img src="images/_original.jpg" alt="Pão Original" loading="lazy" width="240" height="180">
           <div class="card-body">
@@ -475,7 +471,6 @@
             <p>Massa leve de alta hidratação com farinha italiana, azeite e o levain da Cora. Casca fina e miolo aerado, feito pra abrir no meio e virar sanduíche.</p>
           </div>
         </div>
-        <div class="carousel-spacer"></div>
       </div>
 
       <div class="carousel-nav">
