@@ -254,8 +254,7 @@
     }
 
     .how-inner {
-      max-width: 960px;
-      margin: 0 auto;
+      max-width: none;
     }
 
     .how h2 {
@@ -377,7 +376,7 @@
       margin-left: -24px;
       margin-right: -24px;
       height: 48px;
-      background-color: var(--brand-500);
+      background-color: var(--warm-100);
       background-image: url('images/grafismo_coracao.svg');
       background-size: 48px 48px;
       background-repeat: repeat;
@@ -388,6 +387,13 @@
        DESKTOP
     ═══════════════════════════════════ */
     @media (min-width: 768px) {
+      .hero-content { padding-left: 170px; }
+      .copy-row { padding-left: 170px; }
+      .carousel-label { padding-left: 170px; }
+      .carousel { padding-left: 170px; }
+      .carousel-nav { padding-left: 170px; }
+      .how { padding-left: 170px; }
+      .cta-copy { padding-left: 170px; }
       .hero-tagline { font-size: 36px; }
       .copy-left h2 { font-size: 36px; }
       .steps { flex-wrap: nowrap; }
