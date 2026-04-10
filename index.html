@@ -174,10 +174,11 @@
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
-      padding-left: 24px;
-      padding-right: 24px;
       padding-bottom: 4px;
     }
+
+    .carousel .card:first-child { margin-left: 24px; }
+    .carousel .card:last-child { margin-right: 24px; }
 
     .carousel::-webkit-scrollbar { display: none; }
 
@@ -390,7 +391,8 @@
       .hero-content { padding-left: 170px; padding-right: 170px; }
       .copy-row { padding-left: 170px; padding-right: 170px; }
       .carousel-label { padding-left: 170px; padding-right: 170px; }
-      .carousel { padding-left: 170px; padding-right: 170px; }
+      .carousel .card:first-child { margin-left: 170px; }
+      .carousel .card:last-child { margin-right: 170px; }
       .carousel-nav { padding-left: 170px; }
       .how { padding-left: 170px; padding-right: 170px; }
       .cta-copy { padding-left: 170px; }
