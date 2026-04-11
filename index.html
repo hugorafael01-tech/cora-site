@@ -160,17 +160,10 @@
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
+      padding-left: 24px;
+      padding-right: 24px;
       padding-bottom: 4px;
-    }
-
-    .carousel-spacer {
-      flex: 0 0 24px;
-      min-width: 24px;
-    }
-
-    .carousel::after {
-      content: '';
-      flex: 0 0 24px;
+      scroll-padding-inline-start: 24px;
     }
 
     .carousel::-webkit-scrollbar { display: none; }
@@ -383,8 +376,7 @@
       .hero-content { padding-left: 170px; padding-right: 170px; }
       .copy-row { padding-left: 170px; padding-right: 170px; }
       .carousel-label { padding-left: 170px; padding-right: 170px; }
-      .carousel-spacer { flex: 0 0 170px; min-width: 170px; }
-      .carousel::after { flex-basis: 170px; }
+      .carousel { padding-left: 170px; padding-right: 170px; scroll-padding-inline-start: 170px; }
       .carousel-nav { padding-left: 170px; }
       .how { padding-left: 170px; padding-right: 170px; }
       .cta-copy { padding-left: 170px; }
@@ -418,7 +410,6 @@
 
     <div class="carousel-wrapper">
       <div class="carousel" id="carousel">
-        <div class="carousel-spacer"></div>
         <div class="card">
           <img src="images/_original.jpg" alt="Pão Original" loading="lazy" width="240" height="180">
           <div class="card-body">
