@@ -105,12 +105,12 @@
     .hero-logo {
       height: 72px;
       display: block;
-      margin-bottom: 24px;
+      margin-bottom: 12px;
     }
 
     .hero-tagline {
-      font-size: 28px;
-      line-height: 1.1;
+      font-size: 32pt;
+      line-height: 1;
       color: var(--brand-500);
     }
 
@@ -124,34 +124,21 @@
     }
 
     .copy-row {
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-      max-width: none;
       padding: 0 24px;
     }
 
-    .copy-left {
-      flex: 1 1 220px;
-    }
-
-    .copy-left h2 {
+    .copy-row h2 {
       font-size: 30px;
       line-height: 1.1;
       color: var(--warm-800);
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
 
-    .copy-right {
-      flex: 1 1 220px;
-      display: flex;
-      align-items: center;
-    }
-
-    .copy-right p {
+    .copy-row p {
       font-size: 16px;
       color: var(--warm-600);
       line-height: 1.7;
+      max-width: 480px;
     }
 
     .carousel-label {
@@ -180,7 +167,7 @@
 
     .carousel::after {
       content: '';
-      flex: 0 0 8px;
+      flex: 0 0 24px;
     }
 
     .carousel::-webkit-scrollbar { display: none; }
@@ -206,11 +193,11 @@
     }
 
     .card-body h4 {
-      font-family: 'League Gothic', Impact, sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-      font-size: 18px;
-      font-weight: 400;
+      font-family: 'Montagu Slab', Georgia, serif;
+      text-transform: none;
+      letter-spacing: normal;
+      font-size: 16px;
+      font-weight: 600;
       color: var(--warm-800);
       margin-bottom: 8px;
     }
@@ -262,15 +249,15 @@
     }
 
     .how h2 {
-      font-size: 28px;
+      font-size: 32pt;
       color: #fff;
-      margin-bottom: 48px;
+      margin-bottom: 32px;
     }
 
     .steps {
       display: flex;
       flex-wrap: wrap;
-      gap: 32px;
+      gap: 24px;
     }
 
     .step {
@@ -279,27 +266,27 @@
 
     .step-num {
       font-family: 'League Gothic', Impact, sans-serif;
-      font-size: 48px;
+      font-size: 42px;
       color: rgba(255, 255, 255, 0.3);
       line-height: 1;
       font-weight: 400;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .step h4 {
       font-family: 'League Gothic', Impact, sans-serif;
       text-transform: uppercase;
       letter-spacing: 0.02em;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 400;
       color: #fff;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
     }
 
     .step p {
-      font-size: 14px;
+      font-size: 15px;
       color: rgba(255, 255, 255, 0.75);
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
 
@@ -395,12 +382,12 @@
       .copy-row { padding-left: 170px; padding-right: 170px; }
       .carousel-label { padding-left: 170px; padding-right: 170px; }
       .carousel { padding-left: 170px; }
-      .carousel::after { flex-basis: 154px; }
+      .carousel::after { flex-basis: 170px; }
       .carousel-nav { padding-left: 170px; }
       .how { padding-left: 170px; padding-right: 170px; }
       .cta-copy { padding-left: 170px; }
-      .hero-tagline { font-size: 36px; }
-      .copy-left h2 { font-size: 36px; }
+      .hero-tagline { font-size: 42pt; }
+      .copy-row h2 { font-size: 36px; }
       .steps { flex-wrap: nowrap; }
       .cta-copy h2 { font-size: 42px; }
     }
@@ -421,13 +408,8 @@
   <!-- ═══ DOBRA 2 — COPY + CARROSSEL ═══ -->
   <section class="copy-section">
     <div class="copy-row">
-      <div class="copy-left">
-        <h2 class="heading">VEM AÍ UMA PADARIA QUE RESPEITA O TEMPO</h2>
-        <a href="https://app.acora.com.br/interesse" class="btn-filled">Quero saber primeiro</a>
-      </div>
-      <div class="copy-right">
-        <p>Pão de fermentação natural, entregue toda semana na sua porta. Sem loja. Sem pressa. Sem sobra.</p>
-      </div>
+      <h2 class="heading">VEM AÍ UMA PADARIA QUE RESPEITA O TEMPO</h2>
+      <p>Pão de fermentação natural, entregue toda semana na sua porta. Sem loja. Sem pressa. Sem sobra.</p>
     </div>
 
     <h3 class="heading carousel-label">O QUE ESTAMOS PREPARANDO</h3>
@@ -492,17 +474,17 @@
       <h2 class="heading">COMO FUNCIONA</h2>
       <div class="steps">
         <div class="step">
-          <div class="step-num">1</div>
+          <div class="step-num">1°</div>
           <h4>Você escolhe seu pão</h4>
           <p>Pães de fermentação natural pra todo dia ou pra ocasiões especiais. Pode trocar toda semana se quiser.</p>
         </div>
         <div class="step">
-          <div class="step-num">2</div>
+          <div class="step-num">2°</div>
           <h4>A gente assa sob medida</h4>
           <p>Só assamos o que foi pedido. Fermentação longa, sem pressa.</p>
         </div>
         <div class="step">
-          <div class="step-num">3</div>
+          <div class="step-num">3°</div>
           <h4>Entrega toda semana</h4>
           <p>Fresquinho na sua porta. Niterói e Rio de Janeiro.</p>
         </div>
