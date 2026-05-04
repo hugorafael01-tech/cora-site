@@ -144,8 +144,11 @@
     .carousel-label {
       font-size: 22px;
       margin-top: 56px;
-      margin-bottom: 24px;
       padding: 0 24px;
+    }
+
+    .carousel-intro {
+      margin-bottom: 24px;
     }
 
     .carousel-wrapper {
@@ -294,6 +297,10 @@
       flex-wrap: wrap;
     }
 
+    .cta-final--reverse .cta-copy {
+      order: -1;
+    }
+
     .cta-copy {
       flex: 1 1 300px;
       background-color: var(--warm-100);
@@ -380,6 +387,8 @@
       .carousel-nav { padding-left: 170px; }
       .how { padding-left: 170px; padding-right: 170px; }
       .cta-copy { padding-left: 170px; }
+      .cta-copy.quem-faz-copy { padding-left: 32px; }
+      .cta-final--reverse .cta-copy { order: 0; }
       .hero-tagline { font-size: 42pt; }
       .copy-row h2 { font-size: 42px; }
       .steps { flex-wrap: nowrap; }
@@ -408,7 +417,7 @@
     </div>
 
     <h3 class="heading carousel-label">O QUE SAI DO FORNO</h3>
-    <div class="copy-row"><p>Sua assinatura começa pelo Original ou Integral. Os outros aparecem em semanas especiais.</p></div>
+    <div class="copy-row carousel-intro"><p>Sua assinatura começa pelo Original ou Integral. Os outros aparecem em semanas especiais.</p></div>
 
     <div class="carousel-wrapper">
       <div class="carousel" id="carousel">
@@ -503,11 +512,11 @@
 
 
   <!-- ═══ QUEM FAZ ═══ -->
-  <section class="cta-final">
+  <section class="cta-final cta-final--reverse">
     <div class="cta-photo">
       <img src="images/_Hugo-no-curso.png" alt="Hugo, padeiro da Cora" loading="lazy">
     </div>
-    <div class="cta-copy">
+    <div class="cta-copy quem-faz-copy">
       <h2 class="heading">QUEM FAZ</h2>
       <p>A Cora é feita pelo Hugo, em Niterói. Designer de formação e padeiro por paixão. Em 2015, ganhei um levain de um confeiteiro pai de um grande amigo. Quase 10 anos depois, é ele que fermenta cada pão.</p>
     </div>
