@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cora — Padaria por Assinatura</title>
-  <meta name="description" content="Vem aí a Cora. Pão de fermentação natural, toda semana na sua porta. Padaria por assinatura em Niterói e Rio de Janeiro.">
+  <meta name="description" content="O pão da sua mesa, toda semana. Padaria por assinatura com fermentação natural, em Niterói e Rio de Janeiro.">
   <meta name="theme-color" content="#2E55CD">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Cora — Padaria por Assinatura">
-  <meta property="og:description" content="Pão de fermentação natural, feito sob medida, entregue toda semana na sua porta. Niterói e Rio de Janeiro.">
+  <meta property="og:description" content="Fermentação longa e levain ancestral. Tempo como ingrediente principal. Padaria por assinatura em Niterói e Rio.">
   <meta property="og:image" content="images/_original.jpg">
   <meta property="og:locale" content="pt_BR">
 
@@ -129,7 +129,7 @@
     }
 
     .copy-row h2 {
-      font-size: 30px;
+      font-size: 32px;
       line-height: 1.1;
       margin-bottom: 8px;
     }
@@ -144,8 +144,11 @@
     .carousel-label {
       font-size: 22px;
       margin-top: 56px;
-      margin-bottom: 24px;
       padding: 0 24px;
+    }
+
+    .carousel-intro {
+      margin-bottom: 24px;
     }
 
     .carousel-wrapper {
@@ -294,6 +297,10 @@
       flex-wrap: wrap;
     }
 
+    .cta-final--reverse .cta-copy {
+      order: -1;
+    }
+
     .cta-copy {
       flex: 1 1 300px;
       background-color: var(--warm-100);
@@ -380,8 +387,10 @@
       .carousel-nav { padding-left: 170px; }
       .how { padding-left: 170px; padding-right: 170px; }
       .cta-copy { padding-left: 170px; }
+      .cta-copy.quem-faz-copy { padding-left: 32px; padding-right: 170px; }
+      .cta-final--reverse .cta-copy { order: 0; }
       .hero-tagline { font-size: 42pt; }
-      .copy-row h2 { font-size: 36px; }
+      .copy-row h2 { font-size: 42px; }
       .steps { flex-wrap: nowrap; }
       .cta-copy h2 { font-size: 42px; }
     }
@@ -402,11 +411,13 @@
   <!-- ═══ DOBRA 2 — COPY + CARROSSEL ═══ -->
   <section class="copy-section">
     <div class="copy-row">
-      <h2 class="heading">VEM AÍ UMA PADARIA QUE RESPEITA O TEMPO</h2>
-      <p>Pão de fermentação natural, entregue toda semana na sua porta. Sem loja. Sem pressa. Sem sobra.</p>
+      <h2 class="heading">O PÃO DA SUA MESA, TODA SEMANA</h2>
+      <p>Fermentação longa e levain ancestral. Tempo como ingrediente principal.</p>
+      <p>Niterói e Rio de Janeiro.</p>
     </div>
 
-    <h3 class="heading carousel-label">O QUE ESTAMOS PREPARANDO</h3>
+    <h3 class="heading carousel-label">O QUE SAI DO FORNO</h3>
+    <div class="copy-row carousel-intro"><p>Sua assinatura começa pelo Original ou Integral. Os outros aparecem em semanas especiais.</p></div>
 
     <div class="carousel-wrapper">
       <div class="carousel" id="carousel">
@@ -469,18 +480,18 @@
       <div class="steps">
         <div class="step">
           <div class="step-num">1°</div>
-          <h4>Você escolhe seu pão</h4>
-          <p>Pães de fermentação natural pra todo dia ou pra ocasiões especiais. Pode trocar toda semana se quiser.</p>
+          <h4>Você escolhe</h4>
+          <p>1 a 3 pães por semana, Original ou Integral. Pra todo dia ou pra ocasiões especiais. Pode mudar quando quiser.</p>
         </div>
         <div class="step">
           <div class="step-num">2°</div>
           <h4>A gente assa sob medida</h4>
-          <p>Só assamos o que foi pedido. Fermentação longa, sem pressa.</p>
+          <p>Só assamos o que foi pedido. Fermentação longa, sem pressa, sem desperdício.</p>
         </div>
         <div class="step">
           <div class="step-num">3°</div>
-          <h4>Entrega toda semana</h4>
-          <p>Fresquinho na sua porta. Niterói e Rio de Janeiro.</p>
+          <h4>Chega fresco na sua porta</h4>
+          <p>Toda semana. Niterói e Rio de Janeiro.</p>
         </div>
       </div>
     </div>
@@ -492,10 +503,23 @@
     <div class="cta-copy">
       <h2 class="heading">QUERO SER UM DOS PRIMEIROS</h2>
       <p>A Cora começa a entregar em breve. Deixa seu contato e você fica sabendo primeiro.</p>
-      <a href="https://app.acora.com.br/interesse" class="btn-filled">Tenho interesse</a>
+      <a href="https://app.acora.com.br/interesse" class="btn-filled">Reservar minha vaga</a>
     </div>
     <div class="cta-photo">
       <img src="images/_CTA_Final.jpg" alt="Pão artesanal Cora" loading="lazy">
+    </div>
+  </section>
+
+
+  <!-- ═══ QUEM FAZ ═══ -->
+  <section class="cta-final cta-final--reverse">
+    <div class="cta-photo">
+      <img src="images/_Hugo-no-curso.png" alt="Hugo, padeiro da Cora" loading="lazy">
+    </div>
+    <div class="cta-copy quem-faz-copy">
+      <h2 class="heading">QUEM FAZ</h2>
+      <p>A Cora começou com um levain. Em 2015, o pai de um amigo, confeiteiro de mão cheia, me deu de presente. Quase 10 anos depois, ele continua vivo. É de lá que vem o pão de toda semana.</p>
+      <p><em>— Hugo, padeiro apaixonado</em></p>
     </div>
   </section>
 
