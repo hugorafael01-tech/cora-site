@@ -1,1 +1,9 @@
 .DS_Store
+
+# Este repo e PUBLICO: tudo que entra aqui fica acessivel em
+# acora.com.br/<caminho> e no GitHub, sem autenticacao.
+# Nunca versionar documento com dado de assinante.
+extratos/
+extrato_*
+*.csv
+assinantes*
