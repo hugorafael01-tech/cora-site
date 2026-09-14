@@ -1,12 +1,12 @@
 # Política de Privacidade
 
-**Cora · Versão 1.1 · 12/09/2026 · documento em revisão jurídica**
+**Cora · Versão 1.2 · 14/09/2026 · documento em revisão jurídica**
 
 ## 1. Quem trata os seus dados
 
 **Controladora:** 66.701.743 HUGO RAFAEL PEREIRA ELETERIO (nome fantasia **Cora**), CNPJ 66.701.743/0001-05, Travessa Ari Pinto Lima, 41A, Fonseca, Niterói/RJ, CEP 24120-180.
 
-**Encarregado pelo tratamento de dados (LGPD, art. 41):** Hugo Rafael Pereira Eleterio · hugo@acora.com.br.
+**Encarregado pelo tratamento de dados (LGPD, art. 41):** a Cora, pelo e-mail privacidade@acora.com.br.
 
 Esta Política se aplica ao portal **app.acora.com.br**, ao site **acora.com.br**, ao WhatsApp da Cora e a toda a relação de assinatura. Ela complementa os Termos de Uso.
 
