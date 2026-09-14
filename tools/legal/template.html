@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="theme-color" content="#2E55CD">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:image" content="https://www.acora.com.br/images/_original.jpg">
+  <meta property="og:image:alt" content="Pão de fermentação natural Cora">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://www.acora.com.br/{{PAGE}}">
+  <meta property="og:site_name" content="Cora">
+
+  <link rel="canonical" href="https://www.acora.com.br/{{PAGE}}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Montagu+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-50: #EBEEFB;
+      --brand-500: #2E55CD;
+      --brand-600: #2545A8;
+      --brand-700: #1D3787;
+      --warm-50: #FAFAF8;
+      --warm-100: #F5F4F0;
+      --warm-200: #E8E6E1;
+      --warm-400: #A8A49C;
+      --warm-500: #7A766E;
+      --warm-600: #5C5850;
+      --warm-700: #3D3A34;
+      --warm-800: #2A2723;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+    body {
+      background-color: var(--warm-50);
+      color: var(--warm-700);
+      font-family: 'Montagu Slab', Georgia, Palatino, serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--brand-500); text-underline-offset: 2px; }
+    a:hover { color: var(--brand-700); }
+    strong { font-weight: 600; color: var(--warm-800); }
+
+    .heading {
+      font-family: 'League Gothic', Impact, 'Arial Narrow', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+      line-height: 1.05;
+      color: var(--brand-500);
+    }
+
+    /* ═══ TOPO ═══ */
+    .doc-top {
+      padding: 20px 20px 0;
+    }
+
+    .doc-top img {
+      height: 44px;
+      display: block;
+    }
+
+    /* ═══ DOCUMENTO ═══ */
+    .doc {
+      max-width: 40rem;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+
+    .doc > h1 {
+      font-size: 56px;
+      margin-bottom: 12px;
+    }
+
+    .doc-meta {
+      font-size: 14px;
+      color: var(--warm-500);
+      line-height: 1.6;
+    }
+
+    .doc-status {
+      display: inline-block;
+      font-weight: 600;
+      color: var(--brand-700);
+      background: var(--brand-50);
+      padding: 0 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    /* Sumário */
+    .toc {
+      margin: 32px 0 8px;
+      padding: 20px 20px 16px;
+      background: var(--warm-100);
+      border-radius: 12px;
+    }
+
+    .toc h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .toc ol { list-style: none; }
+
+    .toc li { line-height: 1.4; }
+
+    .toc a {
+      display: flex;
+      gap: 6px;
+      padding: 5px 0;
+      font-size: 15px;
+      color: var(--warm-700);
+      text-decoration: none;
+    }
+
+    .toc a:hover { color: var(--brand-500); text-decoration: underline; }
+
+    .toc-num {
+      flex: 0 0 1.6em;
+      color: var(--brand-500);
+      font-weight: 600;
+    }
+
+    .toc-annex {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--warm-200);
+    }
+
+    .toc-annex > a { font-weight: 600; color: var(--brand-500); }
+
+    .toc-sub {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    /* Seções e cláusulas */
+    [id] { scroll-margin-top: 24px; }
+
+    .doc-section,
+    .annex-section {
+      margin-top: 48px;
+    }
+
+    .doc-section > h2 {
+      font-size: 34px;
+      margin-bottom: 16px;
+      padding-top: 24px;
+      border-top: 1px solid var(--warm-200);
+    }
+
+    .sec-num {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .doc p,
+    .doc ul,
+    .table-wrap,
+    .note {
+      margin-bottom: 16px;
+    }
+
+    .doc ul { padding-left: 1.25em; }
+    .doc li { margin-bottom: 6px; }
+    .doc li::marker { color: var(--brand-500); }
+
+    .clause {
+      position: relative;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      transition: background-color 400ms ease-out, box-shadow 400ms ease-out;
+    }
+
+    .clause > :last-child { margin-bottom: 0; }
+
+    .clause-num {
+      font-weight: 700;
+      color: var(--brand-500);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .clause-num:hover { text-decoration: underline; }
+
+    .clause:target {
+      background-color: var(--brand-50);
+      box-shadow: 0 0 0 12px var(--brand-50);
+    }
+
+    /* Anexo */
+    .annex {
+      margin-top: 72px;
+      padding-top: 32px;
+      border-top: 4px solid var(--brand-500);
+    }
+
+    .annex-title {
+      font-size: 44px;
+      margin-bottom: 8px;
+    }
+
+    .annex > .doc-meta { margin-bottom: 20px; }
+
+    .annex-section { margin-top: 36px; }
+
+    .annex-section > h3 {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .note {
+      padding: 12px 16px;
+      background: var(--warm-100);
+      border-left: 3px solid var(--brand-500);
+      border-radius: 0 8px 8px 0;
+      font-size: 15px;
+    }
+
+    .note p { margin: 0; }
+
+    /* Tabelas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--warm-200);
+    }
+
+    th {
+      font-weight: 600;
+      color: var(--warm-800);
+      background: var(--warm-100);
+    }
+
+    /* Celular: cada linha vira um bloco com rótulo */
+    @media (max-width: 599px) {
+      table, thead, tbody, tr, td { display: block; }
+      thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+      tr {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--warm-200);
+      }
+      tr:first-child { border-top: 1px solid var(--warm-200); }
+      td { padding: 2px 0; border: 0; }
+      td::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 12px;
+        letter-spacing: 0.02em;
+        color: var(--warm-500);
+      }
+      td:first-child { font-weight: 600; color: var(--warm-800); }
+      td:first-child::before { display: none; }
+    }
+
+    /* Voltar ao sumário */
+    .to-toc {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--brand-500);
+      background: #fff;
+      border: 1px solid var(--warm-200);
+      border-radius: 999px;
+      box-shadow: 0 2px 8px rgba(42, 39, 35, 0.08);
+      text-decoration: none;
+      transition: opacity 200ms ease-out;
+    }
+
+    .to-toc.is-hidden { opacity: 0; pointer-events: none; }
+
+    /* ═══ RODAPÉ ═══ */
+    footer {
+      text-align: center;
+      padding: 32px 20px 0;
+      border-top: 1px solid var(--warm-200);
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--warm-500);
+      line-height: 1.8;
+    }
+
+    footer p + p { margin-top: 8px; }
+
+    footer a { text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-band {
+      margin: 32px -20px 0;
+      height: 48px;
+      background-color: var(--warm-100);
+      background-image: url('/images/grafismo_coracao.svg');
+      background-size: 48px 48px;
+      background-repeat: repeat;
+    }
+
+    /* ═══ DESKTOP ═══ */
+    @media (min-width: 768px) {
+      body { font-size: 17px; }
+      .doc-top { padding: 28px 40px 0; }
+      .doc { padding-top: 56px; }
+      .doc > h1 { font-size: 72px; }
+      .doc-section > h2 { font-size: 40px; }
+      .annex-title { font-size: 52px; }
+      .toc { padding: 24px 28px 20px; }
+      .toc-sub { grid-template-columns: 1fr 1fr; column-gap: 24px; }
+    }
+
+    /* Tela larga: número da cláusula pendurado na margem */
+    @media (min-width: 960px) {
+      .clause { padding-left: 0; }
+      .clause-num {
+        position: absolute;
+        left: -5rem;
+        width: 4.25rem;
+        text-align: right;
+      }
+    }
+
+    @media print {
+      .doc-top, .to-toc, .footer-band { display: none; }
+      body { background: #fff; color: #000; font-size: 11pt; }
+      .doc { max-width: none; padding: 0; }
+      .toc { background: none; padding: 0; }
+      .doc-section, .annex-section { break-inside: auto; }
+      .clause { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+<!--
+  ARQUIVO GERADO. Não editar à mão: o texto vem de
+  tools/legal/conteudo-*.md, o layout de tools/legal/template.html.
+  Gerar: python3 tools/legal/build.py
+  Conferir: python3 tools/legal/check.py
+
+  TEXTO LEGAL DUPLICADO. A fonte de verdade editorial é o Notion
+  (Cora / Jurídico — Termos e Política). Qualquer mudança no texto
+  toca os dois no mesmo dia, com a data de versão atualizada no
+  topo e no rodapé. Divergência de data = o site está mentindo
+  sobre o contrato vigente.
+  Os ids das cláusulas (#6.7, #anexo-i-f) são citados em e-mails e
+  conversas: não renomear.
+-->
+
+  <header class="doc-top">
+    <a href="/" aria-label="Cora — página inicial"><img src="/images/cora_logo_cor.svg" alt="Cora" width="158" height="44"></a>
+  </header>
+
+  <main class="doc">
+    <h1 class="heading">{{H1}}</h1>
+    <p class="doc-meta">{{META}}</p>
+
+    <nav class="toc" id="sumario" aria-labelledby="sumario-titulo">
+      <h2 class="heading" id="sumario-titulo">Sumário</h2>
+      <ol>
+{{TOC}}
+      </ol>
+    </nav>
+
+{{BODY}}
+  </main>
+
+  <a href="#sumario" class="to-toc" id="to-toc">↑ Sumário</a>
+
+  <footer>
+    <p>{{FOOTER_META}}</p>
+    <p>
+      <a href="{{OTHER_HREF}}">{{OTHER_LABEL}}</a> ·
+      <a href="/">acora.com.br</a> ·
+      <a href="https://instagram.com/cora.padaria" target="_blank" rel="noopener noreferrer">@cora.padaria</a>
+    </p>
+    <div class="footer-band"></div>
+  </footer>
+
+  <script>
+    var toc = document.getElementById('sumario');
+    var toTop = document.getElementById('to-toc');
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        toTop.classList.toggle('is-hidden', entries[0].isIntersecting || entries[0].boundingClientRect.top > 0);
+      }).observe(toc);
+    }
+  </script>
+
+</body>
+</html>
