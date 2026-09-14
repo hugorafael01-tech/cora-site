@@ -18,4 +18,6 @@ O texto de `termos.html` e `privacidade.html` também existe no Notion, em *Cora
 
 **O markdown é a fonte; o HTML só acrescenta navegação.** O texto publicado é idêntico, palavra por palavra, ao markdown revisado. O HTML acrescenta apenas sumário, âncoras e links sobre palavras que já existem no texto ("cláusula 6.9" → `#6.9`, "Anexo I", "Política de Privacidade", e-mails, `app.acora.com.br`). Nenhuma palavra muda. Uma versão revisada (por exemplo, a devolvida pelo advogado) entra pelo markdown e o HTML é gerado de novo a partir dele. Não se edita o texto legal direto no HTML.
 
+**Como atualizar:** edite `tools/legal/conteudo-termos.md` ou `conteudo-privacidade.md` e rode, na raiz do repo, `python3 tools/legal/build.py && python3 tools/legal/check.py`. Só Python 3, sem dependência. O `check.py` falha se o HTML não bater com o markdown palavra por palavra, se alguém editou o HTML à mão ou se sumiu um `id` que existia no último commit. A pasta `tools/` fica fora do deploy (`.vercelignore`).
+
 Os `id` de cláusula (`/termos#6.7`, `/termos#6.9-A`, `/termos#anexo-i-f`) e de seção (`/privacidade#4`) são citados em e-mails e conversas. Não renomear nem renumerar sem avisar quem já citou.
