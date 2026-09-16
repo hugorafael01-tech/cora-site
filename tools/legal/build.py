@@ -5,8 +5,8 @@ Uso (na raiz do repo):  python3 tools/legal/build.py
 
 Só Python 3 padrão, sem dependência. Suporta apenas o subconjunto de markdown
 usado nos documentos legais: # e ## títulos, **negrito**, listas "- ",
-tabelas, citação "> ", parágrafos e parágrafos de cláusula que começam com
-**N.N.** (viram <div id="N.N">).
+tabelas, citação "> ", separador "---", parágrafos e parágrafos de cláusula
+que começam com **N.N.** (viram <div id="N.N">).
 
 O texto sai idêntico ao markdown. O HTML só acrescenta navegação: sumário,
 âncoras e links sobre palavras que já existem no texto (make_linker).
@@ -19,13 +19,11 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parent.parent
 
-STATUS = "documento em revisão jurídica"
-
 PAGES = {
     "termos": {
         "md": "conteudo-termos.md",
         "title": "Termos de Uso — Cora",
-        "description": "Termos de Uso da assinatura de pães de fermentação natural da Cora, com o Anexo I: preços, cobrança, entrega, pausa e cancelamento. {versao}, em revisão jurídica.",
+        "description": "Termos de Uso da assinatura de pães de fermentação natural da Cora, com o Anexo I: preços, cobrança, entrega, pausa e cancelamento. {versao}, após revisão jurídica.",
         "other": ("/privacidade", "Política de Privacidade"),
     },
     "privacidade": {
@@ -214,6 +212,14 @@ def convert(md, page):
             out.append("</ul>")
             continue
 
+        if line.strip() == "---":
+            # Separador: fecha a cláusula aberta para o que vem depois não ser
+            # lido como parte dela (o fecho de contato, no fim dos Termos).
+            close("clause")
+            out.append("<hr>")
+            i += 1
+            continue
+
         if line.startswith("> "):
             out.append(f'<blockquote class="note"><p>{inline(line[2:].strip(), linker)}</p></blockquote>')
             i += 1
@@ -257,12 +263,15 @@ def render(page):
     template = (HERE / "template.html").read_text(encoding="utf-8")
     title, meta, annex_meta, toc, body = convert(md, page)
 
-    # meta: "Cora · Versão 1.2 · 12/09/2026 · documento em revisão jurídica"
-    assert meta.endswith(STATUS), f"linha de versão sem '{STATUS}': {meta}"
+    # meta: "Cora · Versão 1.3 · 15/09/2026 · após revisão jurídica"
+    # O status é o último campo e sai do próprio markdown: cada documento tem o
+    # seu, porque a Política pode seguir em revisão enquanto os Termos já
+    # voltaram do advogado.
+    status = meta.rsplit(" · ", 1)[1]
     versao = re.search(r"Versão [\d.]+", meta).group(0)
-    meta_html = html.escape(meta[: -len(STATUS)]) + f'<span class="doc-status">{STATUS}</span>'
+    meta_html = html.escape(meta[: -len(status)]) + f'<span class="doc-status">{status}</span>'
     footer_meta = html.escape(title + " · " + meta.split(" · ", 1)[1])
-    footer_meta = footer_meta.replace(STATUS, f'<span class="doc-status">{STATUS}</span>')
+    footer_meta = footer_meta.replace(status, f'<span class="doc-status">{status}</span>')
     if annex_meta:
         footer_meta += "<br>Anexo I · " + html.escape(annex_meta)
 
