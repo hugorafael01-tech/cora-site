@@ -8,8 +8,9 @@ Sai com código 1 se qualquer conferência falhar:
    esqueceu de gerar depois de mudar o markdown);
 2. texto do HTML idêntico ao markdown, palavra por palavra;
 3. mesma quantidade de trechos em negrito;
-4. nenhum id de cláusula ou seção que existia no último commit sumiu
-   (ids são citados em e-mails; sumir um id quebra link já enviado).
+4. nenhum id de cláusula ou seção que existia no último commit sumiu, salvo os
+   declarados em IDS_REMOVIDOS (ids são citados em e-mails; sumir um id quebra
+   link já enviado).
 """
 import difflib
 import html
@@ -24,6 +25,26 @@ import build  # noqa: E402
 
 CLAUSE_MD_RE = re.compile(r"^\*\*\d+\.\d+(?:-[A-Z])?\.\*\*", re.M)
 
+# Ids que sumiram de propósito, e em qual versão. A renumeração da revisão
+# jurídica empurra cláusulas inteiras, e não se cria redirect de âncora: um
+# documento legal não finge que um número é outro. Quem tiver link antigo
+# reabre pelo sumário. Declarar aqui é a decisão consciente que o item 4 exige;
+# o que não estiver na lista continua sendo erro. Esvaziar na versão seguinte.
+IDS_REMOVIDOS = {
+    # v1.3 (15/09/2026): renumeração das seções 6, 7 e 14. Só um id deixou de
+    # existir: 6.9-A (Cartão recusado) virou 6.10-A. Os demais números foram
+    # reaproveitados com outro conteúdo, o que este check não detecta — ver
+    # NOTA abaixo.
+    "termos.html": {"6.9-A"},
+}
+
+
+# NOTA: este check compara existência de id, não o conteúdo por trás dele. Numa
+# renumeração o id sobrevive apontando para outra cláusula — na v1.3, "6.9" saiu
+# de "Atraso no pagamento" para "Sem multa e sem juros" — e isso passa em
+# silêncio. É limite conhecido: quem revisa a renumeração confere o de-para de
+# conteúdo à mão; a lista acima só cobre o id que sumiu de vez.
+
 
 def html_words(page_html):
     main = page_html[page_html.index("<main"):page_html.index("</main>")]
@@ -34,6 +55,7 @@ def html_words(page_html):
 
 def md_words(md):
     md = re.sub(r"^\|[-|]+\|$", "", md, flags=re.M)
+    md = re.sub(r"^---$", "", md, flags=re.M)  # separador: não é palavra
     md = re.sub(r"^(#+ |- |> )", "", md, flags=re.M)
     return md.replace("**", "").replace("|", " ").split()
 
@@ -73,7 +95,7 @@ def check(page):
 
     old_ids = ids_no_ultimo_commit(name)
     if old_ids:
-        gone = sorted(old_ids - ids(current))
+        gone = sorted(old_ids - ids(current) - IDS_REMOVIDOS.get(name, set()))
         if gone:
             problems.append("ids que existiam no último commit e sumiram: " + ", ".join(gone))
 
