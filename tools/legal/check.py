@@ -31,11 +31,13 @@ CLAUSE_MD_RE = re.compile(r"^\*\*\d+\.\d+(?:-[A-Z])?\.\*\*", re.M)
 # reabre pelo sumário. Declarar aqui é a decisão consciente que o item 4 exige;
 # o que não estiver na lista continua sendo erro. Esvaziar na versão seguinte.
 IDS_REMOVIDOS = {
-    # v1.3 (15/09/2026): renumeração das seções 6, 7 e 14. Só um id deixou de
-    # existir: 6.9-A (Cartão recusado) virou 6.10-A. Os demais números foram
-    # reaproveitados com outro conteúdo, o que este check não detecta — ver
-    # NOTA abaixo.
-    "termos.html": {"6.9-A"},
+    # v1.4 (17/09/2026): Venda avulsa virou a seção 7 e empurrou 7-14 para
+    # 8-15. A seção 14 encolheu de Disposições gerais (14.1-14.7) para
+    # Alterações (14.1-14.3), então 14.4 a 14.7 deixaram de existir — o texto
+    # delas está em 15.4-15.7. Os demais números foram reaproveitados com
+    # outro conteúdo, o que este check não detecta — ver NOTA abaixo.
+    # (A entrada da v1.3, 6.9-A, saiu: já não está no último commit.)
+    "termos.html": {"14.4", "14.5", "14.6", "14.7"},
 }
 
 
