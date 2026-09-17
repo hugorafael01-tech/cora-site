@@ -1,6 +1,6 @@
 # Termos de Uso
 
-**Cora · Versão 1.4 · 17/09/2026 · após revisão jurídica**
+**Cora · Versão 1.5 · 17/09/2026 · após revisão jurídica**
 
 ## 1. Quem somos e do que trata este documento
 
@@ -58,7 +58,7 @@
 **4.4.** **Mudança de quantidade de pães.**
 
 - **Aumento:** vale a partir da entrega seguinte ao pedido. No mês corrente você paga a diferença proporcional às semanas restantes; a partir da renovação, o valor cheio do novo plano.
-- **Redução:** vale a partir da renovação seguinte. **Até o fim do mês já pago, você continua pagando e recebendo o que contratou.** Não há devolução da diferença.
+- **Redução:** passa a valer a partir da renovação mensal seguinte. Até o fim do mês já pago, você continua recebendo a quantidade anteriormente contratada (pré-paga). Não há estorno ou devolução de valores do mês em curso.
 
 **4.5.** **Extras.** Produtos do Cardápio podem ser adicionados à Cesta da Semana até o Corte e são cobrados por unidade, somente se entregues (cláusula 6.3). Produtos rotativos só entram em produção quando atingem o número mínimo de pedidos indicado no Anexo I; se não atingirem, você é avisado e nada é cobrado por eles.
 
@@ -130,7 +130,7 @@
 
 **7.6.** Não há direito a pausa, troca de produto após o Corte da oferta, nem reposição por ausência no endereço, nas condições da cláusula 8.4.
 
-**7.7.** **Direito de arrependimento (CDC, art. 49).** Você pode desistir da compra em até 7 dias corridos contados da confirmação do pagamento, sem precisar justificar. **A devolução é integral enquanto o produto não tiver sido produzido**, e é feita pelo mesmo meio de pagamento em até 10 dias úteis. **Produto já produzido ou entregue não é devolvido nem reembolsado**, por se tratar de alimento perecível feito sob medida — o que não afasta o direito à reposição ou ao crédito em caso de problema com o produto (cláusula 8.7).
+**7.7.** **Direito de arrependimento (CDC, art. 49).** Você pode desistir da compra em até 7 dias corridos contados da confirmação do pagamento, sem precisar justificar. Caso o direito seja exercido dentro do prazo legal, mas após a entrega, **o valor do reembolso sofrerá a dedução proporcional exclusivamente dos produtos entregues**. Por serem perecíveis e produzidos sob demanda, **os pães entregues não poderão ser devolvidos**, a não ser quando constatado vício do produto (cláusula 8.7). O reembolso é feito pelo mesmo meio de pagamento, em até 10 dias úteis.
 
 ## 8. Entrega
 
@@ -140,7 +140,7 @@
 
 **8.3.** As entregas serão feitas por entregador contratado pela Cora, no endereço cadastrado. **A entrega na portaria ou recepção do prédio, quando existente, é considerada entrega concluída.**
 
-**8.4.** **Ausência no endereço.** Se não houver ninguém para receber, nem portaria, o entregador faz **uma segunda tentativa ao fim da rota do dia**. Se a segunda tentativa também for frustrada, o produto retorna à Cora e **não há crédito nem reposição**, porque a assinatura é pré-paga e a produção daquela semana foi feita sob medida. A Cora avisa você pelo WhatsApp em ambas as tentativas.
+**8.4.** **Ausência no endereço.** Se não houver ninguém para receber, nem portaria, o entregador faz **uma segunda tentativa ao fim da rota do dia**. Se a segunda tentativa também for frustrada, o produto retornará à Cora. Por se tratar de alimento perecível e produzido sob encomenda, **o não recebimento por responsabilidade exclusiva do Assinante não conferirá direito a reembolso, crédito ou reposição da fornada**, uma vez que os custos produtivos e logísticos já foram integralmente suportados pela Cora. A Cora avisa você pelo WhatsApp em ambas as tentativas.
 
 **8.5.** **Mudança de endereço.** Informe pelo Portal ou WhatsApp até o Corte da semana. Endereço fora da área de cobertura suspende as entregas e, se a nova área não for atendida, permite o cancelamento sem ônus com devolução proporcional das semanas não entregues.
 
@@ -169,7 +169,7 @@
 
 **10.2.** O cancelamento vale ao fim do mês já pago: **você continua recebendo as entregas até a última data do mês contratado** e não recebe nova cobrança. A Cora não devolve valores de mês já contratado nem de Extras já entregues.
 
-**10.3.** **Direito de arrependimento (CDC, art. 49).** Como a contratação é feita pela internet, você pode desistir da assinatura **em até 7 dias corridos contados da confirmação do pagamento da primeira cobrança**, sem precisar justificar. **A devolução é integral quanto ao que ainda não tiver sido produzido e entregue**, e é feita pelo mesmo meio de pagamento em até 10 dias úteis. **Pão já entregue não é devolvido nem reembolsado**, por se tratar de alimento perecível produzido sob medida — o que não afasta o direito à reposição ou ao crédito em caso de problema com o produto (cláusula 8.7).
+**10.3.** **Direito de arrependimento (CDC, art. 49).** Como a contratação é feita pela internet, você pode desistir da assinatura **em até 7 dias corridos contados da confirmação do pagamento da primeira cobrança**, sem precisar justificar. Caso o direito seja exercido dentro do prazo legal, mas após a realização de alguma entrega, **o valor do reembolso sofrerá a dedução proporcional exclusivamente dos produtos entregues**. Por serem perecíveis e produzidos sob demanda, **os pães entregues não poderão ser devolvidos**, a não ser quando constatado vício do produto (cláusula 8.7). O reembolso é feito pelo mesmo meio de pagamento, em até 10 dias úteis.
 
 **10.4.** Depois do cancelamento, o meio de pagamento é desvinculado e seus dados são tratados conforme a Política de Privacidade. Você pode voltar a assinar quando quiser, sujeito à disponibilidade de vaga.
 
