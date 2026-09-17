@@ -31,7 +31,7 @@ CLAUSE_MD_RE = re.compile(r"^\*\*\d+\.\d+(?:-[A-Z])?\.\*\*", re.M)
 # reabre pelo sumário. Declarar aqui é a decisão consciente que o item 4 exige;
 # o que não estiver na lista continua sendo erro. Esvaziar na versão seguinte.
 IDS_REMOVIDOS = {
-    # v1.4 (17/09/2026): Venda avulsa virou a seção 7 e empurrou 7-14 para
+    # v1.5 (17/09/2026): Venda avulsa virou a seção 7 e empurrou 7-14 para
     # 8-15. A seção 14 encolheu de Disposições gerais (14.1-14.7) para
     # Alterações (14.1-14.3), então 14.4 a 14.7 deixaram de existir — o texto
     # delas está em 15.4-15.7. Os demais números foram reaproveitados com
