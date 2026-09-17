@@ -1,6 +1,6 @@
 # Política de Privacidade
 
-**Cora · Versão 1.3 · 15/09/2026 · após revisão jurídica**
+**Cora · Versão 1.3 · 17/09/2026 · após revisão jurídica**
 
 Prezado usuário,
 

@@ -1,6 +1,6 @@
 # Termos de Uso
 
-**Cora · Versão 1.4 · 15/09/2026 · após revisão jurídica**
+**Cora · Versão 1.4 · 17/09/2026 · após revisão jurídica**
 
 ## 1. Quem somos e do que trata este documento
 
@@ -237,7 +237,6 @@ A lista de ingredientes e alergênicos atualizada de cada produto está no Porta
 **15.6.** A tolerância, omissão ou não exercício, por parte da Cora, por qualquer motivo, dos direitos a ela conferidos por estes Termos e Condições não implicará desistência, renúncia ou novação de quaisquer outros direitos subsequentes, exercitáveis em função de inadimplemento ou infração contratual do Assinante.
 
 **15.7.** Em caso de conflito entre estes Termos, o **Anexo I** e a Política de Privacidade, prevalecerá a regra mais protetiva para o Assinante.
-
 
 ---
 
