@@ -1,6 +1,6 @@
 # Termos de Uso
 
-**Cora · Versão 1.3 · 15/09/2026 · após revisão jurídica**
+**Cora · Versão 1.4 · 15/09/2026 · após revisão jurídica**
 
 ## 1. Quem somos e do que trata este documento
 
@@ -25,7 +25,7 @@
 - **Extras:** produtos do Cardápio pedidos pontualmente para uma semana, cobrados por unidade além da mensalidade.
 - **Corte:** o prazo, divulgado no Portal, até o qual você pode alterar a Cesta da Semana. Depois do Corte, a produção da semana considera-se encerrada.
 - **Ciclo de leitura:** o período usado para apurar os Extras eventualmente entregues, conforme definido no Anexo I.
-- **Venda avulsa:** compra pontual de produto, sem assinatura, nas condições da cláusula 15.
+- **Venda avulsa:** compra pontual de produto, sem assinatura, nas condições da cláusula 7.
 - **Portal:** app.acora.com.br.
 
 ## 3. Cadastro e conta
@@ -49,7 +49,7 @@
 
 ## 4. A Assinatura
 
-**4.1.** Pelo presente Contrato, o Assinante adere ao serviço de entrega a domicílio de pães de fermentação natural fabricados pela **Cora** e entregues em favor do Destinatário. A Assinatura é mensal, com renovação automática a cada mês, **sem fidelidade e sem multa de saída**. Você pode cancelar quando quiser, observadas as condições estipuladas na cláusula 9.
+**4.1.** Pelo presente Contrato, o Assinante adere ao serviço de entrega a domicílio de pães de fermentação natural fabricados pela **Cora** e entregues em favor do Destinatário. A Assinatura é mensal, com renovação automática a cada mês, **sem fidelidade e sem multa de saída**. Você pode cancelar quando quiser, observadas as condições estipuladas na cláusula 10.
 
 **4.2.** **Modalidades de Assinatura.** O Assinante poderá escolher de 1 a 3 pães por semana, entre os produtos elegíveis listados no Anexo I, sendo que os preços vigentes de cada plano (1, 2 e 3) constam do Anexo I e do Portal.
 
@@ -81,7 +81,7 @@
 | Mensalidade (pães + frete) | mês corrente | pré-paga |
 | Extras | ciclo de leitura anterior | pós-consumo: só o que foi entregue |
 | Ajuste proporcional | quando houver | aumento de plano no meio do mês (cláusula 4.4) |
-| Créditos | quando houver | falha de entrega não reposta (cláusula 7.6) |
+| Créditos | quando houver | falha de entrega não reposta (cláusula 8.6) |
 
 **6.2.** **Valor variável.** Por causa dos Extras e dos ajustes, **o valor da cobrança pode variar de um mês para outro.** Você recebe da Cora, **pelo menos 3 dias antes do vencimento**, um extrato com o detalhamento do que compõe a cobrança. Nenhum débito em cartão é feito antes do envio desse extrato. Dúvidas ou contestações devem ser enviadas à Cora pelos canais da cláusula 1.5, preferencialmente antes do vencimento; a Cora responde em até 2 dias úteis.
 
@@ -116,54 +116,70 @@
 
 **6.14.** Ao adquirir uma Assinatura, você compreende que esta continuará automaticamente (a menos que você nos notifique que deseja cancelá-la ou pausar as entregas), e nos autoriza a cobrar o valor periódico da assinatura então aplicável, compreendendo Mensalidade e Extras, através do método de pagamento constante de nosso Portal.
 
-## 7. Entrega
+## 7. Venda avulsa
 
-**7.1.** As entregas acontecem no **dia, período e área de cobertura divulgados no Portal** (referência atual no Anexo I). A Cora pode ampliar dias, horários e áreas; mudanças que afetem a sua rota serão comunicadas com antecedência.
+**7.1.** A Cora pode, a seu critério e em semanas específicas, oferecer produtos para **compra avulsa**, sem assinatura. A oferta é **pontual e deliberada pela Cora**, não é contínua e não gera direito a novas ofertas.
 
-**7.2.** O Assinante é responsável por informar corretamente à Cora o endereço para entrega de sua Cesta, bem como manter tais dados sempre atualizados, sob pena de prejudicar as entregas e afetar os prazos previstos no presente Contrato. O atraso e/ou a impossibilidade de entrega por culpa do Assinante não poderão ser imputados à Cora.
+**7.2.** A venda avulsa **não cria vínculo de assinatura**, não tem renovação automática e não dá direito a vaga na assinatura nem a prioridade na lista de espera.
 
-**7.3.** As entregas serão feitas por entregador contratado pela Cora, no endereço cadastrado. **A entrega na portaria ou recepção do prédio, quando existente, é considerada entrega concluída.**
+**7.3.** **Pagamento antecipado.** O produto avulso é pago integralmente antes da produção, por Pix, boleto ou cartão. Sem a confirmação do pagamento até o prazo informado na oferta, o pedido não entra em produção.
 
-**7.4.** **Ausência no endereço.** Se não houver ninguém para receber, nem portaria, o entregador faz **uma segunda tentativa ao fim da rota do dia**. Se a segunda tentativa também for frustrada, o produto retorna à Cora e **não há crédito nem reposição**, porque a assinatura é pré-paga e a produção daquela semana foi feita sob medida. A Cora avisa você pelo WhatsApp em ambas as tentativas.
+**7.4.** **Preço.** O preço do produto avulso é o preço unitário do Cardápio, acrescido do valor de entrega informado na oferta. O valor de entrega da venda avulsa é diferente do frete mensal da Assinatura.
 
-**7.5.** **Mudança de endereço.** Informe pelo Portal ou WhatsApp até o Corte da semana. Endereço fora da área de cobertura suspende as entregas e, se a nova área não for atendida, permite o cancelamento sem ônus com devolução proporcional das semanas não entregues.
+**7.5.** Aplicam-se à venda avulsa, no que couber, as regras de **entrega** (cláusula 8), **produto, alergênicos e conservação** (cláusula 11) e **responsabilidade** (cláusula 13).
 
-**7.6.** **Falha da Cora.** Se uma entrega não acontecer por responsabilidade da Cora (produção, insumo, rota), o padrão é a **reposição em outro dia**, combinada com você. Se a reposição não for possível, o valor proporcional da semana vira **crédito na cobrança seguinte**.
+**7.6.** Não há direito a pausa, troca de produto após o Corte da oferta, nem reposição por ausência no endereço, nas condições da cláusula 8.4.
 
-**7.7.** **Conferência.** Problemas com o produto (avaria, item faltante, troca errada) devem ser informados pelo WhatsApp **em até 24 horas** após a entrega, com foto quando possível, para que a Cora possa efetuar a reposição ou o creditamento.
+**7.7.** **Direito de arrependimento (CDC, art. 49).** Você pode desistir da compra em até 7 dias corridos contados da confirmação do pagamento, sem precisar justificar. **A devolução é integral enquanto o produto não tiver sido produzido**, e é feita pelo mesmo meio de pagamento em até 10 dias úteis. **Produto já produzido ou entregue não é devolvido nem reembolsado**, por se tratar de alimento perecível feito sob medida — o que não afasta o direito à reposição ou ao crédito em caso de problema com o produto (cláusula 8.7).
 
-## 8. Pausa
+## 8. Entrega
 
-**8.1.** Você pode pausar a assinatura a qualquer momento, sem custo e sem precisar justificar.
+**8.1.** As entregas acontecem no **dia, período e área de cobertura divulgados no Portal** (referência atual no Anexo I). A Cora pode ampliar dias, horários e áreas; mudanças que afetem a sua rota serão comunicadas com antecedência.
 
-**8.2.** São duas as modalidades de pausa:
+**8.2.** O Assinante é responsável por informar corretamente à Cora o endereço para entrega de sua Cesta, bem como manter tais dados sempre atualizados, sob pena de prejudicar as entregas e afetar os prazos previstos no presente Contrato. O atraso e/ou a impossibilidade de entrega por culpa do Assinante não poderão ser imputados à Cora.
+
+**8.3.** As entregas serão feitas por entregador contratado pela Cora, no endereço cadastrado. **A entrega na portaria ou recepção do prédio, quando existente, é considerada entrega concluída.**
+
+**8.4.** **Ausência no endereço.** Se não houver ninguém para receber, nem portaria, o entregador faz **uma segunda tentativa ao fim da rota do dia**. Se a segunda tentativa também for frustrada, o produto retorna à Cora e **não há crédito nem reposição**, porque a assinatura é pré-paga e a produção daquela semana foi feita sob medida. A Cora avisa você pelo WhatsApp em ambas as tentativas.
+
+**8.5.** **Mudança de endereço.** Informe pelo Portal ou WhatsApp até o Corte da semana. Endereço fora da área de cobertura suspende as entregas e, se a nova área não for atendida, permite o cancelamento sem ônus com devolução proporcional das semanas não entregues.
+
+**8.6.** **Falha da Cora.** Se uma entrega não acontecer por responsabilidade da Cora (produção, insumo, rota), o padrão é a **reposição em outro dia**, combinada com você. Se a reposição não for possível, o valor proporcional da semana vira **crédito na cobrança seguinte**.
+
+**8.7.** **Conferência.** Problemas com o produto (avaria, item faltante, troca errada) devem ser informados pelo WhatsApp **em até 24 horas** após a entrega, com foto quando possível, para que a Cora possa efetuar a reposição ou o creditamento.
+
+## 9. Pausa
+
+**9.1.** Você pode pausar a assinatura a qualquer momento, sem custo e sem precisar justificar.
+
+**9.2.** São duas as modalidades de pausa:
 
 - **Pausa curta:** até **2 semanas**, renovável **uma vez**, totalizando no máximo 4 semanas.
 - **Pausa longa:** acima de 4 semanas ou por prazo indeterminado. É combinada com a Cora pelo WhatsApp, com a data prevista de retorno.
 
-**8.3.** **Efeito nas entregas e na cobrança.** Como a assinatura é pré-paga, **as entregas do mês já pago continuam normalmente até o fim dele**. A pausa vale a partir da renovação seguinte: durante o período pausado não há cobrança nem entrega. Se a pausa terminar no meio de um mês, a cobrança de retorno é proporcional às entregas restantes. **Não há crédito, devolução nem prorrogação** por semana pausada, em nenhuma das modalidades.
+**9.3.** **Efeito nas entregas e na cobrança.** Como a assinatura é pré-paga, **as entregas do mês já pago continuam normalmente até o fim dele**. A pausa vale a partir da renovação seguinte: durante o período pausado não há cobrança nem entrega. Se a pausa terminar no meio de um mês, a cobrança de retorno é proporcional às entregas restantes. **Não há crédito, devolução nem prorrogação** por semana pausada, em nenhuma das modalidades.
 
-**8.4.** **Retorno garantido.** Na pausa curta, sua vaga fica reservada. Na pausa longa, a Cora pode disponibilizar a sua vaga a outra pessoa durante o período pausado, **mas o seu retorno na data combinada é um direito seu** e a Cora se compromete a acomodá-lo. A retomada vale a partir da entrega seguinte à data de retorno, com a cesta que estava configurada antes da pausa, salvo se você pedir alteração até o Corte.
+**9.4.** **Retorno garantido.** Na pausa curta, sua vaga fica reservada. Na pausa longa, a Cora pode disponibilizar a sua vaga a outra pessoa durante o período pausado, **mas o seu retorno na data combinada é um direito seu** e a Cora se compromete a acomodá-lo. A retomada vale a partir da entrega seguinte à data de retorno, com a cesta que estava configurada antes da pausa, salvo se você pedir alteração até o Corte.
 
-**8.5.** **Retomada automática.** A Cora envia um lembrete **7 dias antes** da data de retorno. Se você não pedir prorrogação até essa data, a assinatura é retomada e cobrada normalmente a partir do retorno combinado, e você recebe a confirmação da retomada.
+**9.5.** **Retomada automática.** A Cora envia um lembrete **7 dias antes** da data de retorno. Se você não pedir prorrogação até essa data, a assinatura é retomada e cobrada normalmente a partir do retorno combinado, e você recebe a confirmação da retomada.
 
-## 9. Cancelamento
+## 10. Cancelamento
 
-**9.1.** Você pode cancelar a qualquer momento sua assinatura, sem multa, pelo WhatsApp da Cora.
+**10.1.** Você pode cancelar a qualquer momento sua assinatura, sem multa, pelo WhatsApp da Cora.
 
-**9.2.** O cancelamento vale ao fim do mês já pago: **você continua recebendo as entregas até a última data do mês contratado** e não recebe nova cobrança. A Cora não devolve valores de mês já contratado nem de Extras já entregues.
+**10.2.** O cancelamento vale ao fim do mês já pago: **você continua recebendo as entregas até a última data do mês contratado** e não recebe nova cobrança. A Cora não devolve valores de mês já contratado nem de Extras já entregues.
 
-**9.3.** **Direito de arrependimento (CDC, art. 49).** Como a contratação é feita pela internet, você pode desistir da assinatura **em até 7 dias corridos contados da confirmação do pagamento da primeira cobrança**, sem precisar justificar. A devolução é integral e feita pelo mesmo meio de pagamento, em até 10 dias úteis.
+**10.3.** **Direito de arrependimento (CDC, art. 49).** Como a contratação é feita pela internet, você pode desistir da assinatura **em até 7 dias corridos contados da confirmação do pagamento da primeira cobrança**, sem precisar justificar. **A devolução é integral quanto ao que ainda não tiver sido produzido e entregue**, e é feita pelo mesmo meio de pagamento em até 10 dias úteis. **Pão já entregue não é devolvido nem reembolsado**, por se tratar de alimento perecível produzido sob medida — o que não afasta o direito à reposição ou ao crédito em caso de problema com o produto (cláusula 8.7).
 
-**9.4.** Depois do cancelamento, o meio de pagamento é desvinculado e seus dados são tratados conforme a Política de Privacidade. Você pode voltar a assinar quando quiser, sujeito à disponibilidade de vaga.
+**10.4.** Depois do cancelamento, o meio de pagamento é desvinculado e seus dados são tratados conforme a Política de Privacidade. Você pode voltar a assinar quando quiser, sujeito à disponibilidade de vaga.
 
-**9.5.** A Cora reserva-se o direito de encerrar a assinatura, com aviso prévio de 30 dias, por decisão operacional (por exemplo, encerramento de área de cobertura ou da atividade), devolvendo proporcionalmente o que tiver sido pago e não entregue. Pode também encerrá-la de imediato em caso de uso indevido, revenda, fraude ou descumprimento destes Termos, mantendo as entregas do mês pago quando cabível, sem prejuízo de buscar reparação por eventuais danos que lhe forem causados.
+**10.5.** A Cora reserva-se o direito de encerrar a assinatura, com aviso prévio de 30 dias, por decisão operacional (por exemplo, encerramento de área de cobertura ou da atividade), devolvendo proporcionalmente o que tiver sido pago e não entregue. Pode também encerrá-la de imediato em caso de uso indevido, revenda, fraude ou descumprimento destes Termos, mantendo as entregas do mês pago quando cabível, sem prejuízo de buscar reparação por eventuais danos que lhe forem causados.
 
-## 10. Produto, alergênicos e conservação
+## 11. Produto, alergênicos e conservação
 
-**10.1.** Os pães da Cora são de fermentação natural, feitos em pequena escala, sem conservantes. Peso, aparência, cor de crosta e abertura de miolo variam de fornada para fornada. Isso é característica do processo, não defeito. Os pesos indicados no Cardápio são aproximados.
+**11.1.** Os pães da Cora são de fermentação natural, feitos em pequena escala, sem conservantes. Peso, aparência, cor de crosta e abertura de miolo variam de fornada para fornada. Isso é característica do processo, não defeito. Os pesos indicados no Cardápio são aproximados.
 
-**10.2.** **Alergênicos.** **Todos os produtos contêm glúten (trigo).** Alergênicos adicionais por produto, conforme as fichas técnicas vigentes:
+**11.2.** **Alergênicos.** **Todos os produtos contêm glúten (trigo).** Alergênicos adicionais por produto, conforme as fichas técnicas vigentes:
 
 | Produto | Contém, além de glúten |
 |---|---|
@@ -176,67 +192,52 @@
 
 A lista de ingredientes e alergênicos atualizada de cada produto está no Portal e prevalece sobre esta tabela em caso de mudança de receita.
 
-**10.3.** **Contaminação cruzada.** Toda a produção da Cora é feita no mesmo espaço, na mesma bancada, no mesmo forno e na mesma câmara de fermentação. **Qualquer produto pode conter traços de gergelim, ovos, leite, aveia e das demais sementes listadas acima.** Os produtos **não são adequados a pessoas com doença celíaca** nem a alergias graves a esses ingredientes. É sua responsabilidade avaliar os alergênicos antes de consumir e de escolher a cesta para o Destinatário.
+**11.3.** **Contaminação cruzada.** Toda a produção da Cora é feita no mesmo espaço, na mesma bancada, no mesmo forno e na mesma câmara de fermentação. **Qualquer produto pode conter traços de gergelim, ovos, leite, aveia e das demais sementes listadas acima.** Os produtos **não são adequados a pessoas com doença celíaca** nem a alergias graves a esses ingredientes. É sua responsabilidade avaliar os alergênicos antes de consumir e de escolher a cesta para o Destinatário.
 
-**10.4.** **Conservação.** Por não terem conservantes, os pães devem ser consumidos ou congelados nos prazos indicados no Portal. A Cora não se responsabiliza por produto conservado em desacordo com as orientações.
+**11.4.** **Conservação.** Por não terem conservantes, os pães devem ser consumidos ou congelados nos prazos indicados no Portal. A Cora não se responsabiliza por produto conservado em desacordo com as orientações.
 
-## 11. Portal e comunicação
+## 12. Portal e comunicação
 
-**11.1.** O acesso ao Portal é pessoal e intransferível. Você é responsável por manter sob seu controle o dispositivo e o WhatsApp usados para acessá-lo, e por avisar a Cora em caso de acesso indevido.
+**12.1.** O acesso ao Portal é pessoal e intransferível. Você é responsável por manter sob seu controle o dispositivo e o WhatsApp usados para acessá-lo, e por avisar a Cora em caso de acesso indevido.
 
-**11.2.** A Cora se comunica com você por e-mail e WhatsApp. **Comunicações operacionais** (entrega, cardápio, corte, cobrança, extrato, atraso) são inerentes ao contrato e não podem ser desativadas enquanto a assinatura estiver ativa, funcionando a adesão aos presentes Termos como consentimento do Assinante a tais comunicações. Por sua vez, **comunicações de novidades e conteúdo** podem ser desativadas a qualquer momento, sem afetar a assinatura.
+**12.2.** A Cora se comunica com você por e-mail e WhatsApp. **Comunicações operacionais** (entrega, cardápio, corte, cobrança, extrato, atraso) são inerentes ao contrato e não podem ser desativadas enquanto a assinatura estiver ativa, funcionando a adesão aos presentes Termos como consentimento do Assinante a tais comunicações. Por sua vez, **comunicações de novidades e conteúdo** podem ser desativadas a qualquer momento, sem afetar a assinatura.
 
-**11.3.** A Cora pode indisponibilizar o Portal temporariamente para manutenção, atualizações ou melhorias. Enquanto isso, os pedidos e alterações podem ser feitos pelo WhatsApp, respeitado o Corte.
+**12.3.** A Cora pode indisponibilizar o Portal temporariamente para manutenção, atualizações ou melhorias. Enquanto isso, os pedidos e alterações podem ser feitos pelo WhatsApp, respeitado o Corte.
 
-**11.4.** O nome, a marca, o site, o Portal, as fotos, vídeos, textos e demais conteúdos audiovisuais, bem como as receitas da Cora são de titularidade exclusiva da Cora e protegidos pela legislação atinente à propriedade intelectual. Não se admite a sua reprodução sem prévia e expressa autorização.
+**12.4.** O nome, a marca, o site, o Portal, as fotos, vídeos, textos e demais conteúdos audiovisuais, bem como as receitas da Cora são de titularidade exclusiva da Cora e protegidos pela legislação atinente à propriedade intelectual. Não se admite a sua reprodução sem prévia e expressa autorização.
 
-## 12. Responsabilidade
+## 13. Responsabilidade
 
-**12.1.** A Cora responde pelos produtos que entrega, nos termos do Código de Defesa do Consumidor.
+**13.1.** A Cora responde pelos produtos que entrega, nos termos do Código de Defesa do Consumidor.
 
-**12.2.** A Cora não responde por: atrasos ou falhas causados por dados de cadastro incorretos ou desatualizados; ausência no endereço nas condições da cláusula 7.4; conservação inadequada do produto; e consumo em desacordo com a informação de alergênicos disponibilizada.
+**13.2.** A Cora não responde por: atrasos ou falhas causados por dados de cadastro incorretos ou desatualizados; ausência no endereço nas condições da cláusula 8.4; conservação inadequada do produto; e consumo em desacordo com a informação de alergênicos disponibilizada.
 
-**12.3.** Em caso de força maior (eventos climáticos extremos, bloqueio de vias, falta de energia prolongada, greves e situações análogas) que impeça a entrega, aplica-se a cláusula 7.6.
+**13.3.** Em caso de força maior (eventos climáticos extremos, bloqueio de vias, falta de energia prolongada, greves e situações análogas) que impeça a entrega, aplica-se a cláusula 8.6.
 
-## 13. Alterações destes Termos e do Anexo
+## 14. Alterações destes Termos e do Anexo
 
-**13.1.** A Cora pode alterar estes Termos. Alterações que afetem preço, direitos ou obrigações relevantes são comunicadas com **pelo menos 30 dias de antecedência** por e-mail e WhatsApp, e você pode cancelar sem ônus antes de entrarem em vigor. Continuar com a assinatura após a data de vigência implicará aceitação da nova versão.
+**14.1.** A Cora pode alterar estes Termos. Alterações que afetem preço, direitos ou obrigações relevantes são comunicadas com **pelo menos 30 dias de antecedência** por e-mail e WhatsApp, e você pode cancelar sem ônus antes de entrarem em vigor. Continuar com a assinatura após a data de vigência implicará aceitação da nova versão.
 
-**13.2.** O **Anexo I** reúne os parâmetros operacionais que mudam conforme a operação cresce (dia e horário de corte, data de vencimento, dia e período de entrega, área de cobertura, produtos elegíveis, regras de troca, mínimo de pedidos). Mudanças no Anexo são comunicadas com antecedência mínima de **15 dias**, salvo ampliação de opções ou de área, que pode ser imediata. Se uma mudança no Anexo prejudicar você, pode cancelar sem ônus, com devolução proporcional do que tiver sido pago e não entregue.
+**14.2.** O **Anexo I** reúne os parâmetros operacionais que mudam conforme a operação cresce (dia e horário de corte, data de vencimento, dia e período de entrega, área de cobertura, produtos elegíveis, regras de troca, mínimo de pedidos). Mudanças no Anexo são comunicadas com antecedência mínima de **15 dias**, salvo ampliação de opções ou de área, que pode ser imediata. Se uma mudança no Anexo prejudicar você, pode cancelar sem ônus, com devolução proporcional do que tiver sido pago e não entregue.
 
-**13.3.** A versão vigente dos Termos, do Anexo e da Política de Privacidade fica sempre publicada em acora.com.br/termos, com data de versão.
+**14.3.** A versão vigente dos Termos, do Anexo e da Política de Privacidade fica sempre publicada em acora.com.br/termos, com data de versão.
 
-## 14. Disposições gerais
+## 15. Disposições gerais
 
-**14.1.** Este contrato é regido pela legislação brasileira, em especial pelo Código de Defesa do Consumidor (Lei 8.078/1990), pelo Marco Civil da Internet (Lei 12.965/2014) e pela Lei Geral de Proteção de Dados (Lei 13.709/2018).
+**15.1.** Este contrato é regido pela legislação brasileira, em especial pelo Código de Defesa do Consumidor (Lei 8.078/1990), pelo Marco Civil da Internet (Lei 12.965/2014) e pela Lei Geral de Proteção de Dados (Lei 13.709/2018).
 
-**14.2.** O Assinante declara possuir capacidade jurídica para celebrar este Contrato e se compromete a manter seus dados pessoais informados no cadastro devidamente atualizados, principalmente o endereço para entrega, os dados de contato e o método de pagamento eleito. A Cora não se responsabilizará, em nenhuma hipótese, pela omissão do Assinante quanto ao dever de manter atualizados e exatos seus dados pessoais.
+**15.2.** O Assinante declara possuir capacidade jurídica para celebrar este Contrato e se compromete a manter seus dados pessoais informados no cadastro devidamente atualizados, principalmente o endereço para entrega, os dados de contato e o método de pagamento eleito. A Cora não se responsabilizará, em nenhuma hipótese, pela omissão do Assinante quanto ao dever de manter atualizados e exatos seus dados pessoais.
 
-**14.3.** **Prazo de vigência.** Estes Termos e Condições entram em vigor na data da sua publicação, e, relativamente a cada Assinante, na data de início da sua Assinatura, assim considerado o momento em que efetivado o cadastro ante a confirmação do primeiro pagamento, e perdurarão por prazo indeterminado.
+**15.3.** **Prazo de vigência.** Estes Termos e Condições entram em vigor na data da sua publicação, e, relativamente a cada Assinante, na data de início da sua Assinatura, assim considerado o momento em que efetivado o cadastro ante a confirmação do primeiro pagamento, e perdurarão por prazo indeterminado.
 
-**14.4.** Fica eleito o foro do **domicílio do Assinante** para qualquer questão decorrente deste contrato, nos termos do CDC. Para relações não abrangidas pelo CDC, o foro é o da comarca de Niterói/RJ.
+**15.4.** Fica eleito o foro do **domicílio do Assinante** para qualquer questão decorrente deste contrato, nos termos do CDC. Para relações não abrangidas pelo CDC, o foro é o da comarca de Niterói/RJ.
 
-**14.5.** Na hipótese de qualquer cláusula ser considerada nula, inválida ou ineficaz, as demais disposições permanecerão em vigor.
+**15.5.** Na hipótese de qualquer cláusula ser considerada nula, inválida ou ineficaz, as demais disposições permanecerão em vigor.
 
-**14.6.** A tolerância, omissão ou não exercício, por parte da Cora, por qualquer motivo, dos direitos a ela conferidos por estes Termos e Condições não implicará desistência, renúncia ou novação de quaisquer outros direitos subsequentes, exercitáveis em função de inadimplemento ou infração contratual do Assinante.
+**15.6.** A tolerância, omissão ou não exercício, por parte da Cora, por qualquer motivo, dos direitos a ela conferidos por estes Termos e Condições não implicará desistência, renúncia ou novação de quaisquer outros direitos subsequentes, exercitáveis em função de inadimplemento ou infração contratual do Assinante.
 
-**14.7.** Em caso de conflito entre estes Termos, o **Anexo I** e a Política de Privacidade, prevalecerá a regra mais protetiva para o Assinante.
+**15.7.** Em caso de conflito entre estes Termos, o **Anexo I** e a Política de Privacidade, prevalecerá a regra mais protetiva para o Assinante.
 
-## 15. Venda avulsa
-
-**15.1.** A Cora pode, a seu critério e em semanas específicas, oferecer produtos para **compra avulsa**, sem assinatura. A oferta é **pontual e deliberada pela Cora**, não é contínua e não gera direito a novas ofertas.
-
-**15.2.** A venda avulsa **não cria vínculo de assinatura**, não tem renovação automática e não dá direito a vaga na assinatura nem a prioridade na lista de espera.
-
-**15.3.** **Pagamento antecipado.** O produto avulso é pago integralmente antes da produção, por Pix, boleto ou cartão. Sem a confirmação do pagamento até o prazo informado na oferta, o pedido não entra em produção.
-
-**15.4.** **Preço.** O preço do produto avulso é o preço unitário do Cardápio, acrescido do valor de entrega informado na oferta. O valor de entrega da venda avulsa é diferente do frete mensal da Assinatura.
-
-**15.5.** Aplicam-se à venda avulsa, no que couber, as regras de **entrega** (cláusula 7), **produto, alergênicos e conservação** (cláusula 10) e **responsabilidade** (cláusula 12).
-
-**15.6.** Não há direito a pausa, troca de produto após o Corte da oferta, nem reposição por ausência no endereço, nas condições da cláusula 7.4.
-
-**15.7.** **Arrependimento.** Aplica-se o direito de arrependimento do art. 49 do CDC, em até 7 dias corridos da confirmação do pagamento, desde que exercido antes da produção do pedido. Depois de produzido, por se tratar de alimento perecível feito sob medida, a devolução fica condicionada ao não recebimento do produto.
 
 ---
 
@@ -246,7 +247,7 @@ Ficou com dúvidas? Venha falar com a gente através dos seguintes canais: Whats
 
 **Vigência: a partir de 01/10/2026 · versão 1.1**
 
-Este anexo reúne os parâmetros operacionais da assinatura. Ele pode ser atualizado conforme a cláusula 13.2 dos Termos. A versão vigente está sempre no Portal.
+Este anexo reúne os parâmetros operacionais da assinatura. Ele pode ser atualizado conforme a cláusula 14.2 dos Termos. A versão vigente está sempre no Portal.
 
 ## A. Preços vigentes
 
@@ -264,7 +265,7 @@ Pão Original e Pão Integral, em qualquer combinação, de 1 a 3 pães por sema
 
 ## C. Troca de pão na Cesta da Semana
 
-> Regras em período de teste (setembro/2026). Podem mudar conforme a cláusula 13.2 dos Termos.
+> Regras em período de teste (setembro/2026). Podem mudar conforme a cláusula 14.2 dos Termos.
 
 | Assinatura | O que pode trocar, sem custo, até o Corte |
 |---|---|
@@ -281,7 +282,7 @@ Multigrãos e Brioche não entram na troca de 1 pão. Assinante de 2 ou mais pã
 
 - **Dia e período:** quinta-feira, à tarde.
 - **Área de cobertura atual:** Niterói e Zona Sul do Rio de Janeiro, conforme bairros liberados no Portal.
-- **Tentativas:** duas no mesmo dia (cláusula 7.4 dos Termos).
+- **Tentativas:** duas no mesmo dia (cláusula 8.4 dos Termos).
 
 ## F. Cobrança
 
@@ -313,4 +314,4 @@ O mínimo não é escolha comercial: abaixo desse volume a massa não atinge a q
 - **Curta:** até 2 semanas, renovável uma vez (máximo de 4 semanas). Pelo Portal quando o fluxo estiver disponível; até lá, pelo WhatsApp.
 - **Longa:** acima de 4 semanas, combinada com a Cora, com data de retorno.
 - Em ambas: mês pago é entregue até o fim, sem cobrança durante a pausa, lembrete 7 dias antes e retomada automática na data combinada.
-- **Vaga:** reservada na pausa curta. Na pausa longa a vaga pode ser ocupada durante o período, com retorno garantido na data combinada (cláusula 8.4 dos Termos).
+- **Vaga:** reservada na pausa curta. Na pausa longa a vaga pode ser ocupada durante o período, com retorno garantido na data combinada (cláusula 9.4 dos Termos).

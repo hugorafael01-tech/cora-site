@@ -29,7 +29,7 @@ PAGES = {
     "privacidade": {
         "md": "conteudo-privacidade.md",
         "title": "Política de Privacidade — Cora",
-        "description": "Como a Cora coleta, usa, compartilha e protege os dados pessoais de quem assina, com base na LGPD. {versao}, em revisão jurídica.",
+        "description": "Como a Cora coleta, usa, compartilha e protege os dados pessoais de quem assina, com base na LGPD. {versao}, após revisão jurídica.",
         "other": ("/termos", "Termos de Uso"),
     },
 }
