@@ -595,5 +595,12 @@
     });
   </script>
 
+  <!-- Vercel Web Analytics: sem framework, o script entra direto no HTML.
+       O painel do projeto precisa estar com Web Analytics ligado. -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
 </body>
 </html>
