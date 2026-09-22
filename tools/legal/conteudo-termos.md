@@ -244,7 +244,7 @@ Ficou com dúvidas? Venha falar com a gente através dos seguintes canais: Whats
 
 # Anexo I — Regras da Assinatura
 
-**Vigência: a partir de 01/10/2026 · versão 1.1**
+**Vigência: a partir de 01/10/2026 · versão 1.2**
 
 Este anexo reúne os parâmetros operacionais da assinatura. Ele pode ser atualizado conforme a cláusula 14.2 dos Termos. A versão vigente está sempre no Portal.
 
@@ -275,11 +275,12 @@ Multigrãos e Brioche não entram na troca de 1 pão. Assinante de 2 ou mais pã
 
 ## D. Corte
 
-**Terça-feira, 12h**, para a entrega da mesma semana. Divulgado no Portal e lembrado por WhatsApp.
+**12h de dois dias antes da sua entrega.** Por exemplo: para entrega na quinta-feira, o corte é terça-feira, 12h. O corte de cada entrega é divulgado no Portal e lembrado por WhatsApp.
 
 ## E. Entrega
 
-- **Dia e período:** quinta-feira, à tarde.
+- **Dia e período:** à tarde, no dia de entrega da sua assinatura. Os dias de entrega em operação e o dia da sua assinatura ficam sempre informados no Portal.
+- **Dia da sua assinatura:** definido quando a assinatura é confirmada, conforme a vaga disponível em cada dia.
 - **Área de cobertura atual:** Niterói e Zona Sul do Rio de Janeiro, conforme bairros liberados no Portal.
 - **Tentativas:** duas no mesmo dia (cláusula 8.4 dos Termos).
 
@@ -302,7 +303,7 @@ Multigrãos e Brioche não entram na troca de 1 pão. Assinante de 2 ou mais pã
 
 ## H. Extras rotativos
 
-Produtos rotativos do Cardápio entram em produção com **mínimo de 4 pedidos** na semana. Abaixo disso, o produto não é produzido, o assinante é avisado **até quarta-feira** e nada é cobrado.
+Produtos rotativos do Cardápio entram em produção com **mínimo de 4 pedidos** na semana. Abaixo disso, o produto não é produzido, o assinante é avisado **até a véspera da sua entrega** e nada é cobrado.
 
 O mínimo não é escolha comercial: abaixo desse volume a massa não atinge a quantidade necessária para ser batida na masseira.
 
