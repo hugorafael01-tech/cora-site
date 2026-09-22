@@ -275,7 +275,7 @@ Multigrãos e Brioche não entram na troca de 1 pão. Assinante de 2 ou mais pã
 
 ## D. Corte
 
-**12h de dois dias antes da sua entrega.** Por exemplo: para entrega na quinta-feira, o corte é terça-feira, 12h. O corte de cada entrega é divulgado no Portal e lembrado por WhatsApp.
+**Meio-dia (12h), dois dias antes da sua entrega.** Por exemplo: para entrega na quinta-feira, o corte é terça-feira, ao meio-dia. O corte de cada entrega é divulgado no Portal e lembrado por WhatsApp.
 
 ## E. Entrega
 
