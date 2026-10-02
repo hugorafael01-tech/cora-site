@@ -1,6 +1,6 @@
 # Termos de Uso
 
-**Cora · Versão 1.6 · 02/10/2026 · após revisão jurídica**
+**Cora · Versão 1.6 · 02/10/2026**
 
 ## 1. Quem somos e do que trata este documento
 
