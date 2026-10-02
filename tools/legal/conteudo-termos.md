@@ -1,6 +1,6 @@
 # Termos de Uso
 
-**Cora · Versão 1.5 · 17/09/2026 · após revisão jurídica**
+**Cora · Versão 1.6 · 02/10/2026 · após revisão jurídica**
 
 ## 1. Quem somos e do que trata este documento
 
@@ -23,6 +23,7 @@
 - **Assinatura:** o contrato mensal, renovado automaticamente, que dá direito a 1, 2 ou 3 pães por semana, escolhidos entre os produtos elegíveis.
 - **Cesta da Semana:** o que será entregue em cada semana, composta pelos pães da Assinatura e por eventuais Extras.
 - **Extras:** produtos do Cardápio pedidos pontualmente para uma semana, cobrados por unidade além da mensalidade.
+- **Acréscimo:** valor adicional, informado no Portal no momento da troca, cobrado quando você troca um pão da Cesta da Semana por outro de maior custo.
 - **Corte:** o prazo, divulgado no Portal, até o qual você pode alterar a Cesta da Semana. Depois do Corte, a produção da semana considera-se encerrada.
 - **Ciclo de leitura:** o período usado para apurar os Extras eventualmente entregues, conforme definido no Anexo I.
 - **Venda avulsa:** compra pontual de produto, sem assinatura, nas condições da cláusula 7.
@@ -58,7 +59,7 @@
 **4.4.** **Mudança de quantidade de pães.**
 
 - **Aumento:** vale a partir da entrega seguinte ao pedido. No mês corrente você paga a diferença proporcional às semanas restantes; a partir da renovação, o valor cheio do novo plano.
-- **Redução:** passa a valer a partir da renovação mensal seguinte. Até o fim do mês já pago, você continua recebendo a quantidade anteriormente contratada (pré-paga). Não há estorno ou devolução de valores do mês em curso.
+- **Redução:** passa a valer a partir da renovação mensal seguinte, se o pedido for feito antes da emissão da cobrança do mês seguinte, na data indicada no Anexo I. Pedidos feitos a partir dessa data passam a valer na renovação subsequente. Até lá, você continua recebendo a quantidade anteriormente contratada (pré-paga). Não há estorno ou devolução de valores do mês em curso. Até a data em que passaria a valer, a redução agendada pode ser desfeita pelo Portal.
 
 **4.5.** **Extras.** Produtos do Cardápio podem ser adicionados à Cesta da Semana até o Corte e são cobrados por unidade, somente se entregues (cláusula 6.3). Produtos rotativos só entram em produção quando atingem o número mínimo de pedidos indicado no Anexo I; se não atingirem, você é avisado e nada é cobrado por eles.
 
@@ -80,12 +81,13 @@
 |---|---|---|
 | Mensalidade (pães + frete) | mês corrente | pré-paga |
 | Extras | ciclo de leitura anterior | pós-consumo: só o que foi entregue |
+| Acréscimos de troca | ciclo de leitura anterior | pós-consumo: só o que foi entregue |
 | Ajuste proporcional | quando houver | aumento de plano no meio do mês (cláusula 4.4) |
 | Créditos | quando houver | falha de entrega não reposta (cláusula 8.6) |
 
 **6.2.** **Valor variável.** Por causa dos Extras e dos ajustes, **o valor da cobrança pode variar de um mês para outro.** Você recebe da Cora, **pelo menos 3 dias antes do vencimento**, um extrato com o detalhamento do que compõe a cobrança. Nenhum débito em cartão é feito antes do envio desse extrato. Dúvidas ou contestações devem ser enviadas à Cora pelos canais da cláusula 1.5, preferencialmente antes do vencimento; a Cora responde em até 2 dias úteis.
 
-**6.3.** Nenhum Extra é cobrado se não tiver sido produzido e entregue.
+**6.3.** Nenhum Extra ou Acréscimo é cobrado se o produto não tiver sido produzido e entregue.
 
 **6.4.** **Vencimento.** A cobrança vence na data indicada nela mesma e no Anexo I.
 
@@ -244,7 +246,7 @@ Ficou com dúvidas? Venha falar com a gente através dos seguintes canais: Whats
 
 # Anexo I — Regras da Assinatura
 
-**Vigência: a partir de 01/10/2026 · versão 1.2**
+**Vigência: a partir de 02/10/2026 · versão 1.3**
 
 Este anexo reúne os parâmetros operacionais da assinatura. Ele pode ser atualizado conforme a cláusula 14.2 dos Termos. A versão vigente está sempre no Portal.
 
@@ -264,14 +266,16 @@ Pão Original e Pão Integral, em qualquer combinação, de 1 a 3 pães por sema
 
 ## C. Troca de pão na Cesta da Semana
 
-> Regras em período de teste (setembro/2026). Podem mudar conforme a cláusula 14.2 dos Termos.
+Seu pão fixo é o Original ou o Integral. A cada semana, até o Corte, você pode trocar os pães da Cesta:
 
-| Assinatura | O que pode trocar, sem custo, até o Corte |
-|---|---|
-| 1 pão | o pão por **Original, Integral, Ciabatta ou Focaccia Genovesa** |
-| 2 ou 3 pães | o segundo pão em diante por **qualquer produto do Cardápio** |
+| Assinatura | Sem acréscimo | Com acréscimo |
+|---|---|---|
+| 1 pão | Original, Integral, Focaccia Genovesa ou Ciabatta | Multigrãos ou Brioche |
+| 2 ou 3 pães | uma troca por semana por qualquer pão do Cardápio; os demais pães por Original, Integral, Focaccia Genovesa ou Ciabatta | os demais pães por Multigrãos ou Brioche |
 
-Multigrãos e Brioche não entram na troca de 1 pão. Assinante de 2 ou mais pães pode fixar o segundo pão como preferência permanente, pelo WhatsApp.
+A troca vale só para a semana. Na seguinte, a Cesta volta aos pães da Assinatura. O valor do acréscimo é informado no Portal no momento da troca e entra na cobrança seguinte, junto com os Extras. Se o pão escolhido não for produzido, a Cora entrega outro e o acréscimo não é cobrado.
+
+Assinante de 2 ou mais pães pode fixar o segundo pão como preferência permanente, pelo WhatsApp. A regra de troca e de acréscimo vale para cada semana.
 
 ## D. Corte
 
@@ -286,6 +290,7 @@ Multigrãos e Brioche não entram na troca de 1 pão. Assinante de 2 ou mais pã
 
 ## F. Cobrança
 
+- **Emissão do extrato e da cobrança:** dia 26 de cada mês.
 - **Vencimento:** dia **8** de cada mês, a partir de outubro de 2026.
 - **Ciclo de leitura dos Extras:** do dia seguinte ao fechamento anterior até a **última entrega realizada até o dia 25** do mês anterior. Entregas depois do dia 25 entram no ciclo seguinte.
 - **Extrato:** enviado pela Cora pelo menos 3 dias antes do vencimento. Débito em cartão só depois do envio.
