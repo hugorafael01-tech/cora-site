@@ -23,7 +23,7 @@ PAGES = {
     "termos": {
         "md": "conteudo-termos.md",
         "title": "Termos de Uso — Cora",
-        "description": "Termos de Uso da assinatura de pães de fermentação natural da Cora, com o Anexo I: preços, cobrança, entrega, pausa e cancelamento. {versao}, após revisão jurídica.",
+        "description": "Termos de Uso da assinatura de pães de fermentação natural da Cora, com o Anexo I: preços, cobrança, entrega, pausa e cancelamento. {versao}.",
         "other": ("/privacidade", "Política de Privacidade"),
     },
     "privacidade": {
@@ -264,14 +264,18 @@ def render(page):
     title, meta, annex_meta, toc, body = convert(md, page)
 
     # meta: "Cora · Versão 1.3 · 15/09/2026 · após revisão jurídica"
-    # O status é o último campo e sai do próprio markdown: cada documento tem o
+    # O status é o quarto campo e sai do próprio markdown: cada documento tem o
     # seu, porque a Política pode seguir em revisão enquanto os Termos já
-    # voltaram do advogado.
-    status = meta.rsplit(" · ", 1)[1]
+    # voltaram do advogado. Documento sem o quarto campo sai sem status, e é o
+    # caso dos Termos a partir da v1.6, que não passou por revisão jurídica.
+    campos = meta.split(" · ")
+    status = campos[3] if len(campos) > 3 else None
     versao = re.search(r"Versão [\d.]+", meta).group(0)
-    meta_html = html.escape(meta[: -len(status)]) + f'<span class="doc-status">{status}</span>'
+    meta_html = html.escape(meta)
     footer_meta = html.escape(title + " · " + meta.split(" · ", 1)[1])
-    footer_meta = footer_meta.replace(status, f'<span class="doc-status">{status}</span>')
+    if status:
+        meta_html = html.escape(meta[: -len(status)]) + f'<span class="doc-status">{status}</span>'
+        footer_meta = footer_meta.replace(status, f'<span class="doc-status">{status}</span>')
     if annex_meta:
         footer_meta += "<br>Anexo I · " + html.escape(annex_meta)
 
