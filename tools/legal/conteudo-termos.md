@@ -1,12 +1,12 @@
 # Termos de Uso
 
-**Cora · Versão 1.6 · 02/10/2026**
+**Cora · Versão 1.7 · 04/10/2026**
 
 ## 1. Quem somos e do que trata este documento
 
 **1.1.** Estes Termos ("Termos e Condições do Serviço de Assinatura" ou "Contrato") regulam a assinatura do serviço de fabricação e entrega a domicílio de pães de fermentação natural da **Cora**, nome fantasia de 66.701.743 HUGO RAFAEL PEREIRA ELETERIO, microempreendedor individual inscrito no CNPJ sob o nº 66.701.743/0001-05, inscrição estadual nº 16481726, com sede na Travessa Ari Pinto Lima, 41A, Fonseca, Niterói/RJ, CEP 24120-180 (doravante "Cora", ou "a gente"), e são celebrados entre a Cora e a pessoa física identificada no cadastramento do banco de dados eletrônico do Portal.
 
-**1.2.** A Cora produz pães de fermentação natural em pequena escala e entrega semanalmente, em domicílio, a quem assina ("Contratante" ou "Assinante"). Não há loja física. A contratação é feita pelo portal app.acora.com.br ("Portal") e a relação continua por lá e pelo WhatsApp da Cora.
+**1.2.** A Cora produz pães de fermentação natural em pequena escala e entrega semanalmente, em domicílio ou em ponto de coleta definido pela Cora, a quem assina ("Contratante" ou "Assinante"). Não há loja física. A contratação é feita pelo portal app.acora.com.br ("Portal") e a relação continua por lá e pelo WhatsApp da Cora.
 
 **1.3.** Ao concluir o cadastro no Portal, o Contratante declara que leu cuidadosamente, entendeu e concordou, em toda a sua extensão, com estes Termos e Condições, com o **Anexo I — Regras da Assinatura** e com a Política de Privacidade. Os três documentos formam um contrato único e regulam juridicamente o relacionamento entre o Contratante e a Cora.
 
@@ -27,6 +27,7 @@
 - **Corte:** o prazo, divulgado no Portal, até o qual você pode alterar a Cesta da Semana. Depois do Corte, a produção da semana considera-se encerrada.
 - **Ciclo de leitura:** o período usado para apurar os Extras eventualmente entregues, conforme definido no Anexo I.
 - **Venda avulsa:** compra pontual de produto, sem assinatura, nas condições da cláusula 7.
+- **Ponto de coleta:** local definido pela Cora onde o Assinante retira a Cesta da Semana, quando essa forma de entrega for combinada com a Cora.
 - **Portal:** app.acora.com.br.
 
 ## 3. Cadastro e conta
@@ -140,9 +141,9 @@
 
 **8.2.** O Assinante é responsável por informar corretamente à Cora o endereço para entrega de sua Cesta, bem como manter tais dados sempre atualizados, sob pena de prejudicar as entregas e afetar os prazos previstos no presente Contrato. O atraso e/ou a impossibilidade de entrega por culpa do Assinante não poderão ser imputados à Cora.
 
-**8.3.** As entregas serão feitas por entregador contratado pela Cora, no endereço cadastrado. **A entrega na portaria ou recepção do prédio, quando existente, é considerada entrega concluída.**
+**8.3.** As entregas serão feitas por entregador contratado pela Cora, no endereço cadastrado ou no ponto de coleta combinado com a Cora. **A entrega na portaria ou recepção do prédio, quando existente, é considerada entrega concluída.**
 
-**8.4.** **Ausência no endereço.** Se não houver ninguém para receber, nem portaria, o entregador faz **uma segunda tentativa ao fim da rota do dia**. Se a segunda tentativa também for frustrada, o produto retornará à Cora. Por se tratar de alimento perecível e produzido sob encomenda, **o não recebimento por responsabilidade exclusiva do Assinante não conferirá direito a reembolso, crédito ou reposição da fornada**, uma vez que os custos produtivos e logísticos já foram integralmente suportados pela Cora. A Cora avisa você pelo WhatsApp em ambas as tentativas.
+**8.4.** **Ausência no endereço.** Se não houver ninguém para receber, nem portaria, o entregador faz **uma segunda tentativa ao fim da rota do dia**. Se a segunda tentativa também for frustrada, o produto retornará à Cora. Por se tratar de alimento perecível e produzido sob encomenda, **o não recebimento por responsabilidade exclusiva do Assinante não conferirá direito a reembolso, crédito ou reposição da fornada**, uma vez que os custos produtivos e logísticos já foram integralmente suportados pela Cora. A Cora avisa você pelo WhatsApp em ambas as tentativas. Na retirada em ponto de coleta, a Cesta fica disponível no período informado pela Cora, e a Cesta não retirada nesse período segue a mesma regra: sem reembolso, crédito ou reposição.
 
 **8.5.** **Mudança de endereço.** Informe pelo Portal ou WhatsApp até o Corte da semana. Endereço fora da área de cobertura suspende as entregas e, se a nova área não for atendida, permite o cancelamento sem ônus com devolução proporcional das semanas não entregues.
 
@@ -246,7 +247,7 @@ Ficou com dúvidas? Venha falar com a gente através dos seguintes canais: Whats
 
 # Anexo I — Regras da Assinatura
 
-**Vigência: a partir de 02/10/2026 · versão 1.3**
+**Vigência: a partir de 04/10/2026 · versão 1.4**
 
 Este anexo reúne os parâmetros operacionais da assinatura. Ele pode ser atualizado conforme a cláusula 14.2 dos Termos. A versão vigente está sempre no Portal.
 
@@ -257,6 +258,8 @@ Este anexo reúne os parâmetros operacionais da assinatura. Ele pode ser atuali
 | 1 pão por semana | R$ 99 | R$ 15 | **R$ 114** |
 | 2 pães por semana | R$ 198 | R$ 15 | **R$ 213** |
 | 3 pães por semana | R$ 297 | R$ 15 | **R$ 312** |
+
+Quem retira em ponto de coleta não paga frete: o total mensal é só a mensalidade (R$ 99, R$ 198 ou R$ 297).
 
 Extras: preço por unidade conforme o Cardápio no Portal.
 
@@ -286,6 +289,7 @@ Assinante de 2 ou mais pães pode fixar o segundo pão como preferência permane
 - **Dia e período:** à tarde, no dia de entrega da sua assinatura. Os dias de entrega em operação e o dia da sua assinatura ficam sempre informados no Portal.
 - **Dia da sua assinatura:** definido quando a assinatura é confirmada, conforme a vaga disponível em cada dia.
 - **Área de cobertura atual:** Niterói e Zona Sul do Rio de Janeiro, conforme bairros liberados no Portal.
+- **Ponto de coleta:** a retirada em ponto de coleta definido pela Cora, sem frete, é combinada com a Cora.
 - **Tentativas:** duas no mesmo dia (cláusula 8.4 dos Termos).
 
 ## F. Cobrança
@@ -308,7 +312,7 @@ Assinante de 2 ou mais pães pode fixar o segundo pão como preferência permane
 
 ## H. Extras rotativos
 
-Produtos rotativos do Cardápio entram em produção com **mínimo de 4 pedidos** na semana. Abaixo disso, o produto não é produzido, o assinante é avisado **até a véspera da sua entrega** e nada é cobrado.
+Produtos rotativos do Cardápio entram em produção com **mínimo de 4 pedidos por dia de produção**. Abaixo disso, o produto não é produzido, o assinante é avisado **até a véspera da sua entrega** e nada é cobrado.
 
 O mínimo não é escolha comercial: abaixo desse volume a massa não atinge a quantidade necessária para ser batida na masseira.
 
