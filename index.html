@@ -548,11 +548,14 @@
 
 
   <!-- ═══ DOBRA 4 — CTA FINAL ═══ -->
+  <!-- O texto de vagas FECHADAS e o padrao: e o que fica se a leitura do estado
+       falhar ou demorar. O script no fim da pagina troca para o texto de vagas
+       ABERTAS quando o portal responde que ha vaga. -->
   <section class="cta-final">
     <div class="cta-copy">
-      <h2 class="heading">AS VAGAS DESSA RODADA JÁ FORAM PREENCHIDAS</h2>
-      <p>A Cora entrega toda semana em Niterói e no Rio. A gente amplia a produção aos poucos — deixa seu contato e avisamos quando abrir mais vagas.</p>
-      <a href="https://app.acora.com.br/lista-espera" class="btn-filled">Entrar na fila</a>
+      <h2 class="heading" id="cta-vagas-titulo">AS VAGAS DESSA RODADA JÁ FORAM PREENCHIDAS</h2>
+      <p id="cta-vagas-corpo">A Cora entrega toda semana em Niterói e no Rio. A gente amplia a produção aos poucos — deixa seu contato e avisamos quando abrir mais vagas.</p>
+      <a href="https://app.acora.com.br/lista-espera" class="btn-filled" id="cta-vagas-botao">Entrar na fila</a>
     </div>
     <div class="cta-photo">
       <img src="images/_CTA_Final.jpg" alt="Pão de fermentação natural da Cora com a marca estampada na crosta, cortado ao meio mostrando o miolo aberto." loading="lazy">
@@ -593,6 +596,55 @@
     document.getElementById('carousel-next').addEventListener('click', function () {
       carousel.scrollBy({ left: 260, behavior: 'smooth' });
     });
+  </script>
+
+  <!-- Ultima dobra: texto conforme as vagas do portal. Le o mesmo GET /api/settings
+       que o portal usa (campo subscriptions_open, que ja junta interruptor, teto
+       e capacidade do dia). So troca o texto com resposta clara de "aberto";
+       qualquer outra coisa (erro, atraso, resposta estranha) deixa o texto de
+       fechado que ja esta no HTML. Nunca abre por erro.
+       Fora de acora.com.br (Preview, local) aceita ?simular=aberto|fechado e
+       ?portal=<versao de teste do portal> para conferir os dois estados sem mexer
+       no interruptor de producao. Em acora.com.br esses parametros sao ignorados. -->
+  <script>
+    (function () {
+      var host = location.hostname;
+      var producao = host === 'acora.com.br' || host === 'www.acora.com.br';
+      var api = 'https://app.acora.com.br';
+      var simular = '';
+      if (!producao) {
+        var q = new URLSearchParams(location.search);
+        var portal = q.get('portal');
+        if (portal && /^cora-portal-[a-z0-9-]+-hugorafael01-techs-projects\.vercel\.app$/.test(portal)) {
+          api = 'https://' + portal;
+        }
+        var s = q.get('simular');
+        if (s === 'aberto' || s === 'fechado') simular = '?simular=' + s;
+      }
+
+      var titulo = document.getElementById('cta-vagas-titulo');
+      var corpo = document.getElementById('cta-vagas-corpo');
+      var botao = document.getElementById('cta-vagas-botao');
+      if (!titulo || !corpo || !botao || !window.fetch) return;
+
+      function mostraAberto() {
+        titulo.textContent = 'Abrimos novas vagas';
+        corpo.textContent = '';
+        corpo.appendChild(document.createTextNode('A Cora cresce aos poucos, e agora tem lugar pra mais gente.'));
+        corpo.appendChild(document.createElement('br'));
+        corpo.appendChild(document.createTextNode('Pão de fermentação natural toda semana, na sua porta.'));
+        botao.textContent = 'Quero assinar';
+        botao.href = 'https://app.acora.com.br/onboarding';
+      }
+
+      var controle = window.AbortController ? new AbortController() : null;
+      var limite = setTimeout(function () { if (controle) controle.abort(); }, 4000);
+      fetch(api + '/api/settings' + simular, controle ? { signal: controle.signal } : {})
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) { if (d && d.subscriptions_open === true) mostraAberto(); })
+        .catch(function () { /* fica no texto de fechado */ })
+        .then(function () { clearTimeout(limite); });
+    })();
   </script>
 
   <!-- Vercel Web Analytics: sem framework, o script entra direto no HTML.
