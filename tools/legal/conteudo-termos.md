@@ -1,6 +1,6 @@
 # Termos de Uso
 
-**Cora · Versão 1.7 · 04/10/2026**
+**Cora · Versão 1.8 · 08/10/2026**
 
 ## 1. Quem somos e do que trata este documento
 
@@ -104,14 +104,15 @@
 
 **6.10.** **Atraso no pagamento.** Se a cobrança não for paga até o vencimento, por recusa, perda de validade, insuficiência de fundos ou qualquer outro motivo, e você não tiver efetuado o cancelamento da assinatura:
 
-- você recebe avisos automáticos nos prazos do Anexo I, o segundo deles informando qual entrega ficará suspensa;
-- persistindo o atraso além do prazo do Anexo I, **as entregas ficam suspensas até a regularização**, com aviso pessoal da Cora;
+- você recebe dois avisos automáticos, nos prazos do Anexo I;
+- a primeira entrega depois do vencimento acontece normalmente;
+- sem pagamento até a segunda entrega depois do vencimento, as entregas ficam suspensas a partir dela, até a regularização, com aviso pessoal da Cora antes;
 - regularizado o pagamento, as entregas são retomadas na semana seguinte, sem penalidade;
 - as semanas suspensas por falta de pagamento não são cobradas nem repostas.
 
 **6.10-A.** **Cartão recusado.** Se não for possível processar a cobrança em cartão de crédito, sua assinatura **não é cancelada de imediato**. A Cora avisa você no mesmo dia, e você pode pagar aquele mês por Pix ou boleto, ou informar outro cartão. Os prazos da cláusula 6.10 contam do vencimento normalmente.
 
-**6.11.** A Cora só procederá à fabricação dos pães e à entrega das fornadas após a confirmação do pagamento da respectiva Mensalidade, acrescida, quando o caso, dos Extras apurados no ciclo de consumo encerrado.
+**6.11.** A Cora só procederá à fabricação dos pães e à entrega das fornadas após a confirmação do pagamento da respectiva Mensalidade, acrescida, quando o caso, dos Extras apurados no ciclo de consumo encerrado, ressalvada a tolerância da cláusula 6.10.
 
 **6.12.** **Nota fiscal.** A Cora é microempreendedor individual e, na forma da legislação vigente, é dispensada de emitir nota fiscal ao consumidor pessoa física, emitindo-a quando solicitado.
 
@@ -247,7 +248,7 @@ Ficou com dúvidas? Venha falar com a gente através dos seguintes canais: Whats
 
 # Anexo I — Regras da Assinatura
 
-**Vigência: a partir de 04/10/2026 · versão 1.4**
+**Vigência: a partir de 08/10/2026 · versão 1.5**
 
 Este anexo reúne os parâmetros operacionais da assinatura. Ele pode ser atualizado conforme a cláusula 14.2 dos Termos. A versão vigente está sempre no Portal.
 
@@ -306,8 +307,9 @@ Assinante de 2 ou mais pães pode fixar o segundo pão como preferência permane
 |---|---|
 | Vencimento | dia 8 |
 | 1 dia após | aviso automático |
-| 4 dias após | aviso automático informando qual entrega ficará suspensa |
-| 7 dias após | sem pagamento, entregas suspensas até a regularização, com aviso pessoal |
+| 4 dias após | segundo aviso automático |
+| Primeira entrega após o vencimento | acontece normalmente |
+| Segunda entrega após o vencimento, sem pagamento | entregas suspensas até a regularização, com aviso pessoal da Cora |
 | Pagamento confirmado | entregas retomadas na semana seguinte, sem penalidade |
 
 ## H. Extras rotativos
