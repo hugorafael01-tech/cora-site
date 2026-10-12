@@ -1,6 +1,6 @@
 # Termos de Uso
 
-**Cora · Versão 1.8 · 08/10/2026**
+**Cora · Versão 1.9 · 12/10/2026**
 
 ## 1. Quem somos e do que trata este documento
 
@@ -248,7 +248,7 @@ Ficou com dúvidas? Venha falar com a gente através dos seguintes canais: Whats
 
 # Anexo I — Regras da Assinatura
 
-**Vigência: a partir de 08/10/2026 · versão 1.5**
+**Vigência: a partir de 12/10/2026 · versão 1.6**
 
 Este anexo reúne os parâmetros operacionais da assinatura. Ele pode ser atualizado conforme a cláusula 14.2 dos Termos. A versão vigente está sempre no Portal.
 
@@ -296,7 +296,7 @@ Assinante de 2 ou mais pães pode fixar o segundo pão como preferência permane
 ## F. Cobrança
 
 - **Emissão do extrato e da cobrança:** dia 26 de cada mês.
-- **Vencimento:** dia **8** de cada mês, a partir de outubro de 2026.
+- **Vencimento:** dia **8** de cada mês, a partir de outubro de 2026. Quando o dia 8 não for dia útil (fim de semana, feriado ou dia sem expediente bancário), o pagamento é aceito sem atraso até o dia útil seguinte.
 - **Ciclo de leitura dos Extras:** do dia seguinte ao fechamento anterior até a **última entrega realizada até o dia 25** do mês anterior. Entregas depois do dia 25 entram no ciclo seguinte.
 - **Extrato:** enviado pela Cora pelo menos 3 dias antes do vencimento. Débito em cartão só depois do envio.
 - **Formas de pagamento:** cartão de crédito (recorrente), Pix ou boleto.
@@ -306,8 +306,8 @@ Assinante de 2 ou mais pães pode fixar o segundo pão como preferência permane
 | Momento | O que acontece |
 |---|---|
 | Vencimento | dia 8 |
-| 1 dia após | aviso automático |
-| 4 dias após | segundo aviso automático |
+| 1 dia útil após o vencimento (se o dia 8 não for dia útil, conta-se a partir do dia útil seguinte) | aviso automático |
+| 4 dias úteis após | segundo aviso automático |
 | Primeira entrega após o vencimento | acontece normalmente |
 | Segunda entrega após o vencimento, sem pagamento | entregas suspensas até a regularização, com aviso pessoal da Cora |
 | Pagamento confirmado | entregas retomadas na semana seguinte, sem penalidade |
