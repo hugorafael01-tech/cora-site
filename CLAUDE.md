@@ -53,6 +53,15 @@ python3 tools/legal/build.py && python3 tools/legal/check.py
 Depois, conferir que a versão de teste da Vercel terminou como READY e pôr o
 link dela na descrição do PR.
 
+**Se o `check.py` imprimir `AVISO`**, a versão dos Termos, do Anexo I ou da
+Política mudou, e o banco precisa de uma linha nova em `termos_versoes`
+(migration 0077 do `cora-backoffice`). Sem ela o portal não avisa os
+assinantes e grava a versão errada no cadastro. Cole o aviso inteiro na
+descrição do PR: ele traz o `INSERT` pronto, só sem a data. A linha entra
+**depois do merge**, pela conversa do claude.ai, com `publicado_em` igual ao
+horário do deploy de produção (-03:00), quando o deploy estiver no ar (seção
+abaixo). Revisão só de texto, sem mudar o cabeçalho de versão, não gera linha.
+
 ## Deploy no ar
 
 Este site não tem arquivo `.js` com nome variável. O sinal de que a versão
