@@ -10,7 +10,15 @@ Sai com código 1 se qualquer conferência falhar:
 3. mesma quantidade de trechos em negrito;
 4. nenhum id de cláusula ou seção que existia no último commit sumiu, salvo os
    declarados em IDS_REMOVIDOS (ids são citados em e-mails; sumir um id quebra
-   link já enviado).
+   link já enviado);
+5. o cabeçalho de versão de cada markdown é legível (o aviso abaixo depende
+   dele).
+
+Além das conferências, imprime um AVISO (não falha) quando a versão dos Termos,
+do Anexo I ou da Política mudou em relação ao que está publicado: toda
+publicação nova precisa de uma linha em `termos_versoes` no banco (migration
+0077 do cora-backoffice), senão o portal não avisa os assinantes nem grava a
+versão certa no cadastro. O aviso traz o INSERT pronto, só sem a data.
 """
 import difflib
 import html
@@ -73,6 +81,58 @@ def ids_no_ultimo_commit(name):
     return ids(old)
 
 
+# Cabeçalhos de versão. Termos: "**Cora · Versão 1.9 · 12/10/2026**" e, no Anexo
+# I, "**Vigência: a partir de 12/10/2026 · versão 1.6**". Política: igual ao dos
+# Termos. É o contrato de formato: mudar a linha sem mudar estas expressões faz
+# o check falhar (item 5), em vez de o aviso calar.
+VERSAO_RE = re.compile(r"^\*\*Cora · Versão (\d+(?:\.\d+)+) ·", re.M)
+ANEXO_RE = re.compile(r"^\*\*Vigência: .*· versão (\d+(?:\.\d+)+)\*\*", re.M)
+
+
+def versoes_do_markdown(page, md):
+    """{'versao': '1.9', 'anexo': '1.6'} (anexo só nos Termos); None se não achar."""
+    m = VERSAO_RE.search(md)
+    if not m:
+        return None
+    out = {"versao": m.group(1)}
+    if page == "termos":
+        a = ANEXO_RE.search(md)
+        if not a:
+            return None
+        out["anexo"] = a.group(1)
+    return out
+
+
+def md_publicado(page):
+    """Markdown como está no origin/main (o que está no ar); None se indisponível."""
+    name = f"tools/legal/{build.PAGES[page]['md']}"
+    for ref in ("origin/main", "HEAD"):
+        r = subprocess.run(["git", "show", f"{ref}:{name}"], cwd=build.REPO, capture_output=True, text=True)
+        if r.returncode == 0:
+            return ref, r.stdout
+    return None, None
+
+
+def aviso_de_publicacao(page, atual, publicado):
+    """Linhas do aviso, ou [] se a versão não mudou. `atual`/`publicado`: dicts de versoes_do_markdown."""
+    if publicado is not None and atual == publicado:
+        return []
+    doc = "termos" if page == "termos" else "privacidade"
+    versao = atual["versao"]
+    anexo = f"'{atual['anexo']}'" if page == "termos" else "NULL"
+    antes = "sem base para comparar" if publicado is None else "antes " + ", ".join(f"{k} {v}" for k, v in publicado.items())
+    nome = "Termos de Uso + Anexo I" if page == "termos" else "Política de Privacidade"
+    return [
+        f"AVISO: {nome} mudou de versão ({antes}; agora " + ", ".join(f"{k} {v}" for k, v in atual.items()) + ").",
+        "  Falta a linha em `termos_versoes` (backoffice, migration 0077). Depois do merge, com o deploy",
+        "  de produção READY, a conversa do claude.ai insere, com publicado_em = horário DO DEPLOY (-03:00):",
+        "    INSERT INTO public.termos_versoes (documento, versao, anexo_versao, publicado_em, url, resumo)",
+        f"    VALUES ('{doc}', '{versao}', {anexo}, '<AAAA-MM-DD HH:MM:SS-03:00>', 'https://acora.com.br/{doc}', <resumo do banner ou NULL>);",
+        "  resumo: o texto do banner de Termos atualizados; NULL mostra \"A versão nova vale desde DD/MM.\"",
+        "  Cole este aviso na descrição do PR. Revisão só de texto sem mudar o cabeçalho de versão não gera linha.",
+    ]
+
+
 def check(page):
     problems = []
     name = f"{page}.html"
@@ -98,12 +158,35 @@ def check(page):
         if gone:
             problems.append("ids que existiam no último commit e sumiram: " + ", ".join(gone))
 
+    atual = versoes_do_markdown(page, md)
+    if atual is None:
+        problems.append(
+            "cabeçalho de versão ilegível no markdown (esperado '**Cora · Versão X.Y · ...**'"
+            + (" e '**Vigência: ... · versão X.Y**'" if page == "termos" else "")
+            + "): o aviso de publicação depende dele"
+        )
+
     print(f"{name}: {len(hw)} palavras, {len(ids(current))} âncoras -> " + ("OK" if not problems else "FALHOU"))
     for p in problems:
         print("  - " + p)
     return not problems
 
 
+def avisos():
+    saida = []
+    for page in build.PAGES:
+        md = (build.HERE / build.PAGES[page]["md"]).read_text(encoding="utf-8")
+        atual = versoes_do_markdown(page, md)
+        if atual is None:
+            continue  # já reportado como falha em check()
+        ref, base = md_publicado(page)
+        publicado = versoes_do_markdown(page, base) if base else None
+        saida += aviso_de_publicacao(page, atual, publicado)
+    return saida
+
+
 if __name__ == "__main__":
     ok = all([check(page) for page in build.PAGES])
+    linhas = avisos()
+    print("\n".join(linhas) if linhas else "Versões inalteradas em relação ao publicado: nenhuma linha nova em termos_versoes.")
     sys.exit(0 if ok else 1)
