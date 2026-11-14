@@ -22,6 +22,10 @@
 
   <link rel="canonical" href="https://www.acora.com.br/">
 
+  <!-- Marca que ha JavaScript antes da primeira pintura: o cabecalho nasce no
+       estado "topo, sobre a foto" e nao pisca. Sem JavaScript, fica a barra solida. -->
+  <script>document.documentElement.className += ' cab-js';</script>
+
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cora — Padaria por Assinatura">
@@ -122,6 +126,117 @@
 
     .btn-filled:hover {
       background-color: var(--brand-600);
+    }
+
+
+    /* ═══════════════════════════════════
+       CABECALHO FIXO
+       Padrao (sem JavaScript): barra solida com logo.
+       Com JavaScript (classe cab-js no <html>): no topo da pagina fica sem
+       fundo e sem logo, sobre a foto; a barra solida volta quando o hero sai
+       da tela (classe cab--solida, posta pelo script).
+    ═══════════════════════════════════ */
+    .cab {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      height: 56px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--warm-50);
+      border-bottom: 1px solid var(--warm-200);
+      transition: background-color 180ms ease-out, border-color 180ms ease-out;
+    }
+
+    .cab-logo-link {
+      display: flex;
+      align-items: center;
+      transition: opacity 180ms ease-out, visibility 0s linear 0s;
+    }
+
+    .cab-logo {
+      display: block;
+      height: 24px;
+      width: auto;
+    }
+
+    .cab-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: auto;
+    }
+
+    .cab-entrar {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 12px;
+      font-family: 'Montagu Slab', Georgia, serif;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--brand-500);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 150ms ease-out;
+    }
+
+    .cab-botao {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 144px;
+      height: 40px;
+      padding: 0 20px;
+      font-family: 'Montagu Slab', Georgia, serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: #fff;
+      background-color: var(--brand-500);
+      border-radius: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background-color 150ms ease-out, opacity 180ms ease-out, visibility 0s linear 0s;
+    }
+
+    .cab-botao:hover {
+      background-color: var(--brand-600);
+    }
+
+    .cab a:focus-visible {
+      outline: 2px solid var(--brand-700);
+      outline-offset: 2px;
+    }
+
+    /* Topo da pagina, sobre a foto: sem fundo, sem linha, sem logo. */
+    .cab-js .cab:not(.cab--solida) {
+      background-color: transparent;
+      border-bottom-color: transparent;
+    }
+
+    .cab-js .cab:not(.cab--solida) .cab-logo-link {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 180ms ease-out, visibility 0s linear 180ms;
+    }
+
+    .cab-js .cab:not(.cab--solida) .cab-entrar {
+      color: var(--brand-700);
+    }
+
+    /* Com JavaScript, o botao fica invisivel (com o espaco reservado) ate a
+       leitura das vagas responder ou o limite estourar. */
+    .cab-js .cab-botao:not(.cab-botao--pronto) {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 180ms ease-out, visibility 0s linear 180ms;
     }
 
 
@@ -428,6 +543,9 @@
        DESKTOP
     ═══════════════════════════════════ */
     @media (min-width: 768px) {
+      .cab { height: 64px; padding: 0 40px; }
+      .cab-logo { height: 28px; }
+      .cab-nav { gap: 16px; }
       .hero-content { padding-left: 170px; padding-right: 170px; }
       .copy-row { padding-left: 170px; padding-right: 170px; }
       .carousel-label { padding-left: 170px; padding-right: 170px; }
@@ -446,8 +564,20 @@
 </head>
 <body>
 
+  <!-- ═══ CABECALHO FIXO ═══
+       O rotulo e o destino do botao comecam no estado FECHADO (padrao do site);
+       o script do fim da pagina troca para "Quero assinar" se o portal disser que ha
+       vaga. "Entrar" vai para a raiz do portal, que serve assinante e avulso. -->
+  <header class="cab" id="cabecalho">
+    <a class="cab-logo-link" href="#topo" aria-label="Cora, voltar ao topo da página"><img class="cab-logo" src="images/cora_logo_cor.svg" alt="" width="86" height="24"></a>
+    <nav class="cab-nav" aria-label="Acesso ao portal">
+      <a class="cab-entrar" href="https://app.acora.com.br/">Entrar</a>
+      <a class="cab-botao" id="cab-botao" href="https://app.acora.com.br/lista-espera">Fila do pão</a>
+    </nav>
+  </header>
+
   <!-- ═══ DOBRA 1 — HERO ═══ -->
-  <section class="hero">
+  <section class="hero" id="topo">
     <img src="images/_hero_dobra1.jpg" alt="Pão de fermentação natural" class="hero-bg" fetchpriority="high" decoding="async">
     <div class="hero-content">
       <img src="images/cora_logo_cor.svg" alt="Cora" class="hero-logo">
@@ -568,7 +698,7 @@
     <div class="cta-copy">
       <h2 class="heading" id="cta-vagas-titulo">AS VAGAS DESSA RODADA JÁ FORAM PREENCHIDAS</h2>
       <p id="cta-vagas-corpo">A Cora entrega toda semana em Niterói e no Rio. A gente amplia a produção aos poucos — deixa seu contato e avisamos quando abrir mais vagas.</p>
-      <a href="https://app.acora.com.br/lista-espera" class="btn-filled" id="cta-vagas-botao">Entrar na fila</a>
+      <a href="https://app.acora.com.br/lista-espera" class="btn-filled" id="cta-vagas-botao">Fila do pão</a>
     </div>
     <div class="cta-photo">
       <img src="images/_CTA_Final.jpg" alt="Pão de fermentação natural da Cora com a marca estampada na crosta, cortado ao meio mostrando o miolo aberto." loading="lazy">
@@ -611,6 +741,24 @@
     });
   </script>
 
+  <!-- Cabecalho fixo: troca do estado "topo, sobre a foto" para "barra solida"
+       quando o hero sai da tela (a area util do hero comeca abaixo do cabecalho,
+       por isso a margem negativa). Sem IntersectionObserver, fica a barra solida. -->
+  <script>
+    (function () {
+      var cab = document.getElementById('cabecalho');
+      var hero = document.getElementById('topo');
+      if (!cab || !hero) return;
+      function solida(sim) { cab.classList.toggle('cab--solida', sim); }
+      if (!window.IntersectionObserver) { solida(true); return; }
+      var altura = cab.offsetHeight;
+      solida(window.scrollY >= hero.offsetHeight - altura);
+      new IntersectionObserver(function (itens) {
+        solida(!itens[0].isIntersecting);
+      }, { rootMargin: '-' + altura + 'px 0px 0px 0px' }).observe(hero);
+    })();
+  </script>
+
   <!-- Ultima dobra: texto conforme as vagas do portal. Le o mesmo GET /api/settings
        que o portal usa (campo subscriptions_open, que ja junta interruptor, teto
        e capacidade do dia). So troca o texto com resposta clara de "aberto";
@@ -638,22 +786,37 @@
       var titulo = document.getElementById('cta-vagas-titulo');
       var corpo = document.getElementById('cta-vagas-corpo');
       var botao = document.getElementById('cta-vagas-botao');
-      if (!titulo || !corpo || !botao || !window.fetch) return;
+      var botaoCab = document.getElementById('cab-botao');
+
+      // Uma leitura so, dois botoes: o do cabecalho e o do fim da pagina.
+      // O botao do cabecalho nasce invisivel (com o espaco reservado) e so
+      // aparece quando a leitura termina, com resposta ou sem ela.
+      function revelaCabecalho() {
+        if (botaoCab) botaoCab.classList.add('cab-botao--pronto');
+      }
 
       function mostraAberto() {
-        titulo.textContent = 'Abrimos novas vagas';
-        corpo.textContent = 'A Cora cresce aos poucos, e agora tem lugar pra mais gente. Pão de fermentação natural toda semana, na sua porta.';
-        botao.textContent = 'Quero assinar';
-        botao.href = 'https://app.acora.com.br/onboarding';
+        if (titulo && corpo && botao) {
+          titulo.textContent = 'Abrimos novas vagas';
+          corpo.textContent = 'A Cora cresce aos poucos, e agora tem lugar pra mais gente. Pão de fermentação natural toda semana, na sua porta.';
+          botao.textContent = 'Quero assinar';
+          botao.href = 'https://app.acora.com.br/onboarding';
+        }
+        if (botaoCab) {
+          botaoCab.textContent = 'Quero assinar';
+          botaoCab.href = 'https://app.acora.com.br/onboarding';
+        }
       }
+
+      if (!window.fetch) { revelaCabecalho(); return; }
 
       var controle = window.AbortController ? new AbortController() : null;
       var limite = setTimeout(function () { if (controle) controle.abort(); }, 4000);
       fetch(api + '/api/settings' + simular, controle ? { signal: controle.signal } : {})
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (d) { if (d && d.subscriptions_open === true) mostraAberto(); })
-        .catch(function () { /* fica no texto de fechado */ })
-        .then(function () { clearTimeout(limite); });
+        .catch(function () { /* fica no estado de fechado */ })
+        .then(function () { clearTimeout(limite); revelaCabecalho(); });
     })();
   </script>
 
