@@ -812,7 +812,12 @@
 
       var controle = window.AbortController ? new AbortController() : null;
       var limite = setTimeout(function () { if (controle) controle.abort(); }, 4000);
-      fetch(api + '/api/settings' + simular, controle ? { signal: controle.signal } : {})
+      // cache 'no-store': sem isso, um navegador com resposta guardada revalida e a
+      // leitura pode falhar ("Failed to fetch"), derrubando o site no estado fechado
+      // com vagas abertas (observado em producao em 14/11).
+      var opcoes = { cache: 'no-store' };
+      if (controle) opcoes.signal = controle.signal;
+      fetch(api + '/api/settings' + simular, opcoes)
         .then(function (r) { return r.ok ? r.json() : null; })
         .then(function (d) { if (d && d.subscriptions_open === true) mostraAberto(); })
         .catch(function () { /* fica no estado de fechado */ })
