@@ -190,7 +190,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 120px;
+      min-width: 144px;
       height: 40px;
       padding: 0 20px;
       font-family: 'Montagu Slab', Georgia, serif;
@@ -566,7 +566,7 @@
 
   <!-- ═══ CABECALHO FIXO ═══
        O rotulo e o destino do botao comecam no estado FECHADO (padrao do site);
-       o script do fim da pagina troca para "Assinar" se o portal disser que ha
+       o script do fim da pagina troca para "Quero assinar" se o portal disser que ha
        vaga. "Entrar" vai para a raiz do portal, que serve assinante e avulso. -->
   <header class="cab" id="cabecalho">
     <a class="cab-logo-link" href="#topo" aria-label="Cora, voltar ao topo da página"><img class="cab-logo" src="images/cora_logo_cor.svg" alt="" width="86" height="24"></a>
@@ -803,7 +803,7 @@
           botao.href = 'https://app.acora.com.br/onboarding';
         }
         if (botaoCab) {
-          botaoCab.textContent = 'Assinar';
+          botaoCab.textContent = 'Quero assinar';
           botaoCab.href = 'https://app.acora.com.br/onboarding';
         }
       }
