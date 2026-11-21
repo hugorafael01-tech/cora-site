@@ -193,31 +193,67 @@
       max-width: 560px;
     }
 
+    /* Barra de assuntos: presa logo abaixo do cabecalho fixo (56px no celular,
+       64px no computador), com o mesmo fundo e o mesmo fio. No celular os cinco
+       links ficam numa linha so e a barra rola na horizontal, sem barra de
+       rolagem visivel. */
+    :root {
+      --cab-h: 56px;
+      --barra-h: 48px;
+    }
+
     .assuntos {
+      position: sticky;
+      top: var(--cab-h);
+      z-index: 40;
       display: flex;
-      flex-wrap: wrap;
-      gap: 0 20px;
-      margin: 24px 0 40px;
-      padding: 8px 0;
-      border-top: 1px solid var(--warm-200);
+      flex-wrap: nowrap;
+      align-items: stretch;
+      gap: 24px;
+      height: var(--barra-h);
+      margin: 24px -24px 0;
+      padding: 0 24px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      background-color: var(--warm-50);
       border-bottom: 1px solid var(--warm-200);
     }
 
+    .assuntos::-webkit-scrollbar { display: none; }
+
     .assuntos a {
+      flex: 0 0 auto;
       display: flex;
       align-items: center;
-      min-height: 44px;
       font-size: 16px;
       font-weight: 500;
       color: var(--brand-500);
       text-decoration: none;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
     }
 
-    .assuntos a:hover { text-decoration: underline; }
+    .assuntos a:hover { color: var(--brand-600); }
+
+    .assuntos a[aria-current="true"] {
+      color: var(--brand-700);
+      border-bottom-color: var(--brand-500);
+    }
+
+    .assuntos a:focus-visible {
+      outline: 2px solid var(--brand-700);
+      outline-offset: -2px;
+    }
+
+    .faq {
+      padding-top: 32px;
+    }
 
     .faq-grupo {
       margin-bottom: 40px;
-      scroll-margin-top: 72px;
+      scroll-margin-top: calc(var(--cab-h) + var(--barra-h) + 16px);
     }
 
     .faq-grupo h2 {
@@ -356,9 +392,9 @@
       .cab-nav { gap: 16px; }
       main { padding: 120px 170px 40px; }
       h1.heading { font-size: 64px; }
-      .corpo { display: flex; gap: 80px; align-items: flex-start; margin-top: 56px; }
-      .assuntos { flex: 0 0 200px; flex-direction: column; flex-wrap: nowrap; gap: 0; margin: 0; border-bottom: 0; position: sticky; top: 88px; }
-      .faq { flex: 1 1 auto; min-width: 0; }
+      :root { --cab-h: 64px; }
+      .assuntos { margin: 40px -170px 0; padding: 0 170px; gap: 32px; }
+      .faq { padding-top: 48px; }
       .faq-grupo { margin-bottom: 56px; }
       .faq-grupo h2 { font-size: 30px; }
       .achou { padding: 88px 170px; }
@@ -383,15 +419,15 @@
     <h1 class="heading">Dúvidas</h1>
     <p class="intro">O que as pessoas mais perguntam antes de assinar e depois de receber o primeiro pão.</p>
 
-    <div class="corpo">
-      <nav class="assuntos" aria-label="Assuntos">
-        <a href="#assinatura">Assinatura</a>
-        <a href="#preco-e-cobranca">Preço e cobrança</a>
-        <a href="#entrega">Entrega</a>
-        <a href="#o-pao">O pão</a>
-        <a href="#pausar-e-cancelar">Pausar e cancelar</a>
-      </nav>
-      <div class="faq">
+    <nav class="assuntos" id="assuntos" aria-label="Assuntos">
+      <a href="#assinatura">Assinatura</a>
+      <a href="#preco-e-cobranca">Preço e cobrança</a>
+      <a href="#entrega">Entrega</a>
+      <a href="#o-pao">O pão</a>
+      <a href="#pausar-e-cancelar">Pausar e cancelar</a>
+    </nav>
+
+    <div class="faq">
     <section class="faq-grupo" id="assinatura">
       <h2 class="heading">Assinatura</h2>
       <div class="faq-item">
@@ -474,7 +510,6 @@
         <p>A Cora é uma padaria por assinatura. Se bater a dúvida na hora de assinar, o cadastro oferece pedir uma vez antes, quando houver venda aberta.</p>
       </div>
     </section>
-      </div>
     </div>
   </main>
 
@@ -540,6 +575,47 @@
         .then(function (d) { if (d && d.subscriptions_open === true) mostraAberto(); })
         .catch(function () { /* fica no estado de fechado */ })
         .then(function () { clearTimeout(limite); revelaCabecalho(); });
+    })();
+  </script>
+
+
+  <!-- Destaque do assunto da secao que esta na tela. Sem IntersectionObserver ou
+       sem JavaScript, a barra funciona igual, so sem destaque. -->
+  <script>
+    (function () {
+      var barra = document.getElementById('assuntos');
+      if (!barra || !window.IntersectionObserver) return;
+      var links = barra.querySelectorAll('a[href^="#"]');
+      var secoes = [];
+      for (var i = 0; i < links.length; i++) {
+        var alvo = document.getElementById(links[i].getAttribute('href').slice(1));
+        if (alvo) secoes.push({ el: alvo, link: links[i] });
+      }
+      var visiveis = {};
+      var ativo = null;
+      function marca() {
+        var escolhida = null;
+        for (var i = 0; i < secoes.length; i++) {
+          if (visiveis[secoes[i].el.id]) { escolhida = secoes[i]; break; }
+        }
+        if (!escolhida || escolhida.link === ativo) return;
+        if (ativo) ativo.removeAttribute('aria-current');
+        ativo = escolhida.link;
+        ativo.setAttribute('aria-current', 'true');
+        // No celular, traz o link ativo para o meio da barra.
+        if (barra.scrollWidth > barra.clientWidth) {
+          barra.scrollLeft = ativo.offsetLeft - (barra.clientWidth - ativo.offsetWidth) / 2;
+        }
+      }
+      // Faixa de leitura: abaixo do cabecalho e da barra (112px no celular, 112px
+      // no computador) ate perto da metade da tela.
+      var io = new IntersectionObserver(function (itens) {
+        for (var i = 0; i < itens.length; i++) {
+          visiveis[itens[i].target.id] = itens[i].isIntersecting;
+        }
+        marca();
+      }, { rootMargin: '-112px 0px -50% 0px' });
+      for (var j = 0; j < secoes.length; j++) io.observe(secoes[j].el);
     })();
   </script>
 
