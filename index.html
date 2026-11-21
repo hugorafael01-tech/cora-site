@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cora — Padaria por Assinatura</title>
+  <title>Cora, Padaria por Assinatura</title>
   <meta name="description" content="Chegou a padaria do seu tempo. Fermentação natural longa e levain autoral. Pão de verdade na sua porta toda semana. Niterói e Rio de Janeiro.">
   <meta name="theme-color" content="#2E55CD">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Cora — Padaria por Assinatura">
+  <meta property="og:title" content="Cora, Padaria por Assinatura">
   <meta property="og:description" content="Fermentação natural longa e levain autoral. Pão de verdade na sua porta toda semana. Padaria por assinatura em Niterói e Rio.">
   <meta property="og:image" content="https://www.acora.com.br/images/og-cora.jpg">
   <meta property="og:image:alt" content="Pão Original da Cora com a marca estampada na crosta, sobre tábua de madeira">
@@ -28,11 +28,11 @@
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cora — Padaria por Assinatura">
+  <meta name="twitter:title" content="Cora, Padaria por Assinatura">
   <meta name="twitter:description" content="Fermentação natural longa e levain autoral. Pão de verdade na sua porta toda semana. Padaria por assinatura em Niterói e Rio.">
   <meta name="twitter:image" content="https://www.acora.com.br/images/og-cora.jpg">
 
-  <link rel="preload" as="image" href="images/_hero_dobra1.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero-dobra1.webp" fetchpriority="high">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -453,6 +453,143 @@
 
 
     /* ═══════════════════════════════════
+       QUANTO CUSTA
+    ═══════════════════════════════════ */
+    .price {
+      padding: 64px 24px;
+      background-color: var(--warm-50);
+    }
+
+    .price h2 {
+      font-size: 32px;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .price-intro {
+      font-size: 17px;
+      line-height: 1.5;
+      max-width: 520px;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px 40px;
+      margin-top: 32px;
+      max-width: 940px;
+    }
+
+    .price-card {
+      border-top: 1px solid var(--warm-200);
+      padding-top: 16px;
+    }
+
+    .price-nome {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--warm-800);
+    }
+
+    .price-valor {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--warm-700);
+    }
+
+    .price-valor span {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--warm-600);
+    }
+
+    .price-nota {
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    /* A frase de janeiro tem o mesmo peso do resto do cartao: sem letra miuda. */
+    .price-nota--jan {
+      margin-top: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--brand-700);
+    }
+
+    .price-fecho {
+      margin-top: 28px;
+      max-width: 520px;
+      line-height: 1.5;
+    }
+
+    .link-duvidas {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      margin-top: 12px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--brand-500);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .link-duvidas:hover { color: var(--brand-600); }
+
+
+    /* ═══════════════════════════════════
+       O QUE DIZ QUEM ASSINA
+       So texto: sem italico, sem foto, sem estrela.
+    ═══════════════════════════════════ */
+    .voz {
+      padding: 64px 24px;
+      background-color: var(--warm-100);
+    }
+
+    .voz h2 {
+      font-size: 32px;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .voz-apoio {
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .voz-lista {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+      margin-top: 32px;
+    }
+
+    .voz-item {
+      border-top: 2px solid var(--brand-500);
+      padding-top: 20px;
+    }
+
+    .voz-item blockquote {
+      font-style: normal;
+      font-size: 18px;
+      line-height: 1.5;
+      color: var(--warm-800);
+    }
+
+    .voz-item figcaption {
+      margin-top: 16px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .voz-item figcaption strong {
+      font-weight: 600;
+      color: var(--warm-800);
+    }
+
+
+    /* ═══════════════════════════════════
        DOBRA 4 — CTA FINAL
     ═══════════════════════════════════ */
     .cta-final {
@@ -488,6 +625,10 @@
 
     .cta-copy .btn-filled {
       align-self: flex-start;
+    }
+
+    .quem-faz-copy {
+      background-color: var(--warm-50);
     }
 
     .cta-photo {
@@ -552,6 +693,9 @@
       .carousel { padding-left: 170px; padding-right: 170px; scroll-padding-inline-start: 170px; }
       .carousel-nav { padding-left: 170px; }
       .how { padding-left: 170px; padding-right: 170px; }
+      .price { padding: 112px 170px; }
+      .voz { padding: 112px 170px; }
+      .price h2, .voz h2 { font-size: 42px; }
       .cta-copy { padding-left: 170px; }
       .cta-copy.quem-faz-copy { padding-left: 32px; padding-right: 170px; }
       .cta-final--reverse .cta-copy { order: 0; }
@@ -578,7 +722,7 @@
 
   <!-- ═══ DOBRA 1 — HERO ═══ -->
   <section class="hero" id="topo">
-    <img src="images/_hero_dobra1.jpg" alt="Pão de fermentação natural" class="hero-bg" fetchpriority="high" decoding="async">
+    <img src="images/hero-dobra1.webp" alt="Pão de fermentação natural" class="hero-bg" width="1600" height="900" fetchpriority="high" decoding="async">
     <div class="hero-content">
       <img src="images/cora_logo_cor.svg" alt="Cora" class="hero-logo">
       <h1 class="heading hero-tagline">PADARIA<br>POR<br>ASSINATURA</h1>
@@ -590,12 +734,11 @@
   <section class="copy-section">
     <div class="copy-row">
       <h2 class="heading">CHEGOU A PADARIA DO SEU TEMPO</h2>
-      <p>Fermentação natural longa e levain autoral. Pão de verdade na sua porta toda semana.</p>
-      <p>Niterói e Rio de Janeiro.</p>
+      <p>Fermentação natural longa e levain autoral. Pão de verdade na sua porta toda semana, em Niterói e no Rio.</p>
     </div>
 
     <h3 class="heading carousel-label">O QUE SAI DO FORNO</h3>
-    <div class="copy-row carousel-intro"><p>Sua assinatura começa pelo Original ou Integral. Toda semana dá pra trocar por outros pães do cardápio, alguns com acréscimo.</p></div>
+    <div class="copy-row carousel-intro"><p>Sua assinatura começa pelo Original ou pelo Integral. Toda semana dá pra trocar por outros pães do cardápio, alguns com acréscimo.</p></div>
 
     <div class="carousel-wrapper">
       <div class="carousel" id="carousel">
@@ -690,26 +833,70 @@
   </section>
 
 
-  <!-- ═══ DOBRA 4 — CTA FINAL ═══ -->
-  <!-- O texto de vagas FECHADAS e o padrao: e o que fica se a leitura do estado
-       falhar ou demorar. O script no fim da pagina troca para o texto de vagas
-       ABERTAS quando o portal responde que ha vaga. -->
-  <section class="cta-final">
-    <div class="cta-copy">
-      <h2 class="heading" id="cta-vagas-titulo">AS VAGAS DESSA RODADA JÁ FORAM PREENCHIDAS</h2>
-      <p id="cta-vagas-corpo">A Cora entrega toda semana em Niterói e no Rio. A gente amplia a produção aos poucos — deixa seu contato e avisamos quando abrir mais vagas.</p>
-      <a href="https://app.acora.com.br/lista-espera" class="btn-filled" id="cta-vagas-botao">Fila do pão</a>
+  <!-- ═══ DOBRA 4 — QUANTO CUSTA ═══
+       PRECOS: os quatro valores e a frase de janeiro vivem so neste bloco (e,
+       em duvidas.html, na resposta "Quanto custa?"). Para a troca de dezembro
+       (entrega de R$ 15 para R$ 20) edite so a linha marcada abaixo, sem
+       mexer em mais nada. O site e estatico e nao le preco do banco. Fonte do
+       contrato: Anexo I, secao A. -->
+  <section class="price" id="quanto-custa">
+    <h2 class="heading">QUANTO CUSTA</h2>
+    <p class="price-intro">O pão e a entrega têm preços separados. Os dois são cobrados uma vez por mês.</p>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-nome">1 pão por semana</div>
+        <div class="price-valor">R$ 99 <span>por mês</span></div>
+        <div class="price-nota">4 pães no mês</div>
+      </div>
+      <div class="price-card">
+        <div class="price-nome">2 pães por semana</div>
+        <div class="price-valor">R$ 198 <span>por mês</span></div>
+        <div class="price-nota">8 pães no mês</div>
+      </div>
+      <div class="price-card">
+        <div class="price-nome">3 pães por semana</div>
+        <div class="price-valor">R$ 297 <span>por mês</span></div>
+        <div class="price-nota">12 pães no mês</div>
+      </div>
+      <div class="price-card">
+        <div class="price-nome">Entrega na sua porta</div>
+        <div class="price-valor">R$ 15 <span>por mês</span></div>
+        <div class="price-nota">em qualquer plano</div>
+        <!-- LINHA DE DEZEMBRO: trocar o valor acima para R$ 20 e apagar a linha abaixo. -->
+        <div class="price-nota price-nota--jan">R$ 20 a partir de janeiro de 2027.</div>
+      </div>
     </div>
-    <div class="cta-photo">
-      <img src="images/_CTA_Final.jpg" alt="Pão de fermentação natural da Cora com a marca estampada na crosta, cortado ao meio mostrando o miolo aberto." loading="lazy">
+    <p class="price-fecho">Sem fidelidade e sem multa. Em meses com cinco entregas, a quinta é por nossa conta.</p>
+    <a class="link-duvidas" href="/duvidas">Ver todas as dúvidas</a>
+  </section>
+
+
+  <!-- ═══ DOBRA 5 — O QUE DIZ QUEM ASSINA ═══
+       Citacao, primeiro nome e bairro. Nada alem disso. -->
+  <section class="voz">
+    <h2 class="heading">O QUE DIZ QUEM ASSINA</h2>
+    <p class="voz-apoio">Palavras de assinantes, da pesquisa de novembro de 2026.</p>
+    <div class="voz-lista">
+      <figure class="voz-item">
+        <blockquote>“No último final de semana levei para Ilha Grande, numa casa com 10 pessoas, o integral e a ciabatta. Amaram.”</blockquote>
+        <figcaption><strong>Georgia</strong>, Copacabana</figcaption>
+      </figure>
+      <figure class="voz-item">
+        <blockquote>“Na Cora os pães são feitos de técnica, cuidado e muito carinho, e os insumos são escolhidos com o mesmo cuidado com que os pães são feitos.”</blockquote>
+        <figcaption><strong>Tereza</strong>, Icaraí</figcaption>
+      </figure>
+      <figure class="voz-item">
+        <blockquote>“O conforto de receber em casa os melhores pães possíveis de uma padaria! Sou fã!”</blockquote>
+        <figcaption><strong>Abdala</strong>, Fonseca</figcaption>
+      </figure>
     </div>
   </section>
 
 
-  <!-- ═══ QUEM FAZ ═══ -->
+  <!-- ═══ DOBRA 6 — QUEM FAZ ═══ -->
   <section class="cta-final cta-final--reverse">
     <div class="cta-photo">
-      <img src="images/_Hugo-no-curso.png" alt="Hugo finalizando seu primeiro curso presencial de panificação, em 2026." loading="lazy">
+      <img src="images/hugo-no-curso.webp" alt="Hugo finalizando seu primeiro curso presencial de panificação, em 2026." loading="lazy" decoding="async" width="900" height="900">
     </div>
     <div class="cta-copy quem-faz-copy">
       <h2 class="heading">QUEM FAZ</h2>
@@ -719,12 +906,28 @@
   </section>
 
 
+  <!-- ═══ DOBRA 7 — CHAMADA FINAL ═══
+       Sem preco aqui: o preco aparece uma vez so, em QUANTO CUSTA.
+       O texto de vagas FECHADAS e o padrao: e o que fica se a leitura do estado
+       falhar ou demorar. O script no fim da pagina troca para o texto de vagas
+       ABERTAS quando o portal responde que ha vaga. -->
+  <section class="cta-final">
+    <div class="cta-copy">
+      <h2 class="heading" id="cta-vagas-titulo">AS VAGAS DESSA RODADA JÁ FORAM PREENCHIDAS</h2>
+      <p id="cta-vagas-corpo">A Cora entrega toda semana em Niterói e no Rio. A gente amplia a produção aos poucos. Deixa seu contato e avisamos quando abrir mais vagas.</p>
+      <a href="https://app.acora.com.br/lista-espera" class="btn-filled" id="cta-vagas-botao">Fila do pão</a>
+    </div>
+    <div class="cta-photo">
+      <img src="images/cta-final.webp" alt="Pão de fermentação natural da Cora com a marca estampada na crosta, cortado ao meio mostrando o miolo aberto." loading="lazy" decoding="async" width="800" height="800">
+    </div>
+  </section>
+
   <!-- ═══ FOOTER ═══ -->
   <footer>
     <p>
-      Cora — Padaria por Assinatura<br>
+      Cora, Padaria por Assinatura<br>
       Niterói e Rio de Janeiro<br>
-      <a href="https://instagram.com/cora.padaria" target="_blank" rel="noopener noreferrer">@cora.padaria</a><br>
+      <a href="/duvidas">Dúvidas</a> · <a href="https://instagram.com/cora.padaria" target="_blank" rel="noopener noreferrer">@cora.padaria</a><br>
       <a href="/termos">Termos de Uso</a> · <a href="/privacidade">Política de Privacidade</a>
     </p>
     <div class="footer-band"></div>
@@ -798,7 +1001,7 @@
       function mostraAberto() {
         if (titulo && corpo && botao) {
           titulo.textContent = 'Abrimos novas vagas';
-          corpo.textContent = 'A Cora cresce aos poucos, e agora tem lugar pra mais gente. Pão de fermentação natural toda semana, na sua porta.';
+          corpo.textContent = 'O cadastro leva uns três minutos.';
           botao.textContent = 'Quero assinar';
           botao.href = 'https://app.acora.com.br/onboarding';
         }

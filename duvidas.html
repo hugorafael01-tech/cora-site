@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dúvidas, Cora</title>
+  <meta name="description" content="O que as pessoas mais perguntam antes de assinar a Cora e depois de receber o primeiro pão: preço, cobrança, entrega, troca de pão, pausa e cancelamento.">
+  <meta name="theme-color" content="#2E55CD">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dúvidas, Cora">
+  <meta property="og:description" content="O que as pessoas mais perguntam antes de assinar a Cora: preço, cobrança, entrega, troca de pão, pausa e cancelamento.">
+  <meta property="og:image" content="https://www.acora.com.br/images/og-cora.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://www.acora.com.br/duvidas">
+  <meta property="og:site_name" content="Cora">
+  <link rel="canonical" href="https://www.acora.com.br/duvidas">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dúvidas, Cora">
+  <meta name="twitter:description" content="O que as pessoas mais perguntam antes de assinar a Cora: preço, cobrança, entrega, troca de pão, pausa e cancelamento.">
+  <meta name="twitter:image" content="https://www.acora.com.br/images/og-cora.jpg">
+
+  <!-- Marca que ha JavaScript: o botao do cabecalho nasce invisivel (com o espaco
+       reservado) ate a leitura das vagas responder, para o rotulo nao piscar. -->
+  <script>document.documentElement.className += ' cab-js';</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Montagu+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-50: #EBEEFB;
+      --brand-500: #2E55CD;
+      --brand-600: #2545A8;
+      --brand-700: #1D3787;
+      --brand-800: #172E6E;
+      --brand-900: #0F1E49;
+      --warm-50: #FAFAF8;
+      --warm-100: #F5F4F0;
+      --warm-200: #E8E6E1;
+      --warm-400: #A8A49C;
+      --warm-500: #7A766E;
+      --warm-600: #5C5850;
+      --warm-700: #3D3A34;
+      --warm-800: #2A2723;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--warm-50);
+      color: var(--warm-600);
+      font-family: 'Montagu Slab', Georgia, Palatino, serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .heading {
+      font-family: 'League Gothic', Impact, 'Arial Narrow', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-weight: 400;
+      color: var(--brand-500);
+    }
+
+    .btn-filled {
+      display: inline-block;
+      font-family: 'Montagu Slab', Georgia, serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff;
+      background-color: var(--brand-500);
+      padding: 14px 36px;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      border: none;
+      transition: background-color 150ms ease-out;
+    }
+
+    .btn-filled:hover {
+      background-color: var(--brand-600);
+    }
+
+
+
+    /* Cabecalho: o mesmo da pagina inicial. Aqui nao ha foto no topo, entao a
+       barra e sempre solida. */
+    .cab {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      height: 56px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--warm-50);
+      border-bottom: 1px solid var(--warm-200);
+      transition: background-color 180ms ease-out, border-color 180ms ease-out;
+    }
+
+    .cab-logo-link {
+      display: flex;
+      align-items: center;
+      transition: opacity 180ms ease-out, visibility 0s linear 0s;
+    }
+
+    .cab-logo {
+      display: block;
+      height: 24px;
+      width: auto;
+    }
+
+    .cab-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: auto;
+    }
+
+    .cab-entrar {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0 12px;
+      font-family: 'Montagu Slab', Georgia, serif;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--brand-500);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 150ms ease-out;
+    }
+
+    .cab-botao {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 144px;
+      height: 40px;
+      padding: 0 20px;
+      font-family: 'Montagu Slab', Georgia, serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      color: #fff;
+      background-color: var(--brand-500);
+      border-radius: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background-color 150ms ease-out, opacity 180ms ease-out, visibility 0s linear 0s;
+    }
+
+    .cab-botao:hover {
+      background-color: var(--brand-600);
+    }
+
+    .cab a:focus-visible {
+      outline: 2px solid var(--brand-700);
+      outline-offset: 2px;
+    }
+
+    .cab-js .cab-botao:not(.cab-botao--pronto) {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 180ms ease-out, visibility 0s linear 180ms;
+    }
+
+    main {
+      padding: 96px 24px 24px;
+    }
+
+    h1.heading {
+      font-size: 44px;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      font-size: 18px;
+      line-height: 1.5;
+      max-width: 560px;
+    }
+
+    .assuntos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 20px;
+      margin: 24px 0 40px;
+      padding: 8px 0;
+      border-top: 1px solid var(--warm-200);
+      border-bottom: 1px solid var(--warm-200);
+    }
+
+    .assuntos a {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--brand-500);
+      text-decoration: none;
+    }
+
+    .assuntos a:hover { text-decoration: underline; }
+
+    .faq-grupo {
+      margin-bottom: 40px;
+      scroll-margin-top: 72px;
+    }
+
+    .faq-grupo h2 {
+      font-size: 26px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .faq-item {
+      padding: 20px 0;
+      border-top: 1px solid var(--warm-200);
+    }
+
+    .faq-item h3 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--warm-800);
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      max-width: 620px;
+      line-height: 1.6;
+    }
+
+    .faq-precos {
+      margin-top: 12px;
+      max-width: 420px;
+      color: var(--warm-800);
+    }
+
+    .faq-precos div {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 0;
+      border-top: 1px solid var(--warm-200);
+    }
+
+    .faq-precos dd {
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .faq-precos-jan dt,
+    .faq-precos-jan dd {
+      color: var(--brand-700);
+      font-weight: 600;
+    }
+
+    .faq-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      margin-top: 12px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--brand-500);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .faq-link:hover { color: var(--brand-600); }
+
+    .achou {
+      background-color: var(--warm-100);
+      padding: 64px 24px;
+    }
+
+    .achou h2 {
+      font-size: 32px;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .achou-acoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    .achou-acoes .btn-filled {
+      padding: 15px 36px;
+    }
+
+    .achou-acoes a:not(.btn-filled) {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      font-weight: 500;
+      color: var(--brand-500);
+    }
+
+    footer {
+      text-align: center;
+      padding: 56px 24px 0;
+      background-color: var(--warm-50);
+    }
+
+    footer p {
+      font-size: 14px;
+      color: var(--warm-600);
+      line-height: 2;
+    }
+
+    footer a {
+      color: var(--brand-500);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-band {
+      margin-top: 40px;
+      margin-left: -24px;
+      margin-right: -24px;
+      height: 48px;
+      background-color: var(--warm-100);
+      background-image: url('images/grafismo_coracao.svg');
+      background-size: 48px 48px;
+      background-repeat: repeat;
+    }
+
+    @media (min-width: 768px) {
+      .cab { height: 64px; padding: 0 40px; }
+      .cab-logo { height: 28px; }
+      .cab-nav { gap: 16px; }
+      main { padding: 120px 170px 40px; }
+      h1.heading { font-size: 64px; }
+      .corpo { display: flex; gap: 80px; align-items: flex-start; margin-top: 56px; }
+      .assuntos { flex: 0 0 200px; flex-direction: column; flex-wrap: nowrap; gap: 0; margin: 0; border-bottom: 0; position: sticky; top: 88px; }
+      .faq { flex: 1 1 auto; min-width: 0; }
+      .faq-grupo { margin-bottom: 56px; }
+      .faq-grupo h2 { font-size: 30px; }
+      .achou { padding: 88px 170px; }
+      .achou h2 { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabecalho: o botao segue as vagas, como na pagina inicial. Comeca no estado
+       FECHADO (padrao do site); o script do fim da pagina troca para "Quero
+       assinar" se o portal disser que ha vaga. -->
+  <header class="cab" id="cabecalho">
+    <a class="cab-logo-link" href="/" aria-label="Cora, página inicial"><img class="cab-logo" src="images/cora_logo_cor.svg" alt="" width="86" height="24"></a>
+    <nav class="cab-nav" aria-label="Acesso ao portal">
+      <a class="cab-entrar" href="https://app.acora.com.br/">Entrar</a>
+      <a class="cab-botao" id="cab-botao" href="https://app.acora.com.br/lista-espera">Fila do pão</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="heading">Dúvidas</h1>
+    <p class="intro">O que as pessoas mais perguntam antes de assinar e depois de receber o primeiro pão.</p>
+
+    <div class="corpo">
+      <nav class="assuntos" aria-label="Assuntos">
+        <a href="#assinatura">Assinatura</a>
+        <a href="#preco-e-cobranca">Preço e cobrança</a>
+        <a href="#entrega">Entrega</a>
+        <a href="#o-pao">O pão</a>
+        <a href="#pausar-e-cancelar">Pausar e cancelar</a>
+      </nav>
+      <div class="faq">
+    <section class="faq-grupo" id="assinatura">
+      <h2 class="heading">Assinatura</h2>
+      <div class="faq-item">
+        <h3>Como funciona a assinatura?</h3>
+        <p>Você escolhe de 1 a 3 pães por semana. A gente assa sob medida e entrega na sua casa toda semana, no dia da sua assinatura. A cobrança é mensal, sem fidelidade.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Só tem Original e Integral?</h3>
+        <p>Sua assinatura começa pelo Original ou pelo Integral. Toda semana, até o corte, dá pra trocar por outros pães do cardápio. Focaccia Genovesa e Ciabatta entram sem acréscimo. Multigrãos e Brioche têm acréscimo, que aparece no app na hora da troca. Com dois ou três pães, uma troca por semana pode ser por qualquer pão do cardápio, sem acréscimo.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Até quando posso mudar a cesta da semana?</h3>
+        <p>Até o meio-dia, dois dias antes da sua entrega. Depois disso, a mudança vale para a semana seguinte.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Posso pedir outros pães além da assinatura?</h3>
+        <p>Pode. São os extras: você soma à cesta da semana pelo app, até o corte, e paga por unidade na cobrança seguinte.</p>
+      </div>
+    </section>
+    <section class="faq-grupo" id="preco-e-cobranca">
+      <h2 class="heading">Preço e cobrança</h2>
+      <div class="faq-item">
+        <h3>Quanto custa?</h3>
+        <p>O pão e a entrega têm preços separados. Os dois são cobrados uma vez por mês.</p>
+        <!-- PRECOS: mesmos valores do bloco QUANTO CUSTA de index.html. Troca de
+             dezembro (entrega de R$ 15 para R$ 20): editar so a linha marcada. -->
+        <dl class="faq-precos">
+          <div><dt>1 pão por semana</dt><dd>R$ 99 por mês</dd></div>
+          <div><dt>2 pães por semana</dt><dd>R$ 198 por mês</dd></div>
+          <div><dt>3 pães por semana</dt><dd>R$ 297 por mês</dd></div>
+          <div><dt>Entrega na sua porta, em qualquer plano</dt><dd>R$ 15 por mês</dd></div>
+          <!-- LINHA DE DEZEMBRO: trocar o valor acima para R$ 20 e apagar a linha abaixo. -->
+          <div class="faq-precos-jan"><dt>Entrega, a partir de janeiro de 2027</dt><dd>R$ 20 por mês</dd></div>
+        </dl>
+      </div>
+      <div class="faq-item">
+        <h3>Quando sou cobrado?</h3>
+        <p>Uma cobrança por mês, com vencimento no dia 8. Você recebe o extrato pelo menos 3 dias antes. Dá pra pagar com cartão de crédito, Pix ou boleto.</p>
+      </div>
+      <div class="faq-item">
+        <h3>E nos meses com cinco entregas?</h3>
+        <p>A quinta entrega é por nossa conta.</p>
+      </div>
+    </section>
+    <section class="faq-grupo" id="entrega">
+      <h2 class="heading">Entrega</h2>
+      <div class="faq-item">
+        <h3>Onde e quando vocês entregam?</h3>
+        <p>Em Niterói e no Rio, às quartas e quintas, à tarde. No cadastro, o seu CEP mostra se a gente chega até você. O dia da sua entrega é definido quando a assinatura é confirmada.</p>
+      </div>
+      <div class="faq-item">
+        <h3>E se não tiver ninguém em casa?</h3>
+        <p>O pão pode ficar na portaria. Sem portaria e sem ninguém pra receber, o entregador tenta de novo no fim da rota do dia.</p>
+      </div>
+    </section>
+    <section class="faq-grupo" id="o-pao">
+      <h2 class="heading">O pão</h2>
+      <div class="faq-item">
+        <h3>Um pão por semana não é muito? Como guardar?</h3>
+        <p>Dura mais do que parece: 3 dias no saco da Cora, 1 semana em saco plástico na geladeira ou 1 mês fatiado no congelador.</p>
+      </div>
+      <!-- Pergunta "Tenho alergia. Posso comer?" fora deste PR: o texto do briefing
+           nao lista os alergenos do Multigraos nem o aviso da clausula 11.3 dos
+           Termos. Entra quando o texto for corrigido. -->
+    </section>
+    <section class="faq-grupo" id="pausar-e-cancelar">
+      <h2 class="heading">Pausar e cancelar</h2>
+      <div class="faq-item">
+        <h3>Posso pausar?</h3>
+        <p>Pode, a qualquer momento e sem custo, pelo WhatsApp. Em pausas de até 4 semanas a sua vaga fica reservada. O mês já pago é entregue até o fim.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Como cancelo?</h3>
+        <p>Pelo WhatsApp, sem multa. Você continua recebendo até o fim do mês já pago e não é cobrado de novo.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Dá pra pedir sem assinar?</h3>
+        <p>A Cora é uma padaria por assinatura. Se bater a dúvida na hora de assinar, o cadastro oferece pedir uma vez antes, quando houver venda aberta.</p>
+      </div>
+    </section>
+      </div>
+    </div>
+  </main>
+
+  <section class="achou">
+    <h2 class="heading">Não achou a resposta?</h2>
+    <p>Fala com a gente. Quem responde é o Hugo.</p>
+    <div class="achou-acoes">
+      <a class="btn-filled" href="https://wa.me/5521971059962">Chamar no WhatsApp</a>
+      <a href="mailto:oi@acora.com.br">oi@acora.com.br</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      Cora, Padaria por Assinatura<br>
+      Niterói e Rio de Janeiro<br>
+      <a href="/duvidas">Dúvidas</a> · <a href="https://instagram.com/cora.padaria" target="_blank" rel="noopener noreferrer">@cora.padaria</a><br>
+      <a href="/termos">Termos de Uso</a> · <a href="/privacidade">Política de Privacidade</a>
+    </p>
+    <div class="footer-band"></div>
+  </footer>
+
+  <!-- Botao do cabecalho conforme as vagas do portal: le o mesmo GET /api/settings
+       que a pagina inicial (subscriptions_open). So troca com resposta clara de
+       "aberto"; qualquer outra coisa deixa o estado de fechado. Nunca abre por
+       erro. Fora de acora.com.br aceita ?simular=aberto|fechado e ?portal=<versao
+       de teste do portal>, como a pagina inicial. -->
+  <script>
+    (function () {
+      var host = location.hostname;
+      var producao = host === 'acora.com.br' || host === 'www.acora.com.br';
+      var api = 'https://app.acora.com.br';
+      var simular = '';
+      if (!producao) {
+        var q = new URLSearchParams(location.search);
+        var portal = q.get('portal');
+        if (portal && /^cora-portal-[a-z0-9-]+-hugorafael01-techs-projects\.vercel\.app$/.test(portal)) {
+          api = 'https://' + portal;
+        }
+        var s = q.get('simular');
+        if (s === 'aberto' || s === 'fechado') simular = '?simular=' + s;
+      }
+
+      var botaoCab = document.getElementById('cab-botao');
+      function revelaCabecalho() {
+        if (botaoCab) botaoCab.classList.add('cab-botao--pronto');
+      }
+      function mostraAberto() {
+        if (botaoCab) {
+          botaoCab.textContent = 'Quero assinar';
+          botaoCab.href = 'https://app.acora.com.br/onboarding';
+        }
+      }
+
+      if (!window.fetch) { revelaCabecalho(); return; }
+
+      var controle = window.AbortController ? new AbortController() : null;
+      var limite = setTimeout(function () { if (controle) controle.abort(); }, 4000);
+      var opcoes = { cache: 'no-store' };
+      if (controle) opcoes.signal = controle.signal;
+      fetch(api + '/api/settings' + simular, opcoes)
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) { if (d && d.subscriptions_open === true) mostraAberto(); })
+        .catch(function () { /* fica no estado de fechado */ })
+        .then(function () { clearTimeout(limite); revelaCabecalho(); });
+    })();
+  </script>
+
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
+</body>
+</html>
