@@ -1,6 +1,8 @@
 {
   "cleanUrls": true,
   "rewrites": [
+    { "source": "/via", "destination": "/" },
+    { "source": "/via/", "destination": "/" },
     { "source": "/via/:path*", "destination": "/" }
   ]
 }
