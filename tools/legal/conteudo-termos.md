@@ -1,6 +1,6 @@
 # Termos de Uso
 
-**Cora · Versão 1.9 · 12/10/2026**
+**Cora · Versão 1.10 · 27/11/2026**
 
 ## 1. Quem somos e do que trata este documento
 
@@ -122,9 +122,9 @@
 
 ## 7. Venda avulsa
 
-**7.1.** A Cora pode, a seu critério e em semanas específicas, oferecer produtos para **compra avulsa**, sem assinatura. A oferta é **pontual e deliberada pela Cora**, não é contínua e não gera direito a novas ofertas.
+**7.1.** A Cora pode oferecer produtos para compra avulsa, sem assinatura, inclusive como primeiro pedido para quem quer conhecer a Cora antes de assinar. A oferta depende da capacidade de produção de cada semana, pode ter limite de pedidos e pode ser suspensa ou encerrada a critério da Cora, sem gerar direito a novas ofertas.
 
-**7.2.** A venda avulsa **não cria vínculo de assinatura**, não tem renovação automática e não dá direito a vaga na assinatura nem a prioridade na lista de espera.
+**7.2.** A venda avulsa **não cria vínculo de assinatura**, não tem renovação automática e não dá direito a vaga na assinatura.
 
 **7.3.** **Pagamento antecipado.** O produto avulso é pago integralmente antes da produção, por Pix, boleto ou cartão. Sem a confirmação do pagamento até o prazo informado na oferta, o pedido não entra em produção.
 
