@@ -203,7 +203,7 @@
       border-radius: 8px;
       text-decoration: none;
       white-space: nowrap;
-      transition: background-color 150ms ease-out, opacity 180ms ease-out, visibility 0s linear 0s;
+      transition: background-color 150ms ease-out;
     }
 
     .cab-botao:hover {
@@ -229,14 +229,6 @@
 
     .cab-js .cab:not(.cab--solida) .cab-entrar {
       color: var(--brand-700);
-    }
-
-    /* Com JavaScript, o botao fica invisivel (com o espaco reservado) ate a
-       leitura das vagas responder ou o limite estourar. */
-    .cab-js .cab-botao:not(.cab-botao--pronto) {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 180ms ease-out, visibility 0s linear 180ms;
     }
 
 
@@ -276,6 +268,45 @@
       font-size: 32pt;
       line-height: 1;
       color: #fff;
+    }
+
+    .hero-acoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .hero-acoes a {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Botao secundario (contorno). Aqui ele fica sobre a foto, por isso o fundo
+       claro no lugar de transparente: no celular o pao passa por tras. */
+    .btn-outline {
+      font-family: 'Montagu Slab', Georgia, serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--brand-500);
+      background-color: var(--warm-50);
+      padding: 12px 34px;
+      border: 1.5px solid var(--brand-500);
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: background-color 150ms ease-out;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--brand-50);
+    }
+
+    .hero-acoes a:focus-visible {
+      outline: 2px solid var(--brand-700);
+      outline-offset: 2px;
     }
 
 
@@ -517,6 +548,25 @@
       color: var(--brand-700);
     }
 
+    .price-provar {
+      margin-top: 40px;
+      max-width: 520px;
+    }
+
+    .price-provar h3 {
+      font-size: 22px;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .price-provar p {
+      line-height: 1.5;
+    }
+
+    .price-provar .link-duvidas {
+      margin-top: 4px;
+    }
+
     .price-fecho {
       margin-top: 28px;
       max-width: 520px;
@@ -627,6 +677,10 @@
       align-self: flex-start;
     }
 
+    .cta-copy .link-duvidas {
+      align-self: flex-start;
+    }
+
     .quem-faz-copy {
       background-color: var(--warm-50);
     }
@@ -709,14 +763,13 @@
 <body>
 
   <!-- ═══ CABECALHO FIXO ═══
-       O rotulo e o destino do botao comecam no estado FECHADO (padrao do site);
-       o script do fim da pagina troca para "Quero assinar" se o portal disser que ha
-       vaga. "Entrar" vai para a raiz do portal, que serve assinante e avulso. -->
+       "Quero assinar" e fixo: quem controla as vagas e o portal.
+       "Entrar" vai para a raiz do portal, que serve assinante e avulso. -->
   <header class="cab" id="cabecalho">
     <a class="cab-logo-link" href="#topo" aria-label="Cora, voltar ao topo da página"><img class="cab-logo" src="/images/cora_logo_cor.svg" alt="" width="86" height="24"></a>
     <nav class="cab-nav" aria-label="Acesso ao portal">
       <a class="cab-entrar" href="https://app.acora.com.br/">Entrar</a>
-      <a class="cab-botao" id="cab-botao" href="https://app.acora.com.br/lista-espera">Fila do pão</a>
+      <a class="cab-botao" href="https://app.acora.com.br/onboarding">Quero assinar</a>
     </nav>
   </header>
 
@@ -726,6 +779,10 @@
     <div class="hero-content">
       <img src="/images/cora_logo_cor.svg" alt="Cora" class="hero-logo">
       <h1 class="heading hero-tagline">PADARIA<br>POR<br>ASSINATURA</h1>
+      <div class="hero-acoes">
+        <a href="https://app.acora.com.br/onboarding" class="btn-filled">Quero assinar</a>
+        <a href="https://app.acora.com.br/onboarding?origem=provar" class="btn-outline">Provar antes de assinar</a>
+      </div>
     </div>
   </section>
 
@@ -866,6 +923,11 @@
         <div class="price-nota price-nota--jan">R$ 20 a partir de janeiro de 2027.</div>
       </div>
     </div>
+    <div class="price-provar">
+      <h3 class="heading">QUER PROVAR ANTES?</h3>
+      <p>Seu primeiro pedido pode ser avulso: até 6 itens do cardápio, entrega na quarta, sem compromisso de assinar.</p>
+      <a class="link-duvidas" href="https://app.acora.com.br/onboarding?origem=provar">Fazer meu primeiro pedido</a>
+    </div>
     <p class="price-fecho">Sem fidelidade e sem multa. Em meses com cinco entregas, a quinta é por nossa conta.</p>
     <a class="link-duvidas" href="/duvidas">Ver todas as dúvidas</a>
   </section>
@@ -907,15 +969,13 @@
 
 
   <!-- ═══ DOBRA 7 — CHAMADA FINAL ═══
-       Sem preco aqui: o preco aparece uma vez so, em QUANTO CUSTA.
-       O texto de vagas FECHADAS e o padrao: e o que fica se a leitura do estado
-       falhar ou demorar. O script no fim da pagina troca para o texto de vagas
-       ABERTAS quando o portal responde que ha vaga. -->
+       Sem preco aqui: o preco aparece uma vez so, em QUANTO CUSTA. -->
   <section class="cta-final">
     <div class="cta-copy">
-      <h2 class="heading" id="cta-vagas-titulo">AS VAGAS DESSA RODADA JÁ FORAM PREENCHIDAS</h2>
-      <p id="cta-vagas-corpo">A Cora entrega toda semana em Niterói e no Rio. A gente amplia a produção aos poucos. Deixa seu contato e avisamos quando abrir mais vagas.</p>
-      <a href="https://app.acora.com.br/lista-espera" class="btn-filled" id="cta-vagas-botao">Fila do pão</a>
+      <h2 class="heading">ABRIMOS NOVAS VAGAS</h2>
+      <p>O cadastro leva uns três minutos.</p>
+      <a href="https://app.acora.com.br/onboarding" class="btn-filled">Quero assinar</a>
+      <a class="link-duvidas" href="https://app.acora.com.br/onboarding?origem=provar">Ou peça uma vez antes de assinar</a>
     </div>
     <div class="cta-photo">
       <img src="/images/cta-final.webp" alt="Pão de fermentação natural da Cora com a marca estampada na crosta, cortado ao meio mostrando o miolo aberto." loading="lazy" decoding="async" width="800" height="800">
@@ -959,72 +1019,6 @@
       new IntersectionObserver(function (itens) {
         solida(!itens[0].isIntersecting);
       }, { rootMargin: '-' + altura + 'px 0px 0px 0px' }).observe(hero);
-    })();
-  </script>
-
-  <!-- Ultima dobra: texto conforme as vagas do portal. Le o mesmo GET /api/settings
-       que o portal usa (campo subscriptions_open, que ja junta interruptor, teto
-       e capacidade do dia). So troca o texto com resposta clara de "aberto";
-       qualquer outra coisa (erro, atraso, resposta estranha) deixa o texto de
-       fechado que ja esta no HTML. Nunca abre por erro.
-       Fora de acora.com.br (Preview, local) aceita ?simular=aberto|fechado e
-       ?portal=<versao de teste do portal> para conferir os dois estados sem mexer
-       no interruptor de producao. Em acora.com.br esses parametros sao ignorados. -->
-  <script>
-    (function () {
-      var host = location.hostname;
-      var producao = host === 'acora.com.br' || host === 'www.acora.com.br';
-      var api = 'https://app.acora.com.br';
-      var simular = '';
-      if (!producao) {
-        var q = new URLSearchParams(location.search);
-        var portal = q.get('portal');
-        if (portal && /^cora-portal-[a-z0-9-]+-hugorafael01-techs-projects\.vercel\.app$/.test(portal)) {
-          api = 'https://' + portal;
-        }
-        var s = q.get('simular');
-        if (s === 'aberto' || s === 'fechado') simular = '?simular=' + s;
-      }
-
-      var titulo = document.getElementById('cta-vagas-titulo');
-      var corpo = document.getElementById('cta-vagas-corpo');
-      var botao = document.getElementById('cta-vagas-botao');
-      var botaoCab = document.getElementById('cab-botao');
-
-      // Uma leitura so, dois botoes: o do cabecalho e o do fim da pagina.
-      // O botao do cabecalho nasce invisivel (com o espaco reservado) e so
-      // aparece quando a leitura termina, com resposta ou sem ela.
-      function revelaCabecalho() {
-        if (botaoCab) botaoCab.classList.add('cab-botao--pronto');
-      }
-
-      function mostraAberto() {
-        if (titulo && corpo && botao) {
-          titulo.textContent = 'Abrimos novas vagas';
-          corpo.textContent = 'O cadastro leva uns três minutos.';
-          botao.textContent = 'Quero assinar';
-          botao.href = 'https://app.acora.com.br/onboarding';
-        }
-        if (botaoCab) {
-          botaoCab.textContent = 'Quero assinar';
-          botaoCab.href = 'https://app.acora.com.br/onboarding';
-        }
-      }
-
-      if (!window.fetch) { revelaCabecalho(); return; }
-
-      var controle = window.AbortController ? new AbortController() : null;
-      var limite = setTimeout(function () { if (controle) controle.abort(); }, 4000);
-      // cache 'no-store': sem isso, um navegador com resposta guardada revalida e a
-      // leitura pode falhar ("Failed to fetch"), derrubando o site no estado fechado
-      // com vagas abertas (observado em producao em 14/11).
-      var opcoes = { cache: 'no-store' };
-      if (controle) opcoes.signal = controle.signal;
-      fetch(api + '/api/settings' + simular, opcoes)
-        .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (d) { if (d && d.subscriptions_open === true) mostraAberto(); })
-        .catch(function () { /* fica no estado de fechado */ })
-        .then(function () { clearTimeout(limite); revelaCabecalho(); });
     })();
   </script>
 

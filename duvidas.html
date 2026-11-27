@@ -22,10 +22,6 @@
   <meta name="twitter:description" content="O que as pessoas mais perguntam antes de assinar a Cora: preço, cobrança, entrega, troca de pão, pausa e cancelamento.">
   <meta name="twitter:image" content="https://www.acora.com.br/images/og-cora.jpg">
 
-  <!-- Marca que ha JavaScript: o botao do cabecalho nasce invisivel (com o espaco
-       reservado) ate a leitura das vagas responder, para o rotulo nao piscar. -->
-  <script>document.documentElement.className += ' cab-js';</script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Montagu+Slab:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -159,7 +155,7 @@
       border-radius: 8px;
       text-decoration: none;
       white-space: nowrap;
-      transition: background-color 150ms ease-out, opacity 180ms ease-out, visibility 0s linear 0s;
+      transition: background-color 150ms ease-out;
     }
 
     .cab-botao:hover {
@@ -169,12 +165,6 @@
     .cab a:focus-visible {
       outline: 2px solid var(--brand-700);
       outline-offset: 2px;
-    }
-
-    .cab-js .cab-botao:not(.cab-botao--pronto) {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 180ms ease-out, visibility 0s linear 180ms;
     }
 
     main {
@@ -404,14 +394,12 @@
 </head>
 <body>
 
-  <!-- Cabecalho: o botao segue as vagas, como na pagina inicial. Comeca no estado
-       FECHADO (padrao do site); o script do fim da pagina troca para "Quero
-       assinar" se o portal disser que ha vaga. -->
+  <!-- Cabecalho: o mesmo da pagina inicial. -->
   <header class="cab" id="cabecalho">
     <a class="cab-logo-link" href="/" aria-label="Cora, página inicial"><img class="cab-logo" src="images/cora_logo_cor.svg" alt="" width="86" height="24"></a>
     <nav class="cab-nav" aria-label="Acesso ao portal">
       <a class="cab-entrar" href="https://app.acora.com.br/">Entrar</a>
-      <a class="cab-botao" id="cab-botao" href="https://app.acora.com.br/lista-espera">Fila do pão</a>
+      <a class="cab-botao" href="https://app.acora.com.br/onboarding">Quero assinar</a>
     </nav>
   </header>
 
@@ -507,7 +495,7 @@
       </div>
       <div class="faq-item">
         <h3>Dá pra pedir sem assinar?</h3>
-        <p>A Cora é uma padaria por assinatura. Se bater a dúvida na hora de assinar, o cadastro oferece pedir uma vez antes, quando houver venda aberta.</p>
+        <p>Dá. Seu primeiro pedido pode ser avulso: você escolhe até 6 itens do cardápio e recebe na quarta. No dia seguinte, a gente pergunta o que você achou. Depois disso, o pedido avulso continua possível sempre que sobrar espaço no forno.</p>
       </div>
     </section>
     </div>
@@ -531,52 +519,6 @@
     </p>
     <div class="footer-band"></div>
   </footer>
-
-  <!-- Botao do cabecalho conforme as vagas do portal: le o mesmo GET /api/settings
-       que a pagina inicial (subscriptions_open). So troca com resposta clara de
-       "aberto"; qualquer outra coisa deixa o estado de fechado. Nunca abre por
-       erro. Fora de acora.com.br aceita ?simular=aberto|fechado e ?portal=<versao
-       de teste do portal>, como a pagina inicial. -->
-  <script>
-    (function () {
-      var host = location.hostname;
-      var producao = host === 'acora.com.br' || host === 'www.acora.com.br';
-      var api = 'https://app.acora.com.br';
-      var simular = '';
-      if (!producao) {
-        var q = new URLSearchParams(location.search);
-        var portal = q.get('portal');
-        if (portal && /^cora-portal-[a-z0-9-]+-hugorafael01-techs-projects\.vercel\.app$/.test(portal)) {
-          api = 'https://' + portal;
-        }
-        var s = q.get('simular');
-        if (s === 'aberto' || s === 'fechado') simular = '?simular=' + s;
-      }
-
-      var botaoCab = document.getElementById('cab-botao');
-      function revelaCabecalho() {
-        if (botaoCab) botaoCab.classList.add('cab-botao--pronto');
-      }
-      function mostraAberto() {
-        if (botaoCab) {
-          botaoCab.textContent = 'Quero assinar';
-          botaoCab.href = 'https://app.acora.com.br/onboarding';
-        }
-      }
-
-      if (!window.fetch) { revelaCabecalho(); return; }
-
-      var controle = window.AbortController ? new AbortController() : null;
-      var limite = setTimeout(function () { if (controle) controle.abort(); }, 4000);
-      var opcoes = { cache: 'no-store' };
-      if (controle) opcoes.signal = controle.signal;
-      fetch(api + '/api/settings' + simular, opcoes)
-        .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (d) { if (d && d.subscriptions_open === true) mostraAberto(); })
-        .catch(function () { /* fica no estado de fechado */ })
-        .then(function () { clearTimeout(limite); revelaCabecalho(); });
-    })();
-  </script>
 
 
   <!-- Destaque do assunto da secao que esta na tela. Sem IntersectionObserver ou
