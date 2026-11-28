@@ -131,7 +131,7 @@
 
     /* ═══════════════════════════════════
        CABECALHO FIXO
-       Padrao (sem JavaScript): barra solida com logo.
+       Padrao (sem JavaScript): barra solida com logo e "Quero assinar".
        Com JavaScript (classe cab-js no <html>): no topo da pagina fica sem
        fundo e sem logo, sobre a foto; a barra solida volta quando o hero sai
        da tela (classe cab--solida, posta pelo script).
@@ -231,6 +231,26 @@
       color: var(--brand-700);
     }
 
+    /* "Quero assinar" do cabecalho: some enquanto o botao do topo nao saiu da
+       tela, para haver uma acao so. visibility tira do Tab e do leitor de tela e
+       guarda o espaco, entao nada se mexe. Sem JavaScript, fica sempre visivel. */
+    .cab-js .cab-botao {
+      transition: background-color 150ms ease-out, opacity 180ms ease-out, visibility 0s linear 0s;
+    }
+
+    .cab-js .cab:not(.cab--assinar) .cab-botao {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 180ms ease-out, visibility 0s linear 180ms;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cab-js .cab .cab-botao,
+      .cab-js .cab:not(.cab--assinar) .cab-botao {
+        transition: none;
+      }
+    }
+
 
     /* ═══════════════════════════════════
        DOBRA 1 — HERO
@@ -271,10 +291,6 @@
     }
 
     .hero-acoes {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
       margin-top: 24px;
     }
 
@@ -283,26 +299,6 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-    }
-
-    /* Caminho secundario: so texto, para nao competir com o botao. O min-height
-       garante os 44px de toque sem aumentar a letra. */
-    .hero-link {
-      display: inline-flex;
-      align-items: center;
-      min-height: 44px;
-      padding: 10px 0;
-      font-family: 'Montagu Slab', Georgia, serif;
-      font-size: 15px;
-      font-weight: 500;
-      line-height: 1.4;
-      color: var(--brand-700);
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
-    .hero-link:hover {
-      color: var(--brand-800);
     }
 
     .hero-acoes a:focus-visible {
@@ -764,7 +760,8 @@
 <body>
 
   <!-- ═══ CABECALHO FIXO ═══
-       "Quero assinar" e fixo: quem controla as vagas e o portal.
+       "Quero assinar" aparece quando o botao do topo sai da tela (script no fim
+       da pagina). Quem controla as vagas e o portal.
        "Entrar" vai para a raiz do portal, que serve assinante e avulso. -->
   <header class="cab" id="cabecalho">
     <a class="cab-logo-link" href="#topo" aria-label="Cora, voltar ao topo da página"><img class="cab-logo" src="/images/cora_logo_cor.svg" alt="" width="86" height="24"></a>
@@ -781,8 +778,7 @@
       <img src="/images/cora_logo_cor.svg" alt="Cora" class="hero-logo">
       <h1 class="heading hero-tagline">PADARIA<br>POR<br>ASSINATURA</h1>
       <div class="hero-acoes">
-        <a href="https://app.acora.com.br/onboarding" class="btn-filled">Quero assinar</a>
-        <a href="https://app.acora.com.br/onboarding?origem=provar" class="hero-link">ou prove antes de assinar</a>
+        <a href="https://app.acora.com.br/onboarding" class="btn-filled" id="hero-assinar">Quero assinar</a>
       </div>
     </div>
   </section>
@@ -1020,6 +1016,23 @@
       new IntersectionObserver(function (itens) {
         solida(!itens[0].isIntersecting);
       }, { rootMargin: '-' + altura + 'px 0px 0px 0px' }).observe(hero);
+    })();
+  </script>
+
+  <!-- "Quero assinar" do cabecalho: aparece quando o botao do topo sai da tela
+       por cima e some quando ele volta. Se o botao do topo estiver abaixo da
+       dobra (tela muito baixa), continua escondido. Sem IntersectionObserver,
+       fica sempre visivel. -->
+  <script>
+    (function () {
+      var cab = document.getElementById('cabecalho');
+      if (!cab) return;
+      var botaoTopo = document.getElementById('hero-assinar');
+      if (!botaoTopo || !window.IntersectionObserver) { cab.classList.add('cab--assinar'); return; }
+      new IntersectionObserver(function (itens) {
+        var item = itens[itens.length - 1];
+        cab.classList.toggle('cab--assinar', !item.isIntersecting && item.boundingClientRect.top < 0);
+      }).observe(botaoTopo);
     })();
   </script>
 
